@@ -50,7 +50,7 @@ app.get("*", (req, res, next) => {
             <link rel="manifest" href="/manifest.json">
             <link rel="shortcut icon" href="/favicon.ico">
             <link href="https://fonts.googleapis.com/css?family=Quicksand|Abril+Fatface|Special+Elite" rel="stylesheet">
-            <title>JumpWriter Creative Writing App</title>
+            <title>JumpOff Web Development</title>
           </head>
           <body>
             <noscript>
@@ -71,7 +71,7 @@ app.get("*", (req, res, next) => {
 // app.use(favicon(__dirname +'../../public/favicon.ico'));
 
 
-app.listen(process.env.PORT || 3001, () => {
+app.listen(process.env.PORT || 3002, () => {
   var date = new Date();
   console.log("Server started at " + date);
 });

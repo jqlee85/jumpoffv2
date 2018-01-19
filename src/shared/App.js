@@ -4,8 +4,6 @@ import { Route } from "react-router-dom";
 import routes from "./routes";
 import {PropsRoute} from 'react-router-with-props';
 import {connect} from 'react-redux';
-import {fetchImagePrompt} from './actions/promptActions';
-import {fetchTextPrompt} from './actions/promptActions';
 import {requestUserLogin} from './actions/userActions';
 import {userLogout} from './actions/userActions';
 import Nav from './components/Nav/Nav';
@@ -33,10 +31,7 @@ class App extends Component {
           exact={route.exact} 
           path={route.path} 
           component={route.component} 
-          prompt={this.props.prompt}
           user={this.props.user}
-          getImagePrompt={this.props.fetchImagePrompt}
-          getTextPrompt={this.props.fetchTextPrompt}
         />)}
       </div>
     </div>
