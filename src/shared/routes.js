@@ -1,12 +1,12 @@
 import React from 'react';
-import Write from "./components/Write/Write";
+import Home from "./components/Home/Home";
 import About from "./components/About/About";
 
 const routes = [
   {
     path: "/",
     exact: true,
-    component: Write
+    component: Home
   },
   {
     path: "/about",
