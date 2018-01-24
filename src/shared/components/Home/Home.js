@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import HomeSectionOne from '../HomeSectionOne/HomeSectionOne';
+import HomeSectionTwo from '../HomeSectionTwo/HomeSectionTwo';
 import styles from './Home.css';
 
 class Home extends Component {
@@ -9,10 +11,8 @@ class Home extends Component {
   
   render(){
     return <div className="home">
-      <h1>JumpOff</h1>
-  			<p>Web Design</p>
-        <p>Web Development</p>
-        <p>Digital Art</p>
+      <HomeSectionOne />
+      <HomeSectionTwo />
     </div>
   }
 
