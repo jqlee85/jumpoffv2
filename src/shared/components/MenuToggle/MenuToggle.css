@@ -5,7 +5,51 @@ button#nav-icon {
 button#nav-icon:hover {
   border: none;
   color: none;
+ 
 }
+button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
+  -webkit-animation:rainbow 10s infinite;
+  -ms-animation:rainbow 10s infinite;
+  -o-animation:rainbow 10s infinite;
+  animation:rainbow 10s infinite;
+}
+@-webkit-keyframes rainbow {
+  0% {background-color: #f35b5b;}
+  17% {background-color: #f09f4e;}
+  33% {background-color: #fafa79;}
+  40% {background-color: #6ef7ab;}
+  67% {background-color: #5cfcf4;}
+  83% {background-color: #7b8ef8;}
+  100% {background-color: #f35ba2;}
+}
+@-ms-keyframes rainbow {
+  0% {background-color: #f35b5b;}
+  17% {background-color: #f09f4e;}
+  33% {background-color: #fafa79;}
+  40% {background-color: #6ef7ab;}
+  67% {background-color: #5cfcf4;}
+  83% {background-color: #7b8ef8;}
+  100% {background-color: #f35ba2;}
+}
+@-o-keyframes rainbow {
+  0% {background-color: #f35b5b;}
+  17% {background-color: #f09f4e;}
+  33% {background-color: #fafa79;}
+  40% {background-color: #6ef7ab;}
+  67% {background-color: #5cfcf4;}
+  83% {background-color: #7b8ef8;}
+  100% {background-color: #f35ba2;}
+}
+@keyframes rainbow {
+  0% {background-color: #f35b95;}
+  17% {background-color: #f09f4e;}
+  33% {background-color: #fafa79;}
+  40% {background-color: #6ef7ab;}
+  67% {background-color: #5cfcf4;}
+  83% {background-color: #7b8ef8;}
+  100% {background-color: #f35ba2;}
+}
+
 #nav-icon {
   width: 20px;
   height: 20px;
@@ -23,10 +67,10 @@ button#nav-icon:hover {
   cursor: pointer;
 }
 #nav-icon:hover span {
-  background: rgba(0,0,0,.3)
+  background: rgba(0,0,0,1)
 }
 #nav-icon.toggled span {
-  background: rgba(255,255,255,.8);
+  background: rgba(255,255,255,1);
 }
 #nav-icon span {
   display: block;

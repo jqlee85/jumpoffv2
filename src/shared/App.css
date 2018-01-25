@@ -35,3 +35,8 @@ button:active {
 #app {
   position: relative;
 }
+
+.jo-section {
+  height: auto;
+  min-height: 100vh;
+}

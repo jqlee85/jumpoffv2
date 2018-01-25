@@ -13,7 +13,10 @@ import Header from './components/Header/Header';
 class App extends Component {
 
   render(){
-    return <div className="App">
+    
+    let appClasses = 'App';
+    if (this.props.app.menuToggled) appClasses += ' app-menu-toggled';
+    return <div className={appClasses}>
       <Nav 
         menuToggled={this.props.app.menuToggled} 
         userLogin={this.props.requestUserLogin} 
