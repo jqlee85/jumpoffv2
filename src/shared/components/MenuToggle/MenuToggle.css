@@ -1,19 +1,20 @@
 /* Menu Toggle */
 button#nav-icon {
   border: none;
+  outline: none;
 }
 button#nav-icon:hover {
   border: none;
   color: none;
  
 }
-button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
-  -webkit-animation:rainbow 10s infinite;
-  -ms-animation:rainbow 10s infinite;
-  -o-animation:rainbow 10s infinite;
-  animation:rainbow 10s infinite;
+button#nav-icon:hover span, button#nav-icon:focus span, .app-menu-toggled button#nav-icon span {
+  -webkit-animation:bg-rainbow 10s infinite;
+  -ms-animation:bg-rainbow 10s infinite;
+  -o-animation:bg-rainbow 10s infinite;
+  animation:bg-rainbow 10s infinite;
 }
-@-webkit-keyframes rainbow {
+@-webkit-keyframes bg-rainbow {
   0% {background-color: #f35b5b;}
   17% {background-color: #f09f4e;}
   33% {background-color: #fafa79;}
@@ -22,7 +23,7 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   83% {background-color: #7b8ef8;}
   100% {background-color: #f35ba2;}
 }
-@-ms-keyframes rainbow {
+@-ms-keyframes bg-rainbow {
   0% {background-color: #f35b5b;}
   17% {background-color: #f09f4e;}
   33% {background-color: #fafa79;}
@@ -31,7 +32,7 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   83% {background-color: #7b8ef8;}
   100% {background-color: #f35ba2;}
 }
-@-o-keyframes rainbow {
+@-o-keyframes bg-rainbow {
   0% {background-color: #f35b5b;}
   17% {background-color: #f09f4e;}
   33% {background-color: #fafa79;}
@@ -40,7 +41,7 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   83% {background-color: #7b8ef8;}
   100% {background-color: #f35ba2;}
 }
-@keyframes rainbow {
+@keyframes bg-rainbow {
   0% {background-color: #f35b95;}
   17% {background-color: #f09f4e;}
   33% {background-color: #fafa79;}

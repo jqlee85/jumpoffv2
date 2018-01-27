@@ -44,7 +44,52 @@
 .main-nav ul li a {
   color: rgba(255,255,255,.7);
   text-decoration: none;
+  -webkit-transition: color .5s; /* Safari */
+  transition: color .5s;
 }
 .main-nav ul li.active {
   color: rgba(255,255,255,.9);
+}
+
+.main-nav ul li a:hover, .main-nav ul li a:focus {
+  -webkit-animation:rainbow 8s infinite;
+  -ms-animation:rainbow 8s infinite;
+  -o-animation:rainbow 8s infinite;
+  animation:rainbow 8s infinite;
+}
+@-webkit-keyframes rainbow {
+  0% {color: #f35b5b;}
+  17% {color: #f09f4e;}
+  33% {color: #fafa79;}
+  40% {color: #6ef7ab;}
+  67% {color: #5cfcf4;}
+  83% {color: #7b8ef8;}
+  100% {color: #f35ba2;}
+}
+@-ms-keyframes rainbow {
+  0% {color: #f35b5b;}
+  17% {color: #f09f4e;}
+  33% {color: #fafa79;}
+  40% {color: #6ef7ab;}
+  67% {color: #5cfcf4;}
+  83% {color: #7b8ef8;}
+  100% {color: #f35ba2;}
+}
+@-o-keyframes rainbow {
+  0% {color: #f35b5b;}
+  17% {color: #f09f4e;}
+  33% {color: #fafa79;}
+  40% {color: #6ef7ab;}
+  67% {color: #5cfcf4;}
+  83% {color: #7b8ef8;}
+  100% {color: #f35ba2;}
+}
+@keyframes rainbow {
+  0% {color: #f35b95;}
+  17% {color: #f09f4e;}
+  33% {color: #fafa79;}
+  40% {color: #6ef7ab;}
+  67% {color: #5cfcf4;}
+  83% {color: #7b8ef8;}
+  100% {color: #f35ba2;}
 }

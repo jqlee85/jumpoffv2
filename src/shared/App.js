@@ -8,6 +8,7 @@ import {requestUserLogin} from './actions/userActions';
 import {userLogout} from './actions/userActions';
 import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends Component {

@@ -8,9 +8,9 @@ class HomeSectionTwo extends Component {
   }
   
   render(){
-    return <div className="jo-section home-section-two">
+    return <section className="jo-section home-section-two">
       <p>Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor </p>
-    </div>
+    </section>
   }
 
 }
