@@ -9,10 +9,15 @@ class HomeSectionOne extends Component {
   
   render(){
     return <section className="jo-section home-section-one">
-      <h1>JumpOff</h1>
-  			<p>Web Design</p>
+      <div className="jo-section-half first">
+        <h1>LOGO</h1>
+      </div>
+      <div className="jo-section-half last">
+        <h1>JumpOff</h1>
+        <p>Web Design</p>
         <p>Web Development</p>
         <p>Digital Art</p>
+      </div>
     </section>
   }
 

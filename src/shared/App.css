@@ -35,8 +35,20 @@ button:active {
 #app {
   position: relative;
 }
-
+.main {
+}
 .jo-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
   height: auto;
   min-height: 100vh;
 }
+.jo-section-half {
+  width: 50%;
+  height: auto;
+  max-height: 100%; 
+}
+

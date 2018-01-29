@@ -35,11 +35,40 @@ button:active {
 #app {
   position: relative;
 }
-
+.main {
+}
 .jo-section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   height: auto;
   min-height: 100vh;
-}.home {
+}
+.jo-section-half {
+  width: 50%;
+  height: auto;
+  max-height: 100%; 
+}
+
+.home {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     overflow: auto;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
