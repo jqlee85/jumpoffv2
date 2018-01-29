@@ -49,7 +49,6 @@ app.get("*", (req, res, next) => {
             <link rel="stylesheet" href="/css/main.css">
             <link rel="manifest" href="/manifest.json">
             <link rel="shortcut icon" href="/favicon.ico">
-            <link href="https://fonts.googleapis.com/css?family=Quicksand|Abril+Fatface|Special+Elite" rel="stylesheet">
             <title>JumpOff Web Development</title>
           </head>
           <body>
