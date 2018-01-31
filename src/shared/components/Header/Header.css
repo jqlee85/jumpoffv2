@@ -9,7 +9,7 @@
   height: 80px;
   padding: 10px;
   color: rgba(0,0,0,.7);
-  z-index: 20;
+  z-index: 75;
 }
 #header a.site-title {
   position: relative;

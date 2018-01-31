@@ -4,4 +4,5 @@
     flex-direction: column;
     overflow: auto;
     box-sizing: border-box;
+    width: 100%;
 }

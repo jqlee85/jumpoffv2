@@ -17,24 +17,44 @@ class HomeSectionOne extends Component {
               height="100%"
               x="0"
               y="0"
-              viewBox="0 0 200 200"
+              viewBox="0 0 250 250"
             >
+              <defs>
+                <linearGradient id="jo-gradient" x1="0%" y1="0%" x2="75%" y2="100%">
+                  <stop offset="0%"   stop-color="#f0ba45"/>
+                  <stop offset="25%"   stop-color="#f89c44"/>
+                  <stop offset="75%" stop-color="#ef6085"/>
+                  <stop offset="100%" stop-color="#cd5fa1"/>
+                </linearGradient>
+              </defs>
               <path 
-                
-                d="M 0 25 L 175 25 L 175 175 L 25 175 L 25 100"
+                d="M 25 50 L 200 50 L 200 200 L 50 200 L 50 125"
+                fill="none"
+                stroke="url(#jo-gradient)"
+                strokeWidth="50"
+              />
+              <path 
+                d="M 12.5 62.5 L 187.5 62.5 L 187.5 212.5 L 37.5 212.5 L 37.5 137.5"
+                fill="none"
+                stroke="white"
+                strokeWidth="50"
+              />
+              <path 
+                d="M 0 75 L 175 75 L 175 225 L 25 225 L 25 150"
                 fill="none"
                 stroke="black"
                 strokeWidth="50"
               />
+              
             </svg>
           </div>
         </div>
       </div>
       <div className="jo-section-half last">
-        <h1>JumpOff</h1>
-        <p>Web Design</p>
-        <p>Web Development</p>
-        <p>Digital Art</p>
+        <div className="jo-home-title-wrapper">
+          <h1 className="jo-home-title">Jump<br/>Off</h1>
+          <p className="jo-home-description">Web Design<br/>Web Development<br/>Digital Art</p>
+        </div>
       </div>
     </section>
   }

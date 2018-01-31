@@ -17,6 +17,7 @@
   -webkit-transition: top .2s ease-in, bottom .2s ease-in; /* Safari */
   transition: top .2s ease-in, bottom .2s ease-in;
   overflow: hidden;
+  z-index: 50;
 }
 #main-nav.toggled {
   top: 0;
