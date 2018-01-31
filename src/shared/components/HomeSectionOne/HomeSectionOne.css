@@ -1,0 +1,29 @@
+.home-section-one .first {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 120px;
+  height: 100vh;
+  width: 100%;
+
+}
+
+.jo-logo-featured-wrapper {
+  position: relative;
+  padding-bottom: 70%;
+  margin-top: 5%;
+  /* bottom: 5%; */
+  left: -3%;
+  width: 70%;
+  height:0;
+  transform: rotate(15deg);
+  float: left;
+}
+.jo-logo-featured {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.jo-logo-featured > svg {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
