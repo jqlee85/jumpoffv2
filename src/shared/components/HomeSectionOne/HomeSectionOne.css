@@ -42,7 +42,7 @@
   margin-bottom: 1em;
 }
 .jo-home-title {
-  font-size: 15vw;
+  font-size: 13vw;
   line-height: 85%;
   font-weight: bold;
   text-transform: uppercase;
@@ -50,7 +50,9 @@
 }
 .jo-home-description {
   text-align: right;
-  font-size:3vw;
+  font-size: 2.5vw;
+  font-weight: light;
+  line-height: 140%;
 }
 
 @media screen and ( max-width: 800px ) {

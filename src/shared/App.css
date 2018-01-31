@@ -57,7 +57,9 @@ button:active {
 
 @media screen and ( max-width: 800px ) {
   .jo-section {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
     height: auto;
   }

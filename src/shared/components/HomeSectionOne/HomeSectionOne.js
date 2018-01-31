@@ -53,7 +53,9 @@ class HomeSectionOne extends Component {
       <div className="jo-section-half last">
         <div className="jo-home-title-wrapper">
           <h1 className="jo-home-title">Jump<br/>Off</h1>
-          <p className="jo-home-description">Web Design<br/>Web Development<br/>Digital Art</p>
+          <p className="jo-home-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
         </div>
       </div>
     </section>
