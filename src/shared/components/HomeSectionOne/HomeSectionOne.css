@@ -36,7 +36,6 @@
   align-self: flex-end;
   height: auto;
   margin-right: 30px;
-  margin-left: 30px;
   margin-bottom: 1em;
 }
 .jo-home-title {
@@ -72,9 +71,6 @@
   .jo-home-title-wrapper {
     margin-top: 20px;
   }
-  .jo-home-description {
-    font-size: 16px;
-  }
   
 }
 @media screen and ( min-width: 601px ) and ( max-width: 800px ) {
@@ -83,13 +79,31 @@
     padding-bottom: 60%;
   }
   .jo-home-title-wrapper {
+    margin-top: -40px;
     margin-right: 50px;
     margin-left: 50px;
+  }
+  .jo-home-title {
+    font-size: 100px;
+  }
+  .jo-home-description {
+    width: 60%;
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 20px;
   }
 }
 @media screen and ( max-width: 600px ) {
   .jo-logo-featured-wrapper {
     width: 80%;
     padding-bottom: 80%;
+  }
+  .jo-home-description {
+    width: 80%;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .jo-home-description {
+    font-size: 16px;
   }
 }
