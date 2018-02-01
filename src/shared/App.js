@@ -17,7 +17,7 @@ class App extends Component {
     
     let appClasses = 'App';
     if (this.props.app.menuToggled) appClasses += ' app-menu-toggled';
-    return <div className={appClasses}>
+    return <div id="App" className={appClasses}>
       <Nav 
         menuToggled={this.props.app.menuToggled} 
         userLogin={this.props.requestUserLogin} 

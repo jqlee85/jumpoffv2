@@ -9,6 +9,9 @@
   padding: 10px;
   z-index: 75;
 }
+.app-menu-toggled #header {
+  position: fixed;
+}
 .app-menu-toggled #header a.site-title, .app-menu-sticky #header a.site-title {
   display: block;
   opacity: 1;
