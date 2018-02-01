@@ -332,6 +332,7 @@ button:active {
 }
 .main-nav ul li {
   font-size: 3em;
+  line-height: 130%;
 }
 .main-nav ul li a {
   color: #fff;
@@ -387,24 +388,18 @@ button:active {
 .app-menu-toggled #header {
   position: fixed;
 }
-.app-menu-toggled #header a.site-title, .app-menu-sticky #header a.site-title {
-  display: block;
-  opacity: 1;
-  color: #fff;
-}
 #header a.site-title {
-  display: none;
+  display: block;
   position: relative;
+  height: 0;
+  margin:0;
   float: left;
-  opacity: 0;
-  margin-top: 6px;
-  margin-left: 12px;
-  -webkit-transition: opacity 1s ease; /* Safari */
-  transition: opacity 1s ease;
+  opacity: 0; 
 }
 #header a.site-title h1 {
   float: left;
   display: inline;
+  height: 0;
   margin: 0;
   font-weight: 500;
   font-size: 23px;
@@ -412,19 +407,32 @@ button:active {
   -webkit-transition: color .3s ease; /* Safari */
   transition: color .3s ease;
 }
-#header a.site-title:hover h1 {
-  color: rgba(0,0,0,1);
+.app-menu-toggled #header a.site-title, .app-menu-sticky #header a.site-title {
+  -webkit-transition: opacity 1s ease; /* Safari */
+  transition: opacity 1s ease; 
+  opacity: 1;
+  color: #fff;
+  height: auto;
+  margin-top: 6px;
+  margin-left: 12px;
 }
+.app-menu-toggled #header a.site-title h1, .app-menu-sticky #header a.site-title h1 {
+  height: auto;
+}
+
+
 /* Menu Toggle */
-button#nav-icon {
+a#nav-icon {
   border: none;
   outline: none;
 }
-button#nav-icon:hover {
+a#nav-icon {color:#FF0000;}      /* unvisited link */
+a#nav-icon:visited {color:#000;}  /* visited link */
+a#nav-icon, a#nav-icon:hover, a#nav-icon:active, a#nav-icon:focus {
   border: none;
   color: none;
 }
-button#nav-icon:hover span, button#nav-icon:focus span, .app-menu-toggled button#nav-icon span {
+a#nav-icon:hover span, a#nav-icon:focus span, .app-menu-toggled a#nav-icon span {
   -webkit-animation: bg-rainbow 10s infinite;
   animation: bg-rainbow 10s infinite;
 }
@@ -446,6 +454,28 @@ button#nav-icon:hover span, button#nav-icon:focus span, .app-menu-toggled button
   83% {background-color: #7b8ef8;}
   100% {background-color: #f35ba2;}
 }
+a#nav-icon:hover p, a#nav-icon:focus p, .app-menu-toggled a#nav-icon p {
+  -webkit-animation: p-rainbow 10s infinite;
+  animation: p-rainbow 10s infinite;
+}
+@-webkit-keyframes p-rainbow {
+  0% {color: #f35b5b;}
+  17% {color: #f09f4e;}
+  33% {color: #fafa79;}
+  40% {color: #6ef7ab;}
+  67% {color: #5cfcf4;}
+  83% {color: #7b8ef8;}
+  100% {color: #f35ba2;}
+}
+@keyframes p-rainbow {
+  0% {color: #f35b5b;}
+  17% {color: #f09f4e;}
+  33% {color: #fafa79;}
+  40% {color: #6ef7ab;}
+  67% {color: #5cfcf4;}
+  83% {color: #7b8ef8;}
+  100% {color: #f35ba2;}
+}
 #nav-icon {
   width: 20px;
   height: 20px;
@@ -457,6 +487,15 @@ button#nav-icon:hover span, button#nav-icon:focus span, .app-menu-toggled button
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   cursor: pointer;
+}
+#nav-icon p {
+  position: absolute;
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  right: 28px;
+  top: 0px;
 }
 #nav-icon.toggled span {
   background: #fff;
@@ -497,7 +536,7 @@ button#nav-icon:hover span, button#nav-icon:focus span, .app-menu-toggled button
 #nav-icon.toggled span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 0px;
+  top: -2px;
   left: 0px;
 }
 #nav-icon.toggled span:nth-child(2) {
@@ -507,7 +546,7 @@ button#nav-icon:hover span, button#nav-icon:focus span, .app-menu-toggled button
 #nav-icon.toggled span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 16px;
+  top: 14px;
   left: 0px;
 }
 /*# sourceMappingURL=main.css.map*/

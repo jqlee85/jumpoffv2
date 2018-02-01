@@ -12,24 +12,18 @@
 .app-menu-toggled #header {
   position: fixed;
 }
-.app-menu-toggled #header a.site-title, .app-menu-sticky #header a.site-title {
-  display: block;
-  opacity: 1;
-  color: #fff;
-}
 #header a.site-title {
-  display: none;
+  display: block;
   position: relative;
+  height: 0;
+  margin:0;
   float: left;
-  opacity: 0;
-  margin-top: 6px;
-  margin-left: 12px;
-  -webkit-transition: opacity 1s ease; /* Safari */
-  transition: opacity 1s ease;
+  opacity: 0; 
 }
 #header a.site-title h1 {
   float: left;
   display: inline;
+  height: 0;
   margin: 0;
   font-weight: 500;
   font-size: 23px;
@@ -37,6 +31,17 @@
   -webkit-transition: color .3s ease; /* Safari */
   transition: color .3s ease;
 }
-#header a.site-title:hover h1 {
-  color: rgba(0,0,0,1);
+.app-menu-toggled #header a.site-title, .app-menu-sticky #header a.site-title {
+  -webkit-transition: opacity 1s ease; /* Safari */
+  transition: opacity 1s ease; 
+  opacity: 1;
+  color: #fff;
+  height: auto;
+  margin-top: 6px;
+  margin-left: 12px;
 }
+.app-menu-toggled #header a.site-title h1, .app-menu-sticky #header a.site-title h1 {
+  height: auto;
+}
+
+

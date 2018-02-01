@@ -8,11 +8,12 @@ class MenuToggle extends Component {
   render() {
     let theClasses = 'menu-toggle';
     if (this.props.menuToggled) theClasses += ' toggled';
-    return <button className={theClasses} id="nav-icon" onClick={this.props.toggleNav}>
+    return <a href="#" onclick="return false;" className={theClasses} id="nav-icon" onClick={this.props.toggleNav}>
       <span></span>
       <span></span>
       <span></span>
-    </button>
+      <p>MENU</p>
+    </a>
   }
 }
 

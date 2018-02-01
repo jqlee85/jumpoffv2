@@ -39,6 +39,7 @@
 }
 .main-nav ul li {
   font-size: 3em;
+  line-height: 130%;
 }
 .main-nav ul li a {
   color: #fff;
