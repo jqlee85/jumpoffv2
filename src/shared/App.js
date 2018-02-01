@@ -13,9 +13,49 @@ import Header from './components/Header/Header';
 
 class App extends Component {
 
+
+  constructor(props) {
+    
+      super(props);
+      
+      this.state = {
+        stickyClass: 'app-menu-sticky'
+      }
+    
+    // const stickyClass = 'app-menu-sticky';
+  }
+
+  
+
+  componentDidMount(){
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = (e) => {
+  
+    console.log(e);
+    let isSticky = e.target.getElementById('App').classList.contains(this.state.stickyClass);
+    let yPos = e.currentTarget.pageYOffset;
+    console.log(yPos);
+    console.log(isSticky);
+    if ( yPos >= 60 && !isSticky ) {
+      
+      e.target.getElementById('App').classList.add(this.state.stickyClass);
+    } else if ( yPos < 60 && isSticky ) {
+      console.log('oye');
+      e.target.getElementById('App').classList.remove(this.state.stickyClass);
+    }
+
+  }
+
   render(){
     
     let appClasses = 'App';
+    if (this.props.app.menuSticky) appClasses += this.state.stickyClass;
     if (this.props.app.menuToggled) appClasses += ' app-menu-toggled';
     return <div id="App" className={appClasses}>
       <Nav 

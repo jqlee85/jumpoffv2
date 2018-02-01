@@ -36,7 +36,7 @@
   align-self: flex-end;
   height: auto;
   margin-right: 30px;
-  margin-bottom: 1em;
+  
 }
 .jo-home-title {
   font-size: 13vw;
@@ -50,7 +50,20 @@
   font-size: 2.5vw;
   line-height: 140%;
 }
+@media screen and ( min-width: 1201px ) {
+  .jo-home-title-wrapper {
+    /* align-self: center; */
+    padding-bottom: 60px;
+  }
+}
+@media screen and ( max-width: 1200px ) {
+  .jo-home-title-wrapper {
+    padding-bottom: 20px;
+  }
+}
+@media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
 
+}
 @media screen and ( max-width: 800px ) {
   
   .jo-section-half, .jo-section .first {
