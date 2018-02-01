@@ -12,7 +12,7 @@ const browserConfig = {
   module: {
     rules: [
       {
-        test: [/\.svg$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        test: [/\.svg$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.woff$/, /\.woff2$/],
         loader: "file-loader",
         options: {
           name: "public/media/[name].[ext]",
@@ -61,7 +61,7 @@ const serverConfig = {
   module: {
     rules: [
       {
-        test: [/\.svg$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        test: [/\.svg$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.woff$/, /\.woff2$/],
         loader: "file-loader",
         options: {
           name: "public/media/[name].[ext]",

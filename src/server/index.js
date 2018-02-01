@@ -10,7 +10,6 @@ import routes from "../shared/routes";
 import configureStore from "../shared/configureStore";
 import App from "../shared/App";
 import "source-map-support/register";
-// var favicon = require('serve-favicon');
 
 const app = express();
 

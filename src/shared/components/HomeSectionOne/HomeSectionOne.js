@@ -21,10 +21,10 @@ class HomeSectionOne extends Component {
             >
               <defs>
                 <linearGradient id="jo-gradient" x1="0%" y1="0%" x2="75%" y2="100%">
-                  <stop offset="0%"   stop-color="#f0ba45"/>
-                  <stop offset="25%"   stop-color="#f89c44"/>
-                  <stop offset="75%" stop-color="#ef6085"/>
-                  <stop offset="100%" stop-color="#cd5fa1"/>
+                  <stop offset="0%"   stopColor="#f0ba45"/>
+                  <stop offset="25%"   stopColor="#f89c44"/>
+                  <stop offset="75%" stopColor="#ef6085"/>
+                  <stop offset="100%" stopColor="#cd5fa1"/>
                 </linearGradient>
               </defs>
               <path 

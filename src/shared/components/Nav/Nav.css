@@ -39,11 +39,11 @@
 }
 .main-nav ul li {
   font-size: 3em;
-  font-family: Arial, sans-serif;
-  text-transform: uppercase;
 }
 .main-nav ul li a {
   color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
   text-decoration: none;
   -webkit-transition: color .5s; /* Safari */
   transition: color .5s;
