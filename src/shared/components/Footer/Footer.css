@@ -1,0 +1,24 @@
+footer {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+}
+footer .jo-contact-info {
+  text-align: left;
+  height: 100%;
+  flex-grow: 1;
+}
+footer .jo-contact-info h3 {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.jo-logo-title-section {
+  position: relative;
+  width: 25%;
+  max-width: 120px;
+}

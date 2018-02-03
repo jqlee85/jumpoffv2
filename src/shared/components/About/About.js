@@ -8,10 +8,14 @@ class About extends Component {
   }
   
   render(){
-    return <div className="about">
-      <h1>About JumpWriter</h1>
-      <h3>What is Freewriting?</h3>
-  			<p>Freewriting is the practice of continuous writing without worrying about typos, grammar, or any of the usual rules of writing. This exercise has long been used by writers to promote creativity, fight writer's block and explore ideas. It's not about polished content, it is about ideas flowing uninhibited from brain to paper.</p>
+    return <div className="about jo-section">
+      <div className="jo-row">
+        <div className="jo-content">
+          <h1>About JumpWriter</h1>
+          <h3>What is Freewriting?</h3>
+            <p>Freewriting is the practice of continuous writing without worrying about typos, grammar, or any of the usual rules of writing. This exercise has long been used by writers to promote creativity, fight writer's block and explore ideas. It's not about polished content, it is about ideas flowing uninhibited from brain to paper.</p>
+        </div>
+      </div>
     </div>
   }
 

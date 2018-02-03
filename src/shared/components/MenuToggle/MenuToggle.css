@@ -133,7 +133,7 @@ a#nav-icon:hover p, a#nav-icon:focus p, .app-menu-toggled a#nav-icon p {
   position: absolute;
   height: 2px;
   width: 20px;
-  border-radius: 1px;
+  border-radius: 2px;
   background: #000;
   opacity: 1;
   left: 0;

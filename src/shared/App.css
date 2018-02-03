@@ -81,13 +81,16 @@ button:active {
   height: auto;
   text-align: center;
 }
-#app {
+#App {
   position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 .main {
-}
-#App.app-menu-toggled {
-  max-height: 100vh;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 .jo-section {
   position: relative;
@@ -97,6 +100,18 @@ button:active {
   align-content: center;
   height: auto;
   min-height: 100vh;
+}
+.jo-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  clear: both;
+  
+}
+.jo-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
 }
 .jo-section-half {
   width: 50%;
@@ -134,4 +149,31 @@ button:active {
   font-weight: lighter;
 }
 
-
+/* Media Queries */
+@media screen and ( min-width: 1201px ) {
+  .jo-content {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media screen and ( max-width: 1200px ) {
+  
+}
+@media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
+  .jo-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and ( max-width: 800px ) {
+  
+}
+@media screen and ( min-width: 601px ) and ( max-width: 800px ) {
+  .jo-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and ( max-width: 600px ) {
+  
+}

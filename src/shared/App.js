@@ -8,6 +8,7 @@ import {requestUserLogin} from './actions/userActions';
 import {userLogout} from './actions/userActions';
 import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
 
@@ -62,6 +63,7 @@ class App extends Component {
           user={this.props.user}
         />)}
       </div>
+      <Footer />
     </div>
   }
 

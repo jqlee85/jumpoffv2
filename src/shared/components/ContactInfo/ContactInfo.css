@@ -1,0 +1,13 @@
+.jo-contact-info {
+  display: inline-block;
+  text-transform: uppercase;
+  
+}
+.jo-contact-info h3 {
+  font-weight: bold;
+}
+.jo-contact-info address, .jo-contact-info a, .jo-contact-info p {
+  font-weight: normal;
+  color: #fff;
+  text-decoration: none;
+}

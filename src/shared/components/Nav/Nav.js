@@ -18,6 +18,7 @@ class Nav extends Component {
       <ul className="menu">
         <li><Link to='/' onClick={this.linkClicked}>Home</Link></li>
         <li><Link to='/about' onClick={this.linkClicked}>About</Link></li>
+        <li><Link to='/blog' onClick={this.linkClicked}>Blog</Link></li>
       </ul>
     </nav>;
   }

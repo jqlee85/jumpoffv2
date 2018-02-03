@@ -1,0 +1,14 @@
+.jo-logo-title {
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.jo-logo-title h3 {
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 1em;
+  
+}
