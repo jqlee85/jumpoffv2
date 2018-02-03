@@ -9,7 +9,11 @@ class HomeSectionTwo extends Component {
   
   render(){
     return <section className="jo-section home-section-two">
-      <p>Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor </p>
+      <div className="jo-row">
+        <div className="jo-content">
+          <p>Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor </p>
+        </div>
+      </div>
     </section>
   }
 

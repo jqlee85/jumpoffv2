@@ -16,8 +16,8 @@ class Nav extends Component {
     if (this.props.menuToggled) theClasses += ' toggled';
     return <nav id="main-nav" className={theClasses}>
       <ul className="menu">
-        <li><Link to='/' onClick={this.linkClicked}>Home</Link></li>
         <li><Link to='/about' onClick={this.linkClicked}>About</Link></li>
+        <li><Link to='/work' onClick={this.linkClicked}>Work</Link></li>
         <li><Link to='/blog' onClick={this.linkClicked}>Blog</Link></li>
       </ul>
     </nav>;
