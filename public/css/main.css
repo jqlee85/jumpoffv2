@@ -211,7 +211,7 @@ button:active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100vh;
-  width: 60%;
+  width: 55%;
   z-index: 10;
 }
 .jo-logo-featured-wrapper {
@@ -239,7 +239,7 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  width: 40%;
+  width: 45%;
   -ms-flex-line-pack: end;
       align-content: flex-end;
   -webkit-box-pack: end;
@@ -255,7 +255,7 @@ button:active {
   
 }
 .jo-home-title {
-  font-size: 13vw;
+  font-size: 10vw;
   line-height: 85%;
   font-weight: bold;
   text-transform: uppercase;
@@ -266,10 +266,14 @@ button:active {
   font-size: 2.5vw;
   line-height: 140%;
 }
+/* Media Queries */
+
 @media screen and ( min-width: 1201px ) {
   .jo-home-title-wrapper {
-    /* align-self: center; */
     padding-bottom: 60px;
+  }
+  .jo-home-title {
+    font-size: 160px;
   }
 }
 @media screen and ( max-width: 1200px ) {
@@ -278,10 +282,11 @@ button:active {
   }
 }
 @media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
-
+  .jo-home-title {
+    font-size: 120px;
+  }
 }
 @media screen and ( max-width: 800px ) {
-  
   .jo-section-half, .jo-section .first {
     width: 100%;
     height: auto;
@@ -295,12 +300,10 @@ button:active {
     height: auto;
   }
   .home-section-one .jo-section-half.first {
-   
   }
   .jo-home-title-wrapper {
     margin-top: 20px;
-  }
-  
+  } 
 }
 @media screen and ( min-width: 601px ) and ( max-width: 800px ) {
   .jo-logo-featured-wrapper {
