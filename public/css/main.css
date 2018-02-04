@@ -211,7 +211,7 @@ button:active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100vh;
-  width: 55%;
+  width: 60%;
   z-index: 10;
 }
 .jo-logo-featured-wrapper {
@@ -239,7 +239,7 @@ button:active {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  width: 45%;
+  width: 40%;
   -ms-flex-line-pack: end;
       align-content: flex-end;
   -webkit-box-pack: end;
@@ -283,7 +283,7 @@ button:active {
 }
 @media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
   .jo-home-title {
-    font-size: 120px;
+    font-size: 130px;
   }
 }
 @media screen and ( max-width: 800px ) {
@@ -664,8 +664,8 @@ footer .jo-contact-wrapper h3 {
 }
 .jo-logo-title-section {
   position: relative;
-  width: 25%;
-  max-width: 100px;
+  width: 14%;
+  max-width: 90px;
   padding: 40px;
 }
 /* Media Queries */
@@ -714,10 +714,14 @@ footer .jo-contact-wrapper h3 {
 .jo-logo-title h3 {
   display: block;
   text-align: right;
-  font-size: 1.8em;
+  font-size: 20px;
   line-height: 110%;
   margin-top: 12px;
-  
+}
+@media screen and (min-width: 600px) {
+  .jo-logo-title h3 {
+    font-size: 26px;
+  }
 }.jo-logo-wrapper {
   position: relative;
   padding-bottom: 85%;
