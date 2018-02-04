@@ -9,16 +9,19 @@ footer {
   background: #000;
   color: #fff;
 }
-footer .jo-contact-info {
+footer .jo-contact-wrapper {
   box-sizing: border-box;
   height: 100%;
   flex-grow: 1;
   padding: 40px;
   text-align: left;
 }
-footer .jo-contact-info h3 {
-  font-size: 3em;
+footer .jo-contact-wrapper h3 {
+  font-size: 3.2em;
   text-transform: uppercase;
+}
+.jo-contact-info {
+  margin-top: 20px;
 }
 .jo-logo-title-section {
   position: relative;
@@ -35,7 +38,7 @@ footer .jo-contact-info h3 {
 @media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
 }
 @media screen and ( min-width: 801px ) {
-  footer .jo-contact-info {
+  footer .jo-contact-wrapper {
     
   }
 }
@@ -47,7 +50,7 @@ footer .jo-contact-info h3 {
 @media screen and ( min-width: 601px ) and ( max-width: 800px ) {
 }
 @media screen and ( max-width: 600px ) {
-  footer .jo-contact-info {
+  footer .jo-contact-wrapper {
     padding: 20px;
   }
 }

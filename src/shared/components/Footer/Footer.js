@@ -5,6 +5,7 @@ import LazyLoad from 'react-lazyload';
 import LogoTitle from '../LogoTitle/LogoTitle';
 import ContactInfo from '../ContactInfo/ContactInfo';
 import MapContainer from '../MapContainer/MapContainer';
+import SocialIcons from '../SocialIcons/SocialIcons';
 
 class Footer extends Component {
 
@@ -12,7 +13,7 @@ class Footer extends Component {
     return <footer id="footer">
       <div className="jo-map-wrapper">
         <LazyLoad height={200}>
-          <MapContainer />
+          <MapContainer mapStyle={'light'}/>
         </LazyLoad>
       </div>
       <ContactInfo />

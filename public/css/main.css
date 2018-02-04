@@ -642,7 +642,7 @@ a#nav-icon:hover p, a#nav-icon:focus p, .app-menu-toggled a#nav-icon p {
   background: #000;
   color: #fff;
 }
-footer .jo-contact-info {
+footer .jo-contact-wrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100%;
@@ -652,9 +652,12 @@ footer .jo-contact-info {
   padding: 40px;
   text-align: left;
 }
-footer .jo-contact-info h3 {
-  font-size: 3em;
+footer .jo-contact-wrapper h3 {
+  font-size: 3.2em;
   text-transform: uppercase;
+}
+.jo-contact-info {
+  margin-top: 20px;
 }
 .jo-logo-title-section {
   position: relative;
@@ -672,7 +675,7 @@ footer .jo-contact-info h3 {
 @media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
 }
 @media screen and ( min-width: 801px ) {
-  footer .jo-contact-info {
+  footer .jo-contact-wrapper {
     
   }
 }
@@ -684,7 +687,7 @@ footer .jo-contact-info h3 {
 @media screen and ( min-width: 601px ) and ( max-width: 800px ) {
 }
 @media screen and ( max-width: 600px ) {
-  footer .jo-contact-info {
+  footer .jo-contact-wrapper {
     padding: 20px;
   }
 }.jo-logo-title {
@@ -728,21 +731,104 @@ footer .jo-contact-info h3 {
 .jo-logo > svg {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
-}.jo-contact-info {
+}.jo-contact-wrapper {
   display: inline-block;
   text-transform: uppercase;
   
 }
-.jo-contact-info h3 {
+.jo-contact-wrapper h3 {
   font-weight: bold;
 }
 .jo-contact-info address, .jo-contact-info a, .jo-contact-info p {
-  line-height: 125%;
+  line-height: 160%;
   font-weight: 500;
   font-size: .8em;
   color: #fff;
   text-decoration: none;
-}.jo-map-wrapper {
+}.jo-social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 0;
+  list-style: none;
+  margin-top: 15px;
+  text-align: left;
+  
+}
+.jo-social-icons li {
+  display: inline-block;
+  margin: 2px;
+}
+.jo-social-icons a, .jo-social-icons svg {
+  display: block;
+}
+.jo-social-icons a {
+  position: relative;
+  height: 20px;
+  height: 2.0rem;
+  width: 20px;
+  width: 2.0rem;
+}
+.jo-social-icons svg {
+  height: 100%;
+  width: 100%;
+}
+.jo-social-icons em {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: -0.75em;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.icon-10:hover, .icon-13:hover, .icon-15:hover, .icon-26:hover {
+  border-radius: 2px;
+  /* color: #0e1a25;
+  fill: #0e1a25; */
+  -webkit-transform: scale(1.25) rotate(-15deg);
+          transform: scale(1.25) rotate(-15deg);
+  -webkit-transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+  transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+  transition: background-color 0.5s, transform 0.5s ease-out;
+  transition: background-color 0.5s, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+.icon-10 {
+  color: #cd5fa1;
+  fill: #cd5fa1;
+}
+.icon-10:hover {
+  /* background: #cd5fa1; */
+}
+.icon-13 {
+  color: #f0ba45;
+  fill: #f0ba45;
+}
+.icon-13:hover {
+  /* background: #f0ba45; */
+}
+.icon-15 {
+  color: #f89c44;
+  fill: #f89c44;
+}
+.icon-15:hover {
+  /* background: #f89c44; */
+}
+.icon-26 {
+  color: #ef6085;
+  fill: #ef6085;
+}
+.icon-26:hover {
+  /* background: #ef6085; */
+}
+
+.jo-map-wrapper {
   position: relative;
   width: 40%;
   min-width: 200px;
