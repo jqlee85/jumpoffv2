@@ -7,8 +7,9 @@
 }
 .jo-logo-title h3 {
   display: block;
-  text-align: center;
-  font-size: 1.2em;
-  margin-top: 1em;
+  text-align: right;
+  font-size: 1.8em;
+  line-height: 110%;
+  margin-top: 12px;
   
 }

@@ -661,11 +661,9 @@ footer .jo-contact-wrapper h3 {
 }
 .jo-logo-title-section {
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   width: 25%;
-  max-width: 120px;
-  padding: 20px;
+  max-width: 100px;
+  padding: 40px;
 }
 /* Media Queries */
 @media screen and ( min-width: 1201px ) {
@@ -690,6 +688,9 @@ footer .jo-contact-wrapper h3 {
   footer .jo-contact-wrapper {
     padding: 20px;
   }
+  footer .jo-logo-title-section { 
+    padding: 20px;
+  }
 }.jo-logo-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -709,9 +710,10 @@ footer .jo-contact-wrapper h3 {
 }
 .jo-logo-title h3 {
   display: block;
-  text-align: center;
-  font-size: 1.2em;
-  margin-top: 1em;
+  text-align: right;
+  font-size: 1.8em;
+  line-height: 110%;
+  margin-top: 12px;
   
 }.jo-logo-wrapper {
   position: relative;
@@ -830,7 +832,7 @@ footer .jo-contact-wrapper h3 {
 
 .jo-map-wrapper {
   position: relative;
-  width: 40%;
+  width: 45%;
   min-width: 200px;
   max-width: 600px;
   height: 100%;
