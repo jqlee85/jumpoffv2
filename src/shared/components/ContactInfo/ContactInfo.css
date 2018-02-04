@@ -9,6 +9,7 @@
 .jo-contact-info address, .jo-contact-info a, .jo-contact-info p {
   line-height: 125%;
   font-weight: 500;
+  font-size: .8em;
   color: #fff;
   text-decoration: none;
 }

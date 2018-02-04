@@ -624,7 +624,8 @@ a#nav-icon:hover p, a#nav-icon:focus p, .app-menu-toggled a#nav-icon p {
   left: 0px;
 }footer {
   position: relative;
-  height: auto;
+  height: 250px;;
+  min-height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -632,19 +633,24 @@ a#nav-icon:hover p, a#nav-icon:focus p, .app-menu-toggled a#nav-icon p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #000;
   color: #fff;
-  padding: 20px;
 }
 footer .jo-contact-info {
-  text-align: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 100%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  padding: 40px;
+  text-align: left;
 }
 footer .jo-contact-info h3 {
   font-size: 3em;
@@ -652,8 +658,35 @@ footer .jo-contact-info h3 {
 }
 .jo-logo-title-section {
   position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 25%;
   max-width: 120px;
+  padding: 20px;
+}
+/* Media Queries */
+@media screen and ( min-width: 1201px ) {
+}
+@media screen and ( max-width: 1200px ) {
+}
+@media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
+}
+@media screen and ( min-width: 801px ) {
+  footer .jo-contact-info {
+    
+  }
+}
+@media screen and ( max-width: 800px ) {
+  footer .jo-map-wrapper {
+    display: none;
+  }
+}
+@media screen and ( min-width: 601px ) and ( max-width: 800px ) {
+}
+@media screen and ( max-width: 600px ) {
+  footer .jo-contact-info {
+    padding: 20px;
+  }
 }.jo-logo-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -706,7 +739,20 @@ footer .jo-contact-info h3 {
 .jo-contact-info address, .jo-contact-info a, .jo-contact-info p {
   line-height: 125%;
   font-weight: 500;
+  font-size: .8em;
   color: #fff;
   text-decoration: none;
+}.jo-map-wrapper {
+  position: relative;
+  width: 40%;
+  min-width: 200px;
+  max-width: 600px;
+  height: 100%;
+  min-height: 100%;
 }
+#map {
+  width: 100%;
+  height: 100%;
+}
+
 /*# sourceMappingURL=main.css.map*/
