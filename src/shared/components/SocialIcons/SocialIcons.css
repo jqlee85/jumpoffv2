@@ -3,7 +3,7 @@
   justify-content: flex-start;
   font-size: 0;
   list-style: none;
-  margin-top: 15px;
+  margin-top: 18px;
   text-align: left;
   
 }
@@ -37,7 +37,7 @@
   left: 0;
 }
 
-.icon-10:hover, .icon-13:hover, .icon-15:hover, .icon-26:hover {
+.icon-17:hover, .icon-13:hover, .icon-15:hover, .icon-26:hover {
   border-radius: 2px;
   /* color: #0e1a25;
   fill: #0e1a25; */
@@ -48,11 +48,11 @@
   transition: background-color 0.5s, transform 0.5s ease-out;
   transition: background-color 0.5s, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
-.icon-10 {
+.icon-17 {
   color: #cd5fa1;
   fill: #cd5fa1;
 }
-.icon-10:hover {
+.icon-17:hover {
   /* background: #cd5fa1; */
 }
 .icon-13 {

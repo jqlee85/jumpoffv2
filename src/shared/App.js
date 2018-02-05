@@ -6,6 +6,7 @@ import {PropsRoute} from 'react-router-with-props';
 import {connect} from 'react-redux';
 import {requestUserLogin} from './actions/userActions';
 import {userLogout} from './actions/userActions';
+import {fetchBlogPost} from './actions/blogActions';
 import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -61,6 +62,8 @@ class App extends Component {
           path={route.path} 
           component={route.component} 
           user={this.props.user}
+          blog={this.props.blog}
+          fetchBlogPost={this.props.fetchBlogPost}
         />)}
       </div>
       <Footer />
@@ -73,18 +76,16 @@ class App extends Component {
 const mapStateToProps = (state) => {
   
   return {
-    prompt: state.prompt,
+    blog: state.blog,
     app: state.app,
     user: state.user
   }
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchImagePrompt: () => {
-      dispatch(fetchImagePrompt());
-    },
-    fetchTextPrompt: () => {
-      dispatch(fetchTextPrompt());
+    fetchBlogPost: () => {
+      console.log('fetchBlogPost() called in App.js');
+      dispatch(fetchBlogPost());
     },
     requestUserLogin: (userName,password) => {
       dispatch(requestUserLogin(userName,password));
