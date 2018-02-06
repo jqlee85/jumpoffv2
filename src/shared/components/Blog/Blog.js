@@ -25,6 +25,7 @@ class Blog extends Component {
     } else if ( received ) {
       posts = this.props.blog.data;
     }
+    let match = this.props.match;
 
     return <div className="blog jo-section">
       <div className="jo-row">
@@ -32,7 +33,7 @@ class Blog extends Component {
           { ! received && <h1 class="jo-blog-loading">...Loading</h1> }
           { received &&
             posts.map(function(post, index){
-              return <Post post={post} />;
+              return <Post post={post} single={single} match={match}/>;
             })
           }
         </div>
