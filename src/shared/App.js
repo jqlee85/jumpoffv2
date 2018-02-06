@@ -84,8 +84,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchBlogPost: (id) => {
-      console.log('fetchBlogPost() called in App.js');
-      console.log(id);
       dispatch(fetchBlogPost(id));
     },
     requestUserLogin: (userName,password) => {
@@ -96,9 +94,4 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 }
-// const mergeProps = (stateProps, dispatchProps) => {
-//   console.log('====');
-//   console.log(stateProps.blogPostRequest);
-//   submit: () => dispatchProps.actions.submit(stateProps.blogPostRequest)
-// }
 export default connect(mapStateToProps,mapDispatchToProps,/*mergeProps*/)(App);

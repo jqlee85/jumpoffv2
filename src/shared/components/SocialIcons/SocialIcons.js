@@ -16,4 +16,4 @@ class SocialIcons extends Component {
 
 }
 
-export default SocialIcons
+export default SocialIcons;

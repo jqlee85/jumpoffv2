@@ -1,18 +1,13 @@
 import React, {Component} from 'react';
 import styles from './Blog.css';
 import Post from '../Post/Post';
+import LoadingRectangles from '../LoadingRectangles/LoadingRectangles';
 
 class Blog extends Component {
   
   componentDidMount(){
-    
-    console.log("THE POST ID FROM URL");
     this.props.blog.postId = this.props.match.params.post_id;
-    console.log(this.props.match.params);
-    console.log('PROPS');
-    console.log(this.props);
     this.props.fetchBlogPost(this.props.blog.postId);
-
   }
   
   render(){
@@ -30,7 +25,7 @@ class Blog extends Component {
     return <div className="blog jo-section">
       <div className="jo-row">
         <div className="jo-content">
-          { ! received && <h1 class="jo-blog-loading">...Loading</h1> }
+          { ! received && <LoadingRectangles /> }
           { received &&
             posts.map(function(post, index){
               return <Post post={post} single={single} match={match}/>;

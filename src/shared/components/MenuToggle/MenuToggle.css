@@ -3,7 +3,7 @@ a#nav-icon {
   border: none;
   outline: none;
 }
-a#nav-icon {color:#FF0000;}      /* unvisited link */
+a#nav-icon {color:#000;}      /* unvisited link */
 a#nav-icon:visited {color:#000;}  /* visited link */
 a#nav-icon, a#nav-icon:hover, a#nav-icon:active, a#nav-icon:focus {
   border: none;

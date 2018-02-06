@@ -1,7 +1,7 @@
 article.jo-post {
   display: block;
   position: relative;
-  margin: 150px auto;
+  margin: 100px auto;
 }
 article.jo-post img {
   box-sizing: border-box;
@@ -60,18 +60,12 @@ article.jo-post img {
   line-height: 130%;
   color: rgba(255,255,255,.9);
 }
-
-
-.jo-post a:hover, .jo-post a:active {
-  
-}
 .jo-post a:hover, .jo-post a:active, .jo-post a:focus {
   -webkit-animation: black-rainbow 6s infinite;
   -ms-animation: black-rainbow 6s infinite;
   -o-animation: black-rainbow 6s infinite;
   animation: black-rainbow 6s infinite;
 }
-
 
 /* Media Queries */
 @media screen and ( min-width: 1201px ) { 

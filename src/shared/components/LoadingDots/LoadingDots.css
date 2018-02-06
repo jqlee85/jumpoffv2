@@ -6,21 +6,25 @@
   text-align: center;
   -webkit-animation: jo-chasingDotsRotate 2s infinite linear;
           animation: jo-chasingDotsRotate 2s infinite linear; }
-  .jo-chasing-dots .jo-child {
-    width: 60%;
-    height: 60%;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    background-color: #3ae0b1;
-    border-radius: 100%;
-    -webkit-animation: jo-chasingDotsBounce 2s infinite ease-in-out;
-            animation: jo-chasingDotsBounce 2s infinite ease-in-out; }
-  .jo-chasing-dots .jo-dot-2 {
-    top: auto;
-    bottom: 0;
-    -webkit-animation-delay: -1s;
-            animation-delay: -1s; }
+.jo-chasing-dots .jo-child {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  -webkit-animation: jo-chasingDotsBounce 2s, bg-rainbow 6s infinite;
+  -ms-animation: jo-chasingDotsBounce 2s, bg-rainbow 6s infinite;
+  -o-animation: jo-chasingDotsBounce 2s, bg-rainbow 6s infinite;
+  animation: jo-chasingDotsBounce 2s, bg-rainbow 6s infinite;
+  border-radius: 100%;
+}
+.jo-chasing-dots .jo-dot-2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s; 
+}
 
 @-webkit-keyframes jo-chasingDotsRotate {
   100% {
