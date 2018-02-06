@@ -2,7 +2,9 @@
 
 const blogPostState = {
   postData: false,
-  status: false
+  status: false,
+  requestData: false,
+  postID: false
 }
 
 const blogReducer = ( state = blogPostState, action) => {

@@ -102,14 +102,17 @@ button:active {
   min-height: 100vh;
 }
 .jo-row {
+  position: relative;
   display: flex;
   flex-direction: row;
   width: 100%;
   clear: both;
-  
 }
 .jo-content {
-  max-width: 900px;
+  postion: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
   margin: auto;
   padding: 20px;
 }
@@ -143,6 +146,44 @@ button:active {
   font-family: "Apercu";
   src: url("/fonts/apercu-light-webfont.woff") format('woff');
   font-weight: lighter;
+}
+
+/* Rainbow Hover */
+@-webkit-keyframes black-rainbow {
+  0% {color: #000000;}
+  10% {color: #f35b5b;}
+  30% {color: #f09f4e;}
+  50% {color: #fafa79;}
+  70% {color: #43e295;}
+  90% {color: #7b8ef8;}
+  100% {color: #000000;}
+}
+@-ms-keyframes black-rainbow {
+  0% {color: #000000;}
+  10% {color: #f35b5b;}
+  30% {color: #f09f4e;}
+  50% {color: #fafa79;}
+  70% {color: #43e295;}
+  90% {color: #7b8ef8;}
+  100% {color: #000000;}
+}
+@-o-keyframes black-rainbow {
+  0% {color: #000000;}
+  10% {color: #f35b5b;}
+  30% {color: #f09f4e;}
+  50% {color: #fafa79;}
+  70% {color: #43e295;}
+  90% {color: #7b8ef8;}
+  100% {color: #000000;}
+}
+@keyframes black-rainbow {
+  0% {color: #000000;}
+  10% {color: #f35b5b;}
+  30% {color: #f09f4e;}
+  50% {color: #fafa79;}
+  70% {color: #43e295;}
+  90% {color: #7b8ef8;}
+  100% {color: #000000;}
 }
 
 /* Media Queries */

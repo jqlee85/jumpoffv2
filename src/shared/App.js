@@ -83,9 +83,10 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchBlogPost: () => {
+    fetchBlogPost: (id) => {
       console.log('fetchBlogPost() called in App.js');
-      dispatch(fetchBlogPost());
+      console.log(id);
+      dispatch(fetchBlogPost(id));
     },
     requestUserLogin: (userName,password) => {
       dispatch(requestUserLogin(userName,password));
@@ -95,4 +96,9 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 }
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+// const mergeProps = (stateProps, dispatchProps) => {
+//   console.log('====');
+//   console.log(stateProps.blogPostRequest);
+//   submit: () => dispatchProps.actions.submit(stateProps.blogPostRequest)
+// }
+export default connect(mapStateToProps,mapDispatchToProps,/*mergeProps*/)(App);

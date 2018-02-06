@@ -1,11 +1,15 @@
 import "isomorphic-fetch";
 
+const blogAPIUrl = 'https://api.jumpoff.io/wp-json/wp/v2/';
+
 /* Actions */
 
-export function fetchBlogPostRequest(){
+export const fetchBlogPostRequest = id => {
   console.log('fetchBlogPostRequest() dispatched');
+  console.log('id');console.log(id);
   return {
-    type: 'FETCH_BLOG_POST_REQUEST'
+    type: 'FETCH_BLOG_POST_REQUEST',
+    id
   }
 }
 
@@ -24,10 +28,18 @@ export function fetchBlogPostError(err){
   }
 }
 
-export const fetchBlogPost = () => (dispatch, getState) => {
+export const fetchBlogPost = (id) => (dispatch, getState) => {
   console.log('fetchBlogPost');
-  dispatch(fetchBlogPostRequest());
-  return fetch("https://api.jumpwriter.com/wp-json/wp/v2/posts/1")
+  
+  if (!id) {
+    id = '';
+  }
+  
+
+  let apiEndpoint = blogAPIUrl + 'posts/' + id;
+
+  dispatch(fetchBlogPostRequest(id));
+  return fetch( apiEndpoint )
     .then(response => response.json())
     .then(postData => dispatch(fetchBlogPostSuccess(postData)))
     .catch(err => dispatch(fetchBlogPostError(err)));

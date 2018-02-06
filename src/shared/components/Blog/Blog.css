@@ -1,0 +1,16 @@
+.jo-blog-loading {
+  font-size: 5em;
+}
+
+.jo-blog-loading, .jo-blog-loading, .jo-blog-loading {
+  -webkit-animation: black-rainbow 6s infinite;
+  -ms-animation: black-rainbow 6s infinite;
+  -o-animation: black-rainbow 6s infinite;
+  animation: black-rainbow 6s infinite;
+}
+
+@media screen and (max-width: 600px) {
+  .jo-blog-loading {
+    font-size: 2.5em;
+  }
+}

@@ -1,51 +1,105 @@
-/* Prompts */
-.prompt {
+article.jo-post {
+  display: block;
+  position: relative;
+  margin: 150px auto;
+}
+article.jo-post img {
+  box-sizing: border-box;
   max-width: 100%;
-  margin: 0px auto 0px;
+  padding: 4px;
 }
-.prompt-types {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  min-width: 200px;
+.jo-post h1.jo-post-title {
+  margin-left: -20px;
+  margin-bottom: 0px;
+  font-size: 4.5em;
+  text-transform: uppercase;
 }
-.prompt-type-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #333;
-  border-color: rgba(0,0,0,.7);
-  border-radius: 31px;
-  width: 60px;
-  height: 60px;
-  padding: 0;
-  margin: .5em;
-  cursor: pointer;
-  -webkit-transition: border-color .3s ease; /* Safari */
-  transition: border-color .3s ease;
+.jo-post h1, .jo-post h2, .jo-post h3, .jo-post h4, .jo-post h5, .jo-post h6, .jo-post p {
+  text-align: left;
 }
-.prompt-type-button:hover {
-  background: rgba(32,32,32,1);
-  border-color: rgb(32,32,32);
+.jo-post a {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
 }
-.prompt-type-button:hover span {
-  color: #fafafa;
+.jo-post h1 {
+  font-size: 3em;
+  margin-top: .9em;
+  margin-bottom: .5em;
 }
-.prompt-type-button span {
+.jo-post h2 {
+  font-size: 2.6em;
+  margin-top: .7em;
+  margin-bottom: .3em;
+}
+.jo-post h3 {
+  font-size: 2.2em;
+  margin-top: .6em;
+  margin-bottom: .2em;
+}
+.jo-post h4 {
+  font-size: 2em;
+  margin-top: .5em;
+  margin-bottom: .1em;
+}
+.jo-post-content-wrapper p {
+  margin-top: 10px;
+  font-size: 1.4em;
+  line-height: 140%;
+}
+.jo-post-content-wrapper .snippetcpt-wrap {
   display: block;
-  font-size: 18px;
-  font-weight: lighter;
-  -webkit-transition: color .3s ease; /* Safari */
-  transition: color .3s ease;
-  margin: auto;
-}
-.prompt-type-button svg {
-  display: block;
-  margin: auto;
-}
-.prompt-image-button:hover svg path {
-  fill: #fafafa;
+  margin: 2em auto;
+  padding: 25px;
+  overflow-x: scroll;
+  text-align: left;
+  border: 1px solid rgb(8, 8, 8);
+  border-radius: 4px;
+  background: rgb(34, 34, 34);
+  font-family: "Courier New", Courier, monospace;
+  line-height: 130%;
+  color: rgba(255,255,255,.9);
 }
 
+
+.jo-post a:hover, .jo-post a:active {
+  
+}
+.jo-post a:hover, .jo-post a:active, .jo-post a:focus {
+  -webkit-animation: black-rainbow 6s infinite;
+  -ms-animation: black-rainbow 6s infinite;
+  -o-animation: black-rainbow 6s infinite;
+  animation: black-rainbow 6s infinite;
+}
+
+
+/* Media Queries */
+@media screen and ( min-width: 1201px ) { 
+}
+@media screen and ( max-width: 1200px ) {
+  
+}
+@media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
+}
+@media screen and ( max-width: 800px ) {
+}
+@media screen and ( min-width: 601px ) and ( max-width: 800px ) {
+  .jo-post h1.jo-post-title {
+    margin-left: -10px;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+  }
+  .jo-post-content-wrapper p {
+    font-size: 1.2em;
+  }
+}
+@media screen and ( max-width: 600px ) {
+  .jo-post h1.jo-post-title {
+    font-size: 3em;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+  .jo-post-content-wrapper p {
+    font-size: 1em;
+  }
+}

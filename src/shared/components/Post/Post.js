@@ -5,18 +5,16 @@ import styles from './Post.css';
 class Post extends Component {
 
   render(){
-    console.log(this.props);
-    return <div className="jo-post">
+    
+    let id = this.props.post.id;
+    let postID = 'jo-post-id_' + id;
+    let title = this.props.post.title.rendered;
+    let content = this.props.post.content.rendered;
 
-      { this.props.blog.status == 'received' && this.props.blog.data &&
-        <article className="jo-post-wrapper">
-          <h1 className="jo-post-title">{this.props.blog.data.title.rendered}</h1>
-         
-            <div className="jo-post-content-wrapper" dangerouslySetInnerHTML={{ __html: this.props.blog.data.content.rendered }} />
-            
-        </article>
-      } 
-    </div>
+    return <article div id={postID} data-post-id={id} className="jo-post">
+      <h1 className="jo-post-title">{title}</h1>
+      <div className="jo-post-content-wrapper" dangerouslySetInnerHTML={{ __html: content }} />
+    </article>
   }
 }
 

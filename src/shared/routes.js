@@ -16,7 +16,13 @@ const routes = [
     component: About
   },
   {
+    path: "/blog/:post_id",
+    props: {},
+    component: Blog
+  },
+  {
     path: "/blog",
+    exact: true,
     props: {},
     component: Blog
   },
