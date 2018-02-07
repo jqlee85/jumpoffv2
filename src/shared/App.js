@@ -83,8 +83,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchBlogPost: (id) => {
-      dispatch(fetchBlogPost(id));
+    fetchBlogPost: (slug) => {
+      dispatch(fetchBlogPost(slug));
     },
     requestUserLogin: (userName,password) => {
       dispatch(requestUserLogin(userName,password));
@@ -94,4 +94,4 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 }
-export default connect(mapStateToProps,mapDispatchToProps,/*mergeProps*/)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);

@@ -16,7 +16,7 @@ const routes = [
     component: About
   },
   {
-    path: "/blog/:post_id",
+    path: "/blog/:post_slug",
     props: {},
     component: Blog
   },

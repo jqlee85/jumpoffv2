@@ -4,11 +4,11 @@ const blogAPIUrl = 'https://api.jumpoff.io/wp-json/wp/v2/';
 
 /* Actions */
 
-export const fetchBlogPostRequest = id => {
+export const fetchBlogPostRequest = slug => {
   console.log('fetchBlogPostRequest() dispatched');
   return {
     type: 'FETCH_BLOG_POST_REQUEST',
-    id
+    slug
   }
 }
 
@@ -27,11 +27,10 @@ export function fetchBlogPostError(err){
   }
 }
 
-export const fetchBlogPost = (id) => (dispatch, getState) => {
-  console.log('fetchBlogPost');
-  if (!id) { id = ''; }
-  let apiEndpoint = blogAPIUrl + 'posts/' + id;
-  dispatch(fetchBlogPostRequest(id));
+export const fetchBlogPost = (slug) => (dispatch, getState) => {
+  slug = slug ? '?slug=' + slug : '';
+  let apiEndpoint = blogAPIUrl + 'posts' + slug;
+  dispatch(fetchBlogPostRequest(slug));
   return fetch( apiEndpoint )
     .then(response => response.json())
     .then(postData => dispatch(fetchBlogPostSuccess(postData)))

@@ -6,8 +6,8 @@ import LoadingRectangles from '../LoadingRectangles/LoadingRectangles';
 class Blog extends Component {
   
   componentDidMount(){
-    this.props.blog.postId = this.props.match.params.post_id;
-    this.props.fetchBlogPost(this.props.blog.postId);
+    this.props.blog.postSlug = this.props.match.params.post_slug;
+    this.props.fetchBlogPost(this.props.blog.postSlug);
   }
   
   render(){
@@ -16,7 +16,7 @@ class Blog extends Component {
     let single = ( this.props.blog.data && this.props.blog.data[1] ) ? false : true;
     let posts = new Array();
     if ( received && single ) {
-      posts.push(this.props.blog.data);
+      posts.push(this.props.blog.data[0]);
     } else if ( received ) {
       posts = this.props.blog.data;
     }
