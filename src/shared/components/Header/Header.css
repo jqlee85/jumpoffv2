@@ -8,8 +8,8 @@
   padding: 10px;
   z-index: 75;
   background-color: #000;
-  -webkit-transition: background-color .5s ease; /* Safari */
-  transition: background-color .5s ease;
+  -webkit-transition: background-color 1s ease; /* Safari */
+  transition: background-color 1s ease;
 }
 .app-menu-clear #header  {
   background: none;

@@ -258,7 +258,6 @@ article.jo-post img {
   padding: 4px;
 }
 .jo-post h1.jo-post-title {
-  margin-left: -20px;
   margin-bottom: 0px;
   font-size: 4.5em;
   text-transform: uppercase;
@@ -326,7 +325,6 @@ article.jo-post img {
 }
 @media screen and ( min-width: 601px ) and ( max-width: 800px ) {
   .jo-post h1.jo-post-title {
-    margin-left: -10px;
     font-size: 3.5em;
     margin-bottom: 20px;
   }
@@ -337,7 +335,6 @@ article.jo-post img {
 @media screen and ( max-width: 600px ) {
   .jo-post h1.jo-post-title {
     font-size: 3em;
-    margin-left: 0px;
     margin-bottom: 10px;
   }
   .jo-post-content-wrapper p {
@@ -622,8 +619,8 @@ article.jo-post img {
   padding: 10px;
   z-index: 75;
   background-color: #000;
-  -webkit-transition: background-color .5s ease; /* Safari */
-  transition: background-color .5s ease;
+  -webkit-transition: background-color 1s ease; /* Safari */
+  transition: background-color 1s ease;
 }
 .app-menu-clear #header  {
   background: none;

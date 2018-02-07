@@ -23,7 +23,6 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.initializeMenuBar();
     window.addEventListener('scroll', this.handleScroll);
   }
   
@@ -42,11 +41,10 @@ class App extends Component {
       let yPos = document.documentElement.scrollTop;
       if ( yPos >= 60 && !isClear ) {
         document.getElementById('App').classList.remove(clearClass);
-        
       } else if ( yPos < 60 && isClear ) {
         document.getElementById('App').classList.add(clearClass);
       } 
-    },1000);
+    },500);
   }
 
   handleScroll = (e) => {
@@ -54,7 +52,7 @@ class App extends Component {
     let yPos = e.currentTarget.pageYOffset;
     if ( yPos >= 60 && isClear ) {
       e.target.getElementById('App').classList.remove(this.state.clearClass);
-    } else if ( yPos < 60 && !isClear ) {
+    } else if ( yPos < 60 && !isClear && document.getElementById('home') ) {
       e.target.getElementById('App').classList.add(this.state.clearClass);
     }
   }
