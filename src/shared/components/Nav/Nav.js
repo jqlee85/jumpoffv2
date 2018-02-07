@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import styles from './Nav.css';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {toggleNav} from '../../actions/appActions';
 
 
 class Nav extends Component {
@@ -25,19 +24,5 @@ class Nav extends Component {
 
 }
 
-// Application State
-const mapStateToProps = (state) => {
-  return {
-    app: state.app
-  }
-}
-const mapDispatchToProps = (dispatch) => {
-  return {
-    toggleNav: () => {
-      dispatch(toggleNav());
-    }
-  }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(Nav);
+export default Nav;
 

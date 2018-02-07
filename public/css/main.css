@@ -545,8 +545,8 @@ article.jo-post img {
   padding: 80px 20px 60px;
   background: #000;
   color: #fff;
-  -webkit-transition: top .2s ease-in, bottom .2s ease-in; /* Safari */
-  transition: top .2s ease-in, bottom .2s ease-in;
+  -webkit-transition: top .3s ease-in, bottom .3s ease-in; /* Safari */
+  transition: top .3s ease-in, bottom .3s ease-in;
   overflow: hidden;
   z-index: 50;
 }
@@ -616,17 +616,17 @@ article.jo-post img {
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: none;
   position: fixed;
   width: 100%;
   height: 55px;
   padding: 10px;
   z-index: 75;
+  background-color: #000;
   -webkit-transition: background-color .5s ease; /* Safari */
   transition: background-color .5s ease;
 }
-.app-menu-sticky #header {
-  background-color: #000;
+.app-menu-clear #header  {
+  background: none;
 }
 #header a.site-title {
   display: block;
@@ -647,7 +647,7 @@ article.jo-post img {
   -webkit-transition: color .3s ease; /* Safari */
   transition: color .3s ease;
 }
-.app-menu-toggled #header a.site-title, .app-menu-sticky #header a.site-title {
+.app-menu-toggled #header a.site-title, #header a.site-title {
   -webkit-transition: opacity 1s ease; /* Safari */
   transition: opacity 1s ease; 
   opacity: 1;
@@ -656,8 +656,11 @@ article.jo-post img {
   margin-top: 6px;
   margin-left: 12px;
 }
-.app-menu-toggled #header a.site-title h1, .app-menu-sticky #header a.site-title h1 {
-  height: auto;
+.app-menu-toggled.app-menu-clear #header a.site-title {
+  display: inline;
+}
+.app-menu-clear #header a.site-title {
+  display: none;
 }
 
 
@@ -666,8 +669,8 @@ a#nav-icon {
   border: none;
   outline: none;
 }
-a#nav-icon {color:#000;}      /* unvisited link */
-a#nav-icon:visited {color:#000;}  /* visited link */
+a#nav-icon {color:#fff;}      /* unvisited link */
+a#nav-icon:visited {color:#fff;}  /* visited link */
 a#nav-icon, a#nav-icon:hover, a#nav-icon:active, a#nav-icon:focus {
   border: none;
   color: none;
@@ -739,11 +742,14 @@ a#nav-icon:hover p, a#nav-icon:focus p, .app-menu-toggled a#nav-icon p {
   -webkit-transition: color .5s ease-in-out;
   transition: color .5s ease-in-out;
 }
-#nav-icon.toggled span, .app-menu-sticky #nav-icon span {
+#nav-icon span {
   background: #fff;
 }
-.app-menu-sticky #nav-icon p {
-  color: #fff;
+.app-menu-clear #nav-icon span {
+  background: #000;
+}
+.app-menu-clear #nav-icon p {
+  color: #000;
 }
 #nav-icon span {
   display: block;
@@ -751,7 +757,7 @@ a#nav-icon:hover p, a#nav-icon:focus p, .app-menu-toggled a#nav-icon p {
   height: 2px;
   width: 20px;
   border-radius: 2px;
-  background: #000;
+  background: #fff;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
