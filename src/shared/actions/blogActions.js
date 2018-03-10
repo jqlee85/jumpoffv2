@@ -28,7 +28,7 @@ export function fetchBlogPostError(err){
 }
 
 export const fetchBlogPost = (slug) => (dispatch, getState) => {
-  slug = slug ? '?slug=' + slug : '';
+  slug = slug ? '?slug=' + slug : '?per_page=3';
   let apiEndpoint = blogAPIUrl + 'posts' + slug;
   dispatch(fetchBlogPostRequest(slug));
   return fetch( apiEndpoint )

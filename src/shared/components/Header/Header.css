@@ -11,9 +11,13 @@
   -webkit-transition: background-color 1s ease; /* Safari */
   transition: background-color 1s ease;
 }
+#App.app-menu-toggled #header {
+  background-color: #000;
+}
 .app-menu-clear #header  {
   background: none;
 }
+
 #header a.site-title {
   display: block;
   position: relative;

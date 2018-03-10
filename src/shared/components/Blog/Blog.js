@@ -5,7 +5,7 @@ import LoadingRectangles from '../LoadingRectangles/LoadingRectangles';
 
 class Blog extends Component {
   
-  componentDidMount(){
+  componentWillMount(){
     this.props.blog.postSlug = this.props.match.params.post_slug;
     this.props.fetchBlogPost(this.props.blog.postSlug);
   }

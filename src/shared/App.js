@@ -12,6 +12,9 @@ import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
+import configureStore from "../shared/configureStore";
+import {persistStore, autoRehydrate} from 'redux-persist'
+const store = configureStore();
 
 class App extends Component {
 
@@ -20,6 +23,13 @@ class App extends Component {
       this.state = {
         clearClass: 'app-menu-clear'
       }
+  }
+
+  componentWillMount(){
+    console.log(store);
+    persistStore(store, {}, () => {
+      this.setState({rehydrated: true})
+    })
   }
 
   componentDidMount(){
@@ -58,8 +68,17 @@ class App extends Component {
   }
 
   toggleAppNav = () => {
+    console.log('toggleAppNav in app.js called');
     this.initializeMenuBar();
     this.props.toggleNav();
+  }
+
+  toggleAppNavRoute = () => {
+    this.props.fadeText();
+    setTimeout(() => {
+      console.log('ding');
+      this.props.toggleNav();
+    }, 300);
   }
 
   render(){
@@ -73,6 +92,7 @@ class App extends Component {
         userData={this.props.user} 
         userLogout={this.props.userLogout}
         toggleNav={this.toggleAppNav}
+        toggleAppNavRoute={this.toggleAppNavRoute}
       />
       <Header 
         menuToggled={this.props.app.menuToggled} 
@@ -107,8 +127,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    toggleNav: () => {
-      dispatch(toggleNav());
+    toggleNav: (data) => {
+      dispatch(toggleNav(data));
     },
     fetchBlogPost: (slug) => {
       dispatch(fetchBlogPost(slug));
@@ -118,7 +138,10 @@ const mapDispatchToProps = (dispatch) => {
     },
     userLogout: (userName,password) => {
       dispatch(userLogout(userName,password));
-    }
+    },
+    // updateCurrentLocation: (location) => {
+    //   dispatch(routeLocationDidUpdate(location));
+    // }
   }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(App);

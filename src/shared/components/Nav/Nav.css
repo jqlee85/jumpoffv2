@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: flex-end;
   box-sizing: border-box;
+  top: -100%;
   top: -100vh;
   left: 0;
   z-index: 10;
@@ -14,13 +15,14 @@
   padding: 80px 20px 60px;
   background: #000;
   color: #fff;
-  -webkit-transition: top .3s ease-in, bottom .3s ease-in; /* Safari */
-  transition: top .3s ease-in, bottom .3s ease-in;
+  -webkit-transition: top .5s ease-in; /* Safari */
+  transition: top .5s ease-in;
   overflow: hidden;
   z-index: 50;
 }
 #main-nav.toggled {
-  top: 0;
+  top: 0px;
+  opacity: 1;
   height: 100%;
   height: 100vh;
   max-height: 100vh;
@@ -34,8 +36,8 @@
   text-align: center;
   margin:auto;
   padding: 0;
-  -webkit-transition: opacity .6s ease-in; /* Safari */
-  transition: opacity .6s ease-in;
+  -webkit-transition: opacity .3s ease-in; /* Safari */
+  transition: opacity .3s ease-in;
 }
 .main-nav ul li {
   font-size: 3em;

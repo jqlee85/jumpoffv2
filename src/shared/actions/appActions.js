@@ -1,4 +1,4 @@
-export function toggleNav(err){
+export function toggleNav(){
   return { 
     type: 'TOGGLE_NAV'
   }
