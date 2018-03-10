@@ -8,28 +8,18 @@ import {requestUserLogin} from './actions/userActions';
 import {userLogout} from './actions/userActions';
 import {fetchBlogPost} from './actions/blogActions';
 import {toggleNav} from './actions/appActions';
+import {toggleNavFade} from './actions/appActions';
 import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-
-import configureStore from "../shared/configureStore";
-import {persistStore, autoRehydrate} from 'redux-persist'
-const store = configureStore();
 
 class App extends Component {
 
   constructor(props) {
       super(props);
       this.state = {
-        clearClass: 'app-menu-clear'
+        darkClass: 'app-menu-dark'
       }
-  }
-
-  componentWillMount(){
-    console.log(store);
-    persistStore(store, {}, () => {
-      this.setState({rehydrated: true})
-    })
   }
 
   componentDidMount(){
@@ -41,50 +31,56 @@ class App extends Component {
   }
 
   initializeMenuBar(){
-    let clearClass = this.state.clearClass;
-    let isClear = document.getElementById('App').classList.contains(clearClass);
-    if ( !isClear ) {
-      document.getElementById('App').classList.add(clearClass);
-      isClear = true;
+    let darkClass = this.state.darkClass;
+    let isDark = document.getElementById('App').classList.contains(darkClass);
+    if ( !isDark ) {
+      document.getElementById('App').classList.add(darkClass);
+      isDark = true;
     }
     setTimeout(function(){
       let yPos = document.documentElement.scrollTop;
-      if ( yPos >= 60 && !isClear ) {
-        document.getElementById('App').classList.remove(clearClass);
-      } else if ( yPos < 60 && isClear ) {
-        document.getElementById('App').classList.add(clearClass);
+      if ( yPos >= 60 && !isDark ) {
+        document.getElementById('App').classList.add(darkClass);
+      } else if ( yPos < 60 && isDark ) {
+        document.getElementById('App').classList.remove(darkClass);
       } 
     },500);
   }
 
   handleScroll = (e) => {
-    let isClear = e.target.getElementById('App').classList.contains(this.state.clearClass);
+    let isDark = e.target.getElementById('App').classList.contains(this.state.darkClass);
     let yPos = e.currentTarget.pageYOffset;
-    if ( yPos >= 60 && isClear ) {
-      e.target.getElementById('App').classList.remove(this.state.clearClass);
-    } else if ( yPos < 60 && !isClear && document.getElementById('home') ) {
-      e.target.getElementById('App').classList.add(this.state.clearClass);
+    if ( yPos >= 60 && !isDark ) {
+      console.log('greater than 60 and isdark');
+      e.target.getElementById('App').classList.add(this.state.darkClass);
+    } else if ( yPos < 60 && isDark && document.getElementById('home') ) {
+      e.target.getElementById('App').classList.remove(this.state.darkClass);
     }
   }
 
+  toggleNavFade = () => {
+    this.props.toggleNavFade();
+  }
+
   toggleAppNav = () => {
-    console.log('toggleAppNav in app.js called');
+    this.props.toggleNavFade();
     this.initializeMenuBar();
     this.props.toggleNav();
   }
 
   toggleAppNavRoute = () => {
-    this.props.fadeText();
+    this.initializeMenuBar();
+    this.props.toggleNavFade();
     setTimeout(() => {
-      console.log('ding');
       this.props.toggleNav();
-    }, 300);
+    }, 500);
   }
 
   render(){
     
     let appClasses = 'App';
     if (this.props.app.menuToggled) appClasses += ' app-menu-toggled';
+    if (this.props.app.navFadeToggled) appClasses += ' nav-fade';
     return <div id="App" className={appClasses}>
       <Nav 
         menuToggled={this.props.app.menuToggled} 
@@ -98,7 +94,7 @@ class App extends Component {
         menuToggled={this.props.app.menuToggled} 
         userLogin={this.props.requestUserLogin} 
         userData={this.props.user}
-        toggleNav={this.toggleAppNav}
+        toggleNav={this.toggleAppNavRoute}
       />
       <div className="main">
         {routes.map((route, i) => <PropsRoute 
@@ -130,6 +126,9 @@ const mapDispatchToProps = (dispatch) => {
     toggleNav: (data) => {
       dispatch(toggleNav(data));
     },
+    toggleNavFade: (data) => {
+      dispatch(toggleNavFade(data));
+    },
     fetchBlogPost: (slug) => {
       dispatch(fetchBlogPost(slug));
     },
@@ -138,10 +137,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     userLogout: (userName,password) => {
       dispatch(userLogout(userName,password));
-    },
-    // updateCurrentLocation: (location) => {
-    //   dispatch(routeLocationDidUpdate(location));
-    // }
+    }
   }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(App);

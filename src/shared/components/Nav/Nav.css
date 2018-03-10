@@ -15,8 +15,8 @@
   padding: 80px 20px 60px;
   background: #000;
   color: #fff;
-  -webkit-transition: top .5s ease-in; /* Safari */
-  transition: top .5s ease-in;
+  -webkit-transition: top .4s ease-in-out; /* Safari */
+  transition: top .4s ease-in-out;
   overflow: hidden;
   z-index: 50;
 }
@@ -27,7 +27,7 @@
   height: 100vh;
   max-height: 100vh;
 }
-#main-nav.toggled ul {
+.nav-fade #main-nav ul {
   opacity: 1;
 }
 #main-nav ul {

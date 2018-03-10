@@ -7,19 +7,18 @@
   height: 55px;
   padding: 10px;
   z-index: 75;
-  background-color: #000;
+  background-color: none;
   -webkit-transition: background-color 1s ease; /* Safari */
   transition: background-color 1s ease;
 }
 #App.app-menu-toggled #header {
-  background-color: #000;
-}
-.app-menu-clear #header  {
   background: none;
 }
-
+#App.app-menu-dark #header  {
+  background: #000;
+}
 #header a.site-title {
-  display: block;
+  display: none;
   position: relative;
   height: 0;
   margin:0;
@@ -46,11 +45,9 @@
   margin-top: 6px;
   margin-left: 12px;
 }
-.app-menu-toggled.app-menu-clear #header a.site-title {
+.app-menu-toggled #header a.site-title {
   display: inline;
 }
-.app-menu-clear #header a.site-title {
-  display: none;
-}
+
 
 

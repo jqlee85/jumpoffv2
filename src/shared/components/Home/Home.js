@@ -8,7 +8,7 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      clearClass: 'app-menu-clear'
+      clearClass: 'app-menu-dark'
     }
   }
 

@@ -3,8 +3,8 @@ a#nav-icon {
   border: none;
   outline: none;
 }
-a#nav-icon {color:#fff;}      /* unvisited link */
-a#nav-icon:visited {color:#fff;}  /* visited link */
+a#nav-icon {color:#000;}      /* unvisited link */
+a#nav-icon:visited {color:#000;}  /* visited link */
 a#nav-icon, a#nav-icon:hover, a#nav-icon:active, a#nav-icon:focus {
   border: none;
   color: none;
@@ -122,14 +122,11 @@ a#nav-icon:hover p, a#nav-icon:focus p, .app-menu-toggled a#nav-icon p {
   -o-transition: color .5s ease-in-out;
   transition: color .5s ease-in-out;
 }
-#nav-icon span {
+.app-menu-dark #nav-icon span {
   background: #fff;
 }
-.app-menu-clear #nav-icon span {
-  background: #000;
-}
-.app-menu-clear #nav-icon p {
-  color: #000;
+.app-menu-dark #nav-icon p {
+  color: #fff;
 }
 #nav-icon span {
   display: block;
@@ -137,7 +134,7 @@ a#nav-icon:hover p, a#nav-icon:focus p, .app-menu-toggled a#nav-icon p {
   height: 2px;
   width: 20px;
   border-radius: 2px;
-  background: #fff;
+  background: #000;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
