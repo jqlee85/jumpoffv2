@@ -68,12 +68,17 @@ class App extends Component {
     this.initializeMenuBar();
     this.props.toggleNav();
   }
+  
+  toggleAppNavNonToggledMenu = () => {
+    this.initializeMenuBar();
+  }
 
   toggleAppNavRoute = () => {
-    this.initializeMenuBar();
     this.props.toggleNavFade();
     setTimeout(() => {
+      this.initializeMenuBar();
       this.props.toggleNav();
+      this.initializeMenuBar();
     }, 500);
   }
 
@@ -90,6 +95,7 @@ class App extends Component {
         userLogout={this.props.userLogout}
         toggleNav={this.toggleAppNav}
         toggleAppNavRoute={this.toggleAppNavRoute}
+        toggleNavNonToggledMenu={this.toggleAppNavNonToggledMenu}
       />
       <Header 
         menuToggled={this.props.app.menuToggled} 

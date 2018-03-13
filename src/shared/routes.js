@@ -3,6 +3,7 @@ import About from "./components/About/About";
 import Blog from "./components/Blog/Blog";
 import Home from "./components/Home/Home";
 import Work from "./components/Work/Work";
+import Resume from "./components/Resume/Resume";
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     props: {},
     component: Work
   },
+  {
+    path: "/resume",
+    props: {},
+    component: Resume
+  }
 ];
 
 export default routes;
