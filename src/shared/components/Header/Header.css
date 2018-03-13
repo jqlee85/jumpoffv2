@@ -48,6 +48,10 @@
 .app-menu-toggled #header a.site-title {
   display: inline;
 }
+.app-menu-dark #header a.site-title {
+  height:auto;
+  display: inline;
+}
 
 
 

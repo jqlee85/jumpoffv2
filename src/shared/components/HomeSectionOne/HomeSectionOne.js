@@ -54,7 +54,7 @@ class HomeSectionOne extends Component {
         <div className="jo-home-title-wrapper">
           <h1 className="jo-home-title">Jump<br/>Off</h1>
           <p className="jo-home-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          An interdisciplinary web development agency, focused on building quality, modern web experiences using React.js, Node and WordPress.
           </p>
         </div>
       </div>

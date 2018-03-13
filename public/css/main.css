@@ -378,7 +378,7 @@ article.jo-post img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100vh;
-  width: 60%;
+  width: 50%;
   z-index: 10;
 }
 .jo-logo-featured-wrapper {
@@ -406,7 +406,7 @@ article.jo-post img {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  width: 40%;
+  width: 50%;
   -ms-flex-line-pack: end;
       align-content: flex-end;
   -webkit-box-pack: end;
@@ -506,6 +506,9 @@ article.jo-post img {
     font-size: 20px;
   }
 }
+
+
+
 .home {
     position: relative;
     display: -webkit-box;
@@ -659,6 +662,10 @@ article.jo-post img {
   margin-left: 12px;
 }
 .app-menu-toggled #header a.site-title {
+  display: inline;
+}
+.app-menu-dark #header a.site-title {
+  height:auto;
   display: inline;
 }
 

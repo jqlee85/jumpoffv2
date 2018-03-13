@@ -33,12 +33,13 @@ class App extends Component {
   initializeMenuBar(){
     let darkClass = this.state.darkClass;
     let isDark = document.getElementById('App').classList.contains(darkClass);
-    if ( !isDark ) {
-      document.getElementById('App').classList.add(darkClass);
-      isDark = true;
-    }
+    // if ( !isDark ) {
+    //   document.getElementById('App').classList.add(darkClass);
+    //   isDark = true;
+    // }
     setTimeout(function(){
       let yPos = document.documentElement.scrollTop;
+      console.log(yPos);
       if ( yPos >= 60 && !isDark ) {
         document.getElementById('App').classList.add(darkClass);
       } else if ( yPos < 60 && isDark ) {

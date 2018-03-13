@@ -9,6 +9,13 @@ class Header extends Component {
   constructor(props){
     super(props);
     this.linkClicked = this.linkClicked.bind(this)
+    this.titleLinkClicked = this.titleLinkClicked.bind(this)
+  }
+
+  titleLinkClicked() {
+    if (this.props.app.menuToggled) {
+      this.props.toggleNav();
+    }
   }
 
   linkClicked() {
@@ -17,11 +24,20 @@ class Header extends Component {
 
   render(){
     return <header id="header">
-      <Link className="site-title" to='/' onClick={this.linkClicked}><h1>JumpOff</h1></Link>
+      <Link className="site-title" to='/' onClick={this.titleLinkClicked}><h1>JumpOff</h1></Link>
       <MenuToggle menuToggled={this.props.menuToggled} toggleNav={this.linkClicked}/>
     </header>
   }
 
 }
 
-export default Header;
+// Application State
+const mapStateToProps = (state) => {
+  return {
+    blog: state.blog,
+    app: state.app,
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps)(Header);
