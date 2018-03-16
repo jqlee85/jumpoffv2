@@ -9,6 +9,7 @@ import {userLogout} from './actions/userActions';
 import {fetchBlogPost} from './actions/blogActions';
 import {toggleNav} from './actions/appActions';
 import {toggleNavFade} from './actions/appActions';
+import {toggleMenuDark} from './actions/appActions';
 import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -31,31 +32,30 @@ class App extends Component {
   }
 
   initializeMenuBar(){
+    console.log('initialize!!!');
     let darkClass = this.state.darkClass;
-    let isDark = document.getElementById('App').classList.contains(darkClass);
-    // if ( !isDark ) {
-    //   document.getElementById('App').classList.add(darkClass);
-    //   isDark = true;
-    // }
+    // let isDark = document.getElementById('App').classList.contains(darkClass);
+    let isDark = this.props.app.menuDark;
     setTimeout(function(){
       let yPos = document.documentElement.scrollTop;
       console.log(yPos);
       if ( yPos >= 60 && !isDark ) {
-        document.getElementById('App').classList.add(darkClass);
+        this.props.toggleMenuDark();
       } else if ( yPos < 60 && isDark ) {
-        document.getElementById('App').classList.remove(darkClass);
+        this.props.toggleMenuDark();
       } 
     },500);
   }
 
   handleScroll = (e) => {
-    let isDark = e.target.getElementById('App').classList.contains(this.state.darkClass);
+    console.log('handlescroll!!!');
+    let isDark = this.props.app.menuDark;
     let yPos = e.currentTarget.pageYOffset;
     if ( yPos >= 60 && !isDark ) {
       console.log('greater than 60 and isdark');
-      e.target.getElementById('App').classList.add(this.state.darkClass);
-    } else if ( yPos < 60 && isDark && document.getElementById('home') ) {
-      e.target.getElementById('App').classList.remove(this.state.darkClass);
+      this.props.toggleMenuDark();
+    } else if ( yPos < 60 && isDark ) {
+      this.props.toggleMenuDark();
     }
   }
 
@@ -65,20 +65,13 @@ class App extends Component {
 
   toggleAppNav = () => {
     this.props.toggleNavFade();
-    this.initializeMenuBar();
     this.props.toggleNav();
-  }
-  
-  toggleAppNavNonToggledMenu = () => {
-    this.initializeMenuBar();
   }
 
   toggleAppNavRoute = () => {
     this.props.toggleNavFade();
     setTimeout(() => {
-      this.initializeMenuBar();
       this.props.toggleNav();
-      this.initializeMenuBar();
     }, 500);
   }
 
@@ -87,6 +80,7 @@ class App extends Component {
     let appClasses = 'App';
     if (this.props.app.menuToggled) appClasses += ' app-menu-toggled';
     if (this.props.app.navFadeToggled) appClasses += ' nav-fade';
+    if (this.props.app.menuDark) appClasses += ' app-menu-dark';
     return <div id="App" className={appClasses}>
       <Nav 
         menuToggled={this.props.app.menuToggled} 
@@ -95,13 +89,13 @@ class App extends Component {
         userLogout={this.props.userLogout}
         toggleNav={this.toggleAppNav}
         toggleAppNavRoute={this.toggleAppNavRoute}
-        toggleNavNonToggledMenu={this.toggleAppNavNonToggledMenu}
       />
       <Header 
         menuToggled={this.props.app.menuToggled} 
         userLogin={this.props.requestUserLogin} 
         userData={this.props.user}
         toggleNav={this.toggleAppNavRoute}
+        menuDark={this.props.app.menuDark}
       />
       <div className="main">
         {routes.map((route, i) => <PropsRoute 
@@ -135,6 +129,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     toggleNavFade: (data) => {
       dispatch(toggleNavFade(data));
+    },
+    toggleMenuDark: (data) => {
+      dispatch(toggleMenuDark(data));
     },
     fetchBlogPost: (slug) => {
       dispatch(fetchBlogPost(slug));

@@ -16,12 +16,12 @@ class MenuToggle extends Component {
   render() {
     let theClasses = 'menu-toggle';
     if (this.props.menuToggled) theClasses += ' toggled';
-    return <a href="#" className={theClasses} id="nav-icon" onClick={this.toggleNav}>
+    return <button  className={theClasses} id="nav-icon" onClick={this.toggleNav}>
       <span></span>
       <span></span>
       <span></span>
       <p>MENU</p>
-    </a>
+    </button>
   }
 }
 
