@@ -1,7 +1,7 @@
 article.jo-post {
   display: block;
   position: relative;
-  margin: 100px auto;
+  margin: 100px auto 200px;
   text-align: left;
 }
 article.jo-post img {
