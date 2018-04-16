@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import styles from './Post.css';
 
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
+
 
 class Post extends Component {
 

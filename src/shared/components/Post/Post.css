@@ -32,24 +32,27 @@ article.jo-post img {
   color: black;
 }
 .jo-post h1 {
-  font-size: 3em;
+  font-size: 3.8em;
   margin-top: .9em;
   margin-bottom: .5em;
 }
 .jo-post h2 {
-  font-size: 2.6em;
+  font-size: 3.2em;
   margin-top: .7em;
-  margin-bottom: .3em;
+  margin-bottom: .5em;
+  text-transform: uppercase;
 }
 .jo-post h3 {
   font-size: 2.2em;
   margin-top: .6em;
   margin-bottom: .2em;
+  text-transform: uppercase;
 }
 .jo-post h4 {
   font-size: 2em;
   margin-top: .5em;
   margin-bottom: .1em;
+  text-transform: uppercase;
 }
 .jo-post-content-wrapper {
   margin-top: 40px;
