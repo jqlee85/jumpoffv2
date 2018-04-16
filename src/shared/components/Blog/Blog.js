@@ -5,37 +5,48 @@ import LoadingRectangles from '../LoadingRectangles/LoadingRectangles';
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 
-class Work extends Component {
-  
-  render(){
-    return<Query
-    query={gql`
-      {
-        posts {
-          edges {
-            node {
-              id
-              title
-              date
-              content
-            }
-          }
+const LATEST_POSTS_QUERY = gql`
+  {
+    posts {
+      edges {
+        node {
+          id
+          title
+          slug
+          date
+          content
         }
       }
-    `}
-  >
-  {({ loading, error, data }) => {
-    if (loading) return <LoadingRectangles/>;
-    if (error) return <p>Error :(</p>;
-    return data.posts.edges.map(({ node }) => (
-        <Post post={node}/>
-    ));
-  }}
-  </Query>;
+    }
+  }
+  `;
+
+
+class Blog extends Component {
+
+  render(){
+    return (
+    <div className="blog jo-section">
+    <div className="jo-row">
+    <div className="jo-content">
+    <Query query={LATEST_POSTS_QUERY}>
+    {({ loading, error, data }) => {
+      if (loading) return (<LoadingRectangles/>);
+      if (error) return (<p>Error :(</p>);
+      return (
+        data.posts.edges.map(({ node }) => (
+          <Post post={node} key={`${node.id}`}/>
+        ))
+      );
+    }}  
+  </Query>
+  </div>
+  </div>
+  </div>);
   }
 }
 
-export default Work;
+export default Blog;
 
 <div className="blog jo-section">
   <div className="jo-row">
