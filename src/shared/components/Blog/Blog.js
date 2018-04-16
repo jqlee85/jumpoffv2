@@ -5,8 +5,10 @@ import LoadingRectangles from '../LoadingRectangles/LoadingRectangles';
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 
-const Work = () => (
-  <Query
+class Work extends Component {
+  
+  render(){
+    return<Query
     query={gql`
       {
         posts {
@@ -29,8 +31,9 @@ const Work = () => (
         <Post post={node}/>
     ));
   }}
-  </Query>
-);
+  </Query>;
+  }
+}
 
 export default Work;
 
