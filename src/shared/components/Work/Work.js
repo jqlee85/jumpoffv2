@@ -33,18 +33,19 @@ import gql from "graphql-tag";
 const Work = () => (
   <Query
     query={gql`
-      {
-        posts {
-          edges {
-            node {
-              id
-              title
-              date
-              content
-            }
+    {
+      posts {
+        edges {
+          node {
+            id
+            title
+            slug
+            date
+            content
           }
         }
       }
+    }
     `}
   >  
   {({ loading, error, data }) => {
