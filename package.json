@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-cache-inmemory": "^1.1.12",
+    "apollo-cache-persist": "^0.1.1",
     "babel-runtime": "^6.26.0",
     "cors": "^2.8.4",
     "express": "^4.16.2",
