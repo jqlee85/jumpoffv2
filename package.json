@@ -1,7 +1,7 @@
 {
   "name": "jumpwriter",
   "version": "1.0.0",
-  "description": "A Creative Writing Prompt App",
+  "description": "JumpOff Web Development",
   "main": "index.js",
   "scripts": {
     "start-dev": "NODE_ENV=development webpack -w & NODE_ENV=development nodemon server.js",
