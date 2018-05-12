@@ -77,9 +77,9 @@ app.get("*", (req, res, next) => {
 
 // Favicon
 // app.use(favicon(__dirname +'../../public/favicon.ico'));
+const thePort = process.env.JUMPOFF_PORT || 3002;
 
-
-app.listen(process.env.PORT || 3002, () => {
+app.listen(thePort, () => {
   var date = new Date();
-  console.log("Server started at " + date);
+  console.log( process.env.NODE_ENV + " server started at " + date + " on port: " + thePort );
 });
