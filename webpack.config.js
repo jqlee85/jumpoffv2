@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const browserConfig = {
   entry: "./src/browser/index.js",
@@ -45,6 +46,16 @@ const browserConfig = {
   plugins: [
     new ExtractTextPlugin({
       filename: "public/css/[name].css"
+    },),
+    new webpack.optimize.DedupePlugin(), //dedupe similar code 
+    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    new webpack.optimize.AggressiveMergingPlugin(),//Merge chunks 
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
     })
   ]
 };

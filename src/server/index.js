@@ -5,9 +5,6 @@ import React from "react";
 import { renderToString } from "react-dom/server";
 import { Provider } from "react-redux";
 
-// import { ApolloClient, createNetworkInterface } from 'apollo-client';
-// import { HttpLink } from 'apollo-link-http';
-// import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloProvider } from 'react-apollo';
 import client from '../shared/graphql/apolloClient'
 
@@ -22,6 +19,13 @@ const app = express();
 
 app.use(cors());
 app.use(express.static("public"));
+
+// Handle Gzips
+app.get('*.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
 
 app.get("*", (req, res, next) => {
   const store = configureStore();
