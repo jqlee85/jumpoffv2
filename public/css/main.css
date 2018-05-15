@@ -577,39 +577,33 @@ article.jo-post img {
           justify-content: flex-end;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  top: -100%;
-  top: -100vh;
   left: 0;
   z-index: 10;
-  height: 0px;
-  max-height: 0px;
-  width: 100%;
-  padding: 80px 20px 60px;
-  background: #000;
-  color: #fff;
-  -webkit-transition: top .4s ease-in-out; /* Safari */
-  transition: top .4s ease-in-out;
-  overflow: hidden;
-  z-index: 50;
-}
-#main-nav.toggled {
-  top: 0px;
-  opacity: 1;
   height: 100%;
   height: 100vh;
   max-height: 100vh;
+  width: 100%;
+  padding: 80px 20px 60px;
+  opacity: 0;
+  background: #000;
+  color: #fff;
+  -webkit-transition: opacity .3s ease-in-out; /* Safari */
+  transition: opacity .3s ease-in-out;
+  overflow: hidden;
+  z-index: 0;
 }
-.nav-fade #main-nav ul {
-  opacity: 1;
+#main-nav.toggled {
+  z-index: 50;
+  opacity: 1; 
 }
 #main-nav ul {
-  opacity: 0;
+  opacity: 1;
   list-style-type: none;
   text-align: center;
   margin:auto;
   padding: 0;
-  -webkit-transition: opacity .3s ease-in; /* Safari */
-  transition: opacity .3s ease-in;
+  -webkit-transition: opacity .1s ease-in; /* Safari */
+  transition: opacity .1s ease-in;
 }
 .main-nav ul li {
   font-size: 3em;
@@ -719,7 +713,7 @@ button#nav-icon, button#nav-icon:hover, button#nav-icon:active, button#nav-icon:
   border: none;
   color: none;
 }
-button#nav-icon:hover span, button#nav-icon:focus span, .app-menu-toggled button#nav-icon span {
+button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   -webkit-animation: bg-rainbow 10s infinite;
   animation: bg-rainbow 10s infinite;
 }
@@ -741,7 +735,7 @@ button#nav-icon:hover span, button#nav-icon:focus span, .app-menu-toggled button
   83% {background-color: #7b8ef8;}
   100% {background-color: #f35ba2;}
 }
-button#nav-icon:hover p, button#nav-icon:focus p, .app-menu-toggled button#nav-icon p {
+button#nav-icon:hover p, .app-menu-toggled button#nav-icon p {
   -webkit-animation: p-rainbow 10s infinite;
   animation: p-rainbow 10s infinite;
 }
