@@ -20,6 +20,8 @@ server.js.map
 .env.test.local
 .env.production.local
 
+/servernotes
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
