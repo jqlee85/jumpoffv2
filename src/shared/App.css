@@ -109,10 +109,10 @@ button:active {
   clear: both;
 }
 .jo-content {
-  postion: relative;
+  position: relative;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 20px;
 }

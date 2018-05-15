@@ -34,7 +34,6 @@ class App extends Component {
   initializeMenuBar(){
     console.log('initialize!!!');
     let darkClass = this.state.darkClass;
-    // let isDark = document.getElementById('App').classList.contains(darkClass);
     let isDark = this.props.app.menuDark;
     setTimeout(function(){
       let yPos = document.documentElement.scrollTop;
@@ -44,7 +43,7 @@ class App extends Component {
       } else if ( yPos < 60 && isDark ) {
         this.props.toggleMenuDark();
       } 
-    },500);
+    },50);
   }
 
   handleScroll = (e) => {
@@ -72,7 +71,7 @@ class App extends Component {
     this.props.toggleNavFade();
     setTimeout(() => {
       this.props.toggleNav();
-    }, 500);
+    }, 100);
   }
 
   render(){

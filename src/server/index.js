@@ -4,6 +4,10 @@ import cors from "cors";
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { Provider } from "react-redux";
+
+import { ApolloProvider } from 'react-apollo';
+import client from '../shared/graphql/apolloClient'
+
 import { StaticRouter, matchPath } from "react-router-dom";
 import serialize from "serialize-javascript";
 import routes from "../shared/routes";
@@ -11,13 +15,26 @@ import configureStore from "../shared/configureStore";
 import App from "../shared/App";
 import "source-map-support/register";
 
+import expressStaticGzip from "express-static-gzip";
+
+
 const app = express();
 
 app.use(cors());
 app.use(express.static("public"));
+app.use("/", expressStaticGzip("/public/"));
+
+
+//Handle Gzips
+app.get('*.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
 
 app.get("*", (req, res, next) => {
   const store = configureStore();
+
 
   const promises = routes.reduce((acc, route) => {
     if (matchPath(req.url, route) && route.component && route.component.initialAction) {
@@ -30,11 +47,13 @@ app.get("*", (req, res, next) => {
     .then(() => {
       const context = {};
       const markup = renderToString(
-        <Provider store={store}>
-          <StaticRouter location={req.url} context={context}>
-            <App />
-          </StaticRouter>
-        </Provider>
+        <ApolloProvider client={client}>
+          <Provider store={store}>
+            <StaticRouter location={req.url} context={context}>
+              <App />
+            </StaticRouter>
+          </Provider>
+        </ApolloProvider>
       );
 
       const initialData = store.getState();
@@ -67,9 +86,9 @@ app.get("*", (req, res, next) => {
 
 // Favicon
 // app.use(favicon(__dirname +'../../public/favicon.ico'));
+const thePort = process.env.JUMPOFF_PORT || 3002;
 
-
-app.listen(process.env.PORT || 3002, () => {
+app.listen(thePort, () => {
   var date = new Date();
-  console.log("Server started at " + date);
+  console.log( process.env.NODE_ENV + " server started at " + date + " on port: " + thePort );
 });
