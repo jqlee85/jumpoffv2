@@ -18,7 +18,7 @@ if (typeof window !== 'undefined'){
 const API_HOST =
   process.env.NODE_ENV !== 'production'
     ? 'https://jumpoff.io/graphql'
-    : 'http://localhost:3306';
+    : 'https://jumpoff.io/graphql';
 
 // Create Apollo Client
 const client = new ApolloClient({

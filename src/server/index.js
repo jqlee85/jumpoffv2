@@ -4,10 +4,8 @@ import cors from "cors";
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { Provider } from "react-redux";
-
 import { ApolloProvider } from 'react-apollo';
 import client from '../shared/graphql/apolloClient'
-
 import { StaticRouter, matchPath } from "react-router-dom";
 import serialize from "serialize-javascript";
 import routes from "../shared/routes";
@@ -34,7 +32,6 @@ app.get('*.js', function (req, res, next) {
 
 app.get("*", (req, res, next) => {
   const store = configureStore();
-
 
   const promises = routes.reduce((acc, route) => {
     if (matchPath(req.url, route) && route.component && route.component.initialAction) {
