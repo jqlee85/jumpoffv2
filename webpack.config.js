@@ -47,7 +47,7 @@ const browserConfig = {
     new ExtractTextPlugin({
       filename: "public/css/[name].css"
     },),
-    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    // new webpack.optimize.UglifyJsPlugin(), //minify everything
     new webpack.optimize.AggressiveMergingPlugin(),//Merge chunks 
     new CompressionPlugin({
       asset: "[path].gz[query]",
@@ -96,7 +96,7 @@ const serverConfig = {
     ]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    // new webpack.optimize.UglifyJsPlugin(), //minify everything
     new webpack.optimize.AggressiveMergingPlugin(),//Merge chunks 
     new CompressionPlugin({
       asset: "[path].gz[query]",
