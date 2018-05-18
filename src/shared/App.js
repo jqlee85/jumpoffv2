@@ -107,7 +107,7 @@ class App extends Component {
           fetchBlogPost={this.props.fetchBlogPost}
         />)}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   }
 
