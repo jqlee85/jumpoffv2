@@ -23,21 +23,30 @@ class Home extends Component {
   }
   
   
+  
   render(){
+    function onBeforeScroll(from,to) {
+      console.log(to);
+    }
+
+    function onAfterScroll(page) {
+      console.log(page);
+    }
+    
     return <div id="home" className="home">
       <Scroller
         curPage={1}
-        onBeforeScroll={(from, to) => {}}
-        onAfterScroll={(page) => {}}
+        onBeforeScroll={(from, to) => {onBeforeScroll(from,to)}}
+        onAfterScroll={(page) => {onAfterScroll(page)}}
         isEnabled={true}
-        swipeSensitivity={400}
-        transDuration={0.7}
+        swipeSensitivity={300}
+        transDuration={1.3}
       >
         <Section>
           <HomeSectionOne />
         </Section>
         <Section>
-          <HomeSectionTwo />
+          <HomeSectionTwo sectionNumber={2}/>
         </Section>
         <Section>
           <HomeSectionThree />
@@ -49,10 +58,6 @@ class Home extends Component {
           <HomeSectionFive />
         </Section>
       </Scroller>
-      
-      
-    
-      
     </div>
   }
 

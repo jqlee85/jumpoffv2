@@ -4,16 +4,17 @@ import styles from './HomeSectionTwo.css';
 class HomeSectionTwo extends Component {
   
   componentDidMount(){
-    this.props = this.props.properties;
+ 
+ 
   }
+
+  
   
   render(){
-    return <section className="jo-section home-section-two">
-      <div className="jo-row">
-        <div className="jo-content">
-          <h1>React + WordPress</h1>
-          <p>Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor </p>
-        </div>
+    return <section className="jo-section jo-home-section home-section-two" id={'home-section_'+this.props.sectionNumber}>
+      <div className="jo-home-section-content blue">
+        <h1>Node + React</h1>
+        <p>Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor </p>
       </div>
     </section>
   }

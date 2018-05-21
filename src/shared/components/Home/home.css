@@ -6,3 +6,32 @@
     box-sizing: border-box;
     width: 100%;
 }
+.jo-home-section {
+    width: 100%;
+    height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+}
+.jo-home-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 34%;
+    height: 100vh;
+    height: 100%;  
+}
+.blue {
+    background: rgba(0, 154, 192, 0.85);
+}
+.red {
+    background: rgba(243, 56, 56, 0.85);
+}
+@media screen and (max-width: 800px) {
+    .jo-home-section-content {
+        width: 100%;
+    }    
+}

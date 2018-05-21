@@ -8,14 +8,12 @@ class HomeSectionFour extends Component {
   }
   
   render(){
-    return <section className="jo-section home-section-four">
-      <div className="jo-row">
-        <div className="jo-content">
-          <h1>Digital Art</h1>
-          <p>Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor </p>
-        </div>
-      </div>
-    </section>
+    return <section className="jo-section jo-home-section">
+    <div className="jo-home-section-content blue">
+      <h1>Digital Art</h1>
+      <p>Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor Lorem ipsum sit dolor </p>
+    </div>
+  </section>
   }
 
 }
