@@ -6,6 +6,7 @@ import HomeSectionFour from '../HomeSectionFour/HomeSectionFour';
 import HomeSectionFive from '../HomeSectionFive/HomeSectionFive';
 import styles from './Home.css';
 
+
 import { Scroller, Section } from 'react-fully-scrolled';
 
 class Home extends Component {
@@ -22,22 +23,23 @@ class Home extends Component {
     document.ontouchmove = function(ev) {}
   }
   
-  
+  onBeforeScroll = (from,to) => {
+    this.props.updateCurrentSection(to)
+    console.log(to);
+  }
+
+  onAfterScroll = (page) => {
+    console.log(page);
+  }
   
   render(){
-    function onBeforeScroll(from,to) {
-      console.log(to);
-    }
-
-    function onAfterScroll(page) {
-      console.log(page);
-    }
+    
     
     return <div id="home" className="home">
       <Scroller
         curPage={1}
-        onBeforeScroll={(from, to) => {onBeforeScroll(from,to)}}
-        onAfterScroll={(page) => {onAfterScroll(page)}}
+        onBeforeScroll={(from, to) => {this.onBeforeScroll(from,to)}}
+        onAfterScroll={(page) => {this.onAfterScroll(page)}}
         isEnabled={true}
         swipeSensitivity={300}
         transDuration={1.3}
@@ -63,4 +65,4 @@ class Home extends Component {
 
 }
 
-export default Home
+export default Home;

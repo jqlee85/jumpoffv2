@@ -10,6 +10,7 @@ import {fetchBlogPost} from './actions/blogActions';
 import {toggleNav} from './actions/appActions';
 import {toggleNavFade} from './actions/appActions';
 import {toggleMenuDark} from './actions/appActions';
+import {updateCurrentSection} from './actions/appActions';
 import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -105,6 +106,7 @@ class App extends Component {
           user={this.props.user}
           blog={this.props.blog}
           fetchBlogPost={this.props.fetchBlogPost}
+          updateCurrentSection={this.props.updateCurrentSection}
         />)}
       </div>
       {/* <Footer /> */}
@@ -131,6 +133,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     toggleMenuDark: (data) => {
       dispatch(toggleMenuDark(data));
+    },
+    updateCurrentSection: (data) => {
+      dispatch(updateCurrentSection(data));
     },
     fetchBlogPost: (slug) => {
       dispatch(fetchBlogPost(slug));
