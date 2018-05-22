@@ -401,7 +401,12 @@ article.jo-post img {
   0% {background-color: #fafafa;}
   50% {background-color: #eee;}
   100% {background-color: #fafafa;}
-}.home-section-one .first {
+}.home-landing .home-section-content {
+  position: absolute;
+  background-color: none;
+  left: 0;
+}
+.home-landing .first {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -429,7 +434,7 @@ article.jo-post img {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
 }
-.home-section-one .jo-section-half.last {
+.home-landing .jo-section-half.last {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,11 +495,11 @@ article.jo-post img {
   .jo-section {
     padding-bottom: 40px;
   }
-  .home-section-one .jo-section-half.first, .home-section-one .jo-section-half.last { 
+  .home-landing .jo-section-half.first, .home-landing .jo-section-half.last { 
     width: 100% !important;
     height: auto;
   }
-  .home-section-one .jo-section-half.first {
+  .home-landing .jo-section-half.first {
   }
   .jo-home-title-wrapper {
     margin-top: 20px;
@@ -533,21 +538,45 @@ article.jo-post img {
   .jo-home-description {
     font-size: 20px;
   }
-}.home-section-two {
-  background: url('/images/home-hero-bg-full-light.jpg');
+}.home-section {
+  width: 100%;
+  height: 100vh;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
 }
-.home-section-three h1{
-  font-size: 3em;
-  text-transform: uppercase;
-}.home-section-four h1{
-  font-size: 3em;
-  text-transform: uppercase;
+.home-section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35%;
+  height: 100vh;
+  height: 100%; 
+  opacity: .9;
+  -webkit-transition: background-color .5s ease-in-out, opacity .5s ease-in-out;
+  transition: background-color .5s ease-in-out, opacity .5s ease-in-out;
 }
-.home-section-five h1{
-  font-size: 3em;
-  text-transform: uppercase;
-}
-.home {
+@media screen and (max-width: 800px) {
+  .home-section-content {
+      width: 100%;
+  }    
+}.home {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -560,48 +589,6 @@ article.jo-post img {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
-}
-.jo-home-section {
-    width: 100%;
-    height: 100vh;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    background-size: cover;
-    background-position: center;
-}
-.jo-home-section-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 34%;
-    height: 100vh;
-    height: 100%;  
-}
-.blue {
-    background: rgba(0, 154, 192, 0.85);
-}
-.red {
-    background: rgba(243, 56, 56, 0.85);
-}
-@media screen and (max-width: 800px) {
-    .jo-home-section-content {
-        width: 100%;
-    }    
 }
 .resume {
   padding: 100px 60px;
@@ -627,8 +614,8 @@ article.jo-post img {
   width: 100%;
   padding: 80px 20px 60px;
   opacity: 0;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   -webkit-transition: opacity .3s ease-in-out; /* Safari */
   transition: opacity .3s ease-in-out;
   overflow: hidden;
@@ -636,7 +623,7 @@ article.jo-post img {
 }
 #main-nav.toggled {
   z-index: 50;
-  opacity: 1; 
+  opacity: .9; 
 }
 #main-nav ul {
   opacity: 1;
@@ -652,7 +639,7 @@ article.jo-post img {
   line-height: 130%;
 }
 .main-nav ul li a {
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   font-weight: 500;
   text-decoration: none;
@@ -664,22 +651,22 @@ article.jo-post img {
   animation: rainbow 6s infinite;
 }
 @-webkit-keyframes rainbow {
-  0% {color: #ffffff;}
+  0% {color: #000;}
   10% {color: #f35b5b;}
   30% {color: #f09f4e;}
   50% {color: #fafa79;}
   70% {color: #43e295;}
   90% {color: #7b8ef8;}
-  100% {color: #ffffff;}
+  100% {color: #000;}
 }
 @keyframes rainbow {
-  0% {color: #ffffff;}
+  0% {color: #000000;}
   10% {color: #f35b5b;}
   30% {color: #f09f4e;}
   50% {color: #fafa79;}
   70% {color: #43e295;}
   90% {color: #7b8ef8;}
-  100% {color: #ffffff;}
+  100% {color: #000000;}
 }
 @media screen and ( min-width: 601px ) and ( max-width: 800px ) {
   .main-nav ul li {
@@ -701,17 +688,10 @@ article.jo-post img {
   padding: 22.5px 10px;
   padding: 10px;
   z-index: 75;
-  background-color: none;
+  background-color: #fff;
+  
   -webkit-transition: background-color 1s ease, height 1s ease, padding 1s ease; /* Safari */
   transition: background-color 1s ease, height 1s ease, padding 1s ease;
-}
-#App.app-menu-dark #header  {
-  background-color: #000;
-  padding: 10px;
-  height: 55px;
-}
-#App.app-menu-dark #header a {
-  margin-top: 6px;
 }
 #App #header a {
   -webkit-transition: .3s ease-in-out, margin-top 1s ease;
@@ -738,7 +718,7 @@ article.jo-post img {
   transition: color .3s ease;
 }
 .app-menu-toggled #header a.site-title, .app-menu-dark #header a.site-title {
-  color: #fff;
+  color: #000;
 }
 
 

@@ -13,8 +13,8 @@
   width: 100%;
   padding: 80px 20px 60px;
   opacity: 0;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   -webkit-transition: opacity .3s ease-in-out; /* Safari */
   transition: opacity .3s ease-in-out;
   overflow: hidden;
@@ -22,7 +22,7 @@
 }
 #main-nav.toggled {
   z-index: 50;
-  opacity: 1; 
+  opacity: .9; 
 }
 #main-nav ul {
   opacity: 1;
@@ -38,7 +38,7 @@
   line-height: 130%;
 }
 .main-nav ul li a {
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   font-weight: 500;
   text-decoration: none;
@@ -52,40 +52,40 @@
   animation: rainbow 6s infinite;
 }
 @-webkit-keyframes rainbow {
-  0% {color: #ffffff;}
+  0% {color: #000;}
   10% {color: #f35b5b;}
   30% {color: #f09f4e;}
   50% {color: #fafa79;}
   70% {color: #43e295;}
   90% {color: #7b8ef8;}
-  100% {color: #ffffff;}
+  100% {color: #000;}
 }
 @-ms-keyframes rainbow {
-  0% {color: #ffffff;}
+  0% {color: #000000;}
   10% {color: #f35b5b;}
   30% {color: #f09f4e;}
   50% {color: #fafa79;}
   70% {color: #43e295;}
   90% {color: #7b8ef8;}
-  100% {color: #ffffff;}
+  100% {color: #000000;}
 }
 @-o-keyframes rainbow {
-  0% {color: #ffffff;}
+  0% {color: #000000;}
   10% {color: #f35b5b;}
   30% {color: #f09f4e;}
   50% {color: #fafa79;}
   70% {color: #43e295;}
   90% {color: #7b8ef8;}
-  100% {color: #ffffff;}
+  100% {color: #000000;}
 }
 @keyframes rainbow {
-  0% {color: #ffffff;}
+  0% {color: #000000;}
   10% {color: #f35b5b;}
   30% {color: #f09f4e;}
   50% {color: #fafa79;}
   70% {color: #43e295;}
   90% {color: #7b8ef8;}
-  100% {color: #ffffff;}
+  100% {color: #000000;}
 }
 @media screen and ( min-width: 601px ) and ( max-width: 800px ) {
   .main-nav ul li {

@@ -105,6 +105,7 @@ class App extends Component {
           component={route.component} 
           user={this.props.user}
           blog={this.props.blog}
+          app={this.props.app}
           fetchBlogPost={this.props.fetchBlogPost}
           updateCurrentSection={this.props.updateCurrentSection}
         />)}

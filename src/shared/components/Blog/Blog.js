@@ -47,17 +47,3 @@ class Blog extends Component {
 }
 
 export default Blog;
-
-<div className="blog jo-section">
-  <div className="jo-row">
-    <div className="jo-content">
-    {({ loading, error, data }) => {
-      if (loading) return <p>Loading...</p>;
-      if (error) return <p>Error :(</p>;
-      return data.posts.edges.map(({ node }) => (
-        <Post post={node}/>
-      ));
-    }}
-    </div>
-  </div>
-</div>
