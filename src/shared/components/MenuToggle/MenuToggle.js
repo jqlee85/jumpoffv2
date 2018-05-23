@@ -20,7 +20,6 @@ class MenuToggle extends Component {
       <span></span>
       <span></span>
       <span></span>
-      <p>MENU</p>
     </button>
   }
 }

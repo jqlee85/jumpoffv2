@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import styles from './Header.css';
 import MenuToggle from '../MenuToggle/MenuToggle';
+import Logo from '../Logo/Logo';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+
 
 class Header extends Component {
 
@@ -26,7 +28,7 @@ class Header extends Component {
 
   render(){
     return <header id="header">
-      <Link className="site-title" to='/' onClick={this.titleLinkClicked}><h1>JumpOff</h1></Link>
+      <Link className="site-title" to='/' onClick={this.titleLinkClicked}><Logo mainColor="black"/><h1>JumpOff</h1></Link>
       <MenuToggle menuToggled={this.props.menuToggled} toggleNav={this.linkClicked}/>
     </header>
   }

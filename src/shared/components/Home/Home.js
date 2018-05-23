@@ -47,7 +47,7 @@ class Home extends Component {
       },
       { 
         number: 2,
-        color: 'rgb(226, 77, 102)',
+        color: '#C33847',
         title: 'Node + React',
         content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
         slug: 'node-react-apps',
@@ -55,12 +55,20 @@ class Home extends Component {
       },
       { 
         number: 3,
-        color: '#26a3ce',
+        color: '#2C83CF',
         title: 'WordPress Development',
         content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
         slug: 'wordpress-development',
         backgroundImage: false
       },
+      { 
+        number: 4,
+        color: '#6DC853',
+        title: 'Digital Art',
+        content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
+        slug: 'wordpress-development',
+        backgroundImage: false
+      }
     ];
     
     let className = 'current-' + this.props.app.currentSection;
@@ -76,8 +84,8 @@ class Home extends Component {
         onBeforeScroll={(from, to) => {this.onBeforeScroll(from,to)}}
         onAfterScroll={(page) => {this.onAfterScroll(page)}}
         isEnabled={true}
-        swipeSensitivity={300}
-        transDuration={1.3}
+        swipeSensitivity={1000}
+        transDuration={1.5}
       >  
         { 
           sectionData.map(function(section, index){

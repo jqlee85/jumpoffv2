@@ -9,7 +9,7 @@ class HomeLanding extends Component {
   
   render(){
     return <section className="jo-section home-landing">
-      <div class="home-section-content"></div>
+      <div className="home-section-content"></div>
       <div className="jo-section-half first">
         <div className="jo-logo-featured-wrapper">
           <div className="jo-logo-featured">

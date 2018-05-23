@@ -5,7 +5,17 @@ import { Link } from 'react-router-dom';
 
 class Logo extends Component {
 
+  constructor(props){
+    super(props);
+  }
+
   render(){
+    console.log(this.props);
+    let mainColor = this.props.color == 'white' ? 'white' : 'black';
+    let secondaryColor = this.props.color == 'white' ? 'black' : 'white';
+
+    console.log('mainColor'+mainColor);
+    console.log('secondary'+secondaryColor);
     return <div className="jo-logo-wrapper">
       <div className="jo-logo">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" 
@@ -32,13 +42,13 @@ class Logo extends Component {
           <path 
             d="M 12.5 62.5 L 187.5 62.5 L 187.5 212.5 L 37.5 212.5 L 37.5 137.5"
             fill="none"
-            stroke="black"
+            stroke={secondaryColor}
             strokeWidth="50"
           />
           <path 
             d="M 0 75 L 175 75 L 175 225 L 25 225 L 25 150"
             fill="none"
-            stroke="white"
+            stroke={mainColor}
             strokeWidth="50"
           />
         </svg>
