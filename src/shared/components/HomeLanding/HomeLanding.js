@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
-import styles from './HomeSectionOne.css';
+import styles from './HomeLanding.css';
 
-class HomeSectionOne extends Component {
+class HomeLanding extends Component {
   
   componentDidMount(){
     this.props = this.props.properties;
   }
   
   render(){
-    return <section className="jo-section home-section-one">
+    return <section className="jo-section home-landing">
+      <div className="home-section-content"></div>
       <div className="jo-section-half first">
         <div className="jo-logo-featured-wrapper">
           <div className="jo-logo-featured">
@@ -63,4 +64,4 @@ class HomeSectionOne extends Component {
 
 }
 
-export default HomeSectionOne
+export default HomeLanding

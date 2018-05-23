@@ -3,29 +3,12 @@
   display: block;
   box-sizing: border-box;
   position: fixed;
+  top: 0px;
   width: 100%;
-  height: 80px;
-  padding: 22.5px 10px;
-  padding: 10px;
+  height: 100px;
+  padding: 28px 14px;
   z-index: 75;
-  background-color: none;
-  -webkit-transition: background-color 1s ease, height 1s ease, padding 1s ease; /* Safari */
-  transition: background-color 1s ease, height 1s ease, padding 1s ease;
-}
-#App.app-menu-dark #header  {
-  background-color: #000;
-  padding: 10px;
-  height: 55px;
-}
-#App.app-menu-dark #header a {
-  margin-top: 6px;
-}
-#App #header a {
-  -webkit-transition: .3s ease-in-out, margin-top 1s ease;
-  -moz-transition: .3s ease-in-out, margin-top 1s ease;
-  -o-transition: .3s ease-in-out, margin-top 1s ease;
-  transition: .3s ease-in-out, margin-top 1s ease;
-  margin-top: 18.5px;
+  background-color: #fff;
 }
 #header a.site-title {
   display: inline;
@@ -34,21 +17,25 @@
   opacity: 1; 
   color: #000;
   height: auto;
-  margin-top: 6px;
-  margin-left: 12px;
+  margin-top: 8px;
+  margin-left: 14px;
 }
 #header a.site-title h1 {
   float: left;
   display: inline;
+  margin-left: 6px;
   font-weight: 500;
-  font-size: 23px;
+  font-size: 28px;
   text-transform: uppercase;
   -webkit-transition: color .3s ease; /* Safari */
   transition: color .3s ease;
 }
-.app-menu-toggled #header a.site-title, .app-menu-dark #header a.site-title {
-  color: #fff;
+.site-title .jo-logo-wrapper {
+  left: 0;
+  top: -3px;
+  padding-bottom: 28px;
+  width: 28px;
+  display: inline;
 }
-
 
 

@@ -2,7 +2,8 @@
 const appState = {
   menuToggled: false,
   navFadeToggled: false,
-  menuDark: false
+  menuDark: false,
+  currentSection: 1
 }
 
 // Reducer
@@ -22,6 +23,11 @@ const appReducer = (state = appState, action) => {
       return {
         ...state,
         menuDark: !state.menuDark
+      };
+    case 'UPDATE_CURRENT_SECTION':
+      return {
+        ...state,
+        currentSection: action.payload
       };
     default:
       return state;

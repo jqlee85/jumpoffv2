@@ -15,3 +15,10 @@ export function toggleMenuDark(){
     type: 'TOGGLE_MENU_DARK'
   }
 }
+
+export function updateCurrentSection(currentSection){
+  return { 
+    type: 'UPDATE_CURRENT_SECTION',
+    payload: currentSection
+  }
+}
