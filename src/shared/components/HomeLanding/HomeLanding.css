@@ -30,7 +30,12 @@
   font-weight: bold;
   margin: 1em auto .8em;
 }
-
+.home-landing-content a.jo-down-arrow:hover circle {
+  -webkit-animation: black-rainbow 6s infinite;
+  -ms-animation: black-rainbow 6s infinite;
+  -o-animation: black-rainbow 6s infinite;
+  animation: black-rainbow 6s infinite;
+}
 /* Media Queries */
 
 @media screen and ( min-width: 1201px ) {
