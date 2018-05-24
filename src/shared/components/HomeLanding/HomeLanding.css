@@ -1,130 +1,53 @@
+.home-landing {
+  display: flex;
+  align-items: center;
+  background-image: url('../../../../public/images/home-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.home-landing-content {
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  color: #000000;
+}
 .home-landing .home-section-content {
   position: absolute;
-  background-color: none;
-  left: 0;
 }
-.home-landing .first {
-  position: relative;
-  box-sizing: border-box;
-  height: 100vh;
-  width: 50%;
-  z-index: 10;
+.home-landing .jo-logo-wrapper {
+  width: 80px;
+  padding-bottom: 80px;
+  left: 2px;
+  margin: auto;
+  float: none;
 }
-.jo-logo-featured-wrapper {
-  position: relative;
-  padding-bottom: 100%;
-  margin-top: 10%;
-  left: -1%;
-  width: 100%;
-  height:0;
-  transform: rotate(15deg);
-  float: left;
-}
-.jo-logo-featured {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.jo-logo-featured > svg#jo-black-logo {
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-}
-.home-landing .jo-section-half.last {
-  display: flex;
-  height: 100vh;
-  width: 50%;
-  align-content: flex-end;
-  justify-content: flex-end;
-  z-index: 20;
-}
-.jo-home-title-wrapper {
-  align-self: flex-end;
-  height: auto;
-  margin-right: 30px;
-  
-}
-.jo-home-title {
-  font-size: 10vw;
-  line-height: 85%;
+.home-landing-content h2 {
+  color: rgb(45, 41, 42);
+  font-size: 3.6em;
   font-weight: bold;
-  text-transform: uppercase;
-  text-align: right;
+  margin: 1em auto .8em;
 }
-.jo-home-description {
-  text-align: right;
-  font-size: 2.5vw;
-  line-height: 140%;
-}
+
 /* Media Queries */
 
 @media screen and ( min-width: 1201px ) {
-  .jo-home-title-wrapper {
-    padding-bottom: 60px;
-  }
-  .jo-home-title {
-    font-size: 160px;
-  }
+  
 }
 @media screen and ( max-width: 1200px ) {
-  .jo-home-title-wrapper {
-    padding-bottom: 20px;
-  }
+ 
 }
 @media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
-  .jo-home-title {
-    font-size: 130px;
-  }
+  
 }
 @media screen and ( max-width: 800px ) {
-  .jo-section-half, .jo-section .first {
-    width: 100%;
-    height: auto;
-    min-height: auto;
-  }
-  .jo-section {
-    padding-bottom: 40px;
-  }
-  .home-landing .jo-section-half.first, .home-landing .jo-section-half.last { 
-    width: 100% !important;
-    height: auto;
-  }
-  .home-landing .jo-section-half.first {
-  }
-  .jo-home-title-wrapper {
-    margin-top: 20px;
-  } 
+  
 }
 @media screen and ( min-width: 601px ) and ( max-width: 800px ) {
-  .jo-logo-featured-wrapper {
-    width: 60%;
-    padding-bottom: 60%;
-  }
-  .jo-home-title-wrapper {
-    margin-top: -40px;
-    margin-right: 50px;
-    margin-left: 50px;
-  }
-  .jo-home-title {
-    font-size: 110px;
-  }
-  .jo-home-description {
-    width: 60%;
-    margin-left: auto;
-    margin-right: 0;
-    font-size: 24px;
-  }
+  
 }
 @media screen and ( max-width: 600px ) {
-  .jo-logo-featured-wrapper {
-    width: 80%;
-    padding-bottom: 80%;
-  }
-  .jo-home-description {
-    width: 80%;
-    margin-left: auto;
-    margin-right: 0;
-  }
-  .jo-home-description {
-    font-size: 20px;
-  }
+  
 }

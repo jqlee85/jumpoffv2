@@ -50,7 +50,6 @@ class Home extends Component {
         title: 'Node + React',
         content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
         slug: 'node-react-apps',
-        backgroundImage: '/images/home-hero-bg-full-light.jpg',
         link: ''
       },
       { 
