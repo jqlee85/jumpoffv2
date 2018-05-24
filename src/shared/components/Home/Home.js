@@ -84,8 +84,8 @@ class Home extends Component {
         onBeforeScroll={(from, to) => {this.onBeforeScroll(from,to)}}
         onAfterScroll={(page) => {this.onAfterScroll(page)}}
         isEnabled={true}
-        swipeSensitivity={1000}
-        transDuration={1.5}
+        swipeSensitivity={300}
+        transDuration={1.2}
       >  
         { 
           sectionData.map(function(section, index){

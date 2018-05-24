@@ -17,9 +17,9 @@ class HomeSection extends Component {
   
   render(){
     
-    let sectionStyle = {
+    let sectionStyle = this.props.sectionData.backgroundImage ? {
       backgroundImage: `url(${this.props.sectionData.backgroundImage})`
-    }
+    } : {};
 
     return <section className="jo-section home-section" id={'home-section_'+this.props.sectionData.number} style={sectionStyle}>
       <div className="home-section-content">
