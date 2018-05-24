@@ -40,7 +40,6 @@
 .main-nav ul li a {
   color: #000;
   text-transform: uppercase;
-  font-weight: 500;
   text-decoration: none;
   -webkit-transition: color .5s; /* Safari */
   transition: color .5s;

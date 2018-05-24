@@ -64,6 +64,7 @@ app.get("*", (req, res, next) => {
             <link rel="stylesheet" href="/css/main.css">
             <link rel="manifest" href="/manifest.json">
             <link rel="shortcut icon" href="/favicon.ico">
+            <style>@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,300i,600');</style>
             <title>JumpOff Web Development</title>
           </head>
           <body>
