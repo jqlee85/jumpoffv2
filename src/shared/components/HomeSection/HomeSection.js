@@ -23,8 +23,9 @@ class HomeSection extends Component {
 
     return <section className="jo-section home-section" id={'home-section_'+this.props.sectionData.number} style={sectionStyle}>
       <div className="home-section-content">
-        <h1>{this.props.sectionData.title}</h1>
+        <h2>{this.props.sectionData.title}</h2>
         <p>{this.props.sectionData.content}</p>
+        <a href={this.props.sectionData.link}>Learn More</a>
       </div>
     </section>
   }

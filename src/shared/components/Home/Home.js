@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import HomeLanding from '../HomeLanding/HomeLanding';
 import HomeSection from '../HomeSection/HomeSection';
 import styles from './Home.css';
-
-
 import { Scroller, Section } from 'react-fully-scrolled';
 
 class Home extends Component {
@@ -43,7 +41,8 @@ class Home extends Component {
         color: 'none',
         title: 'Node + React',
         content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
-        slug: 'node-react-apps'
+        slug: 'node-react-apps',
+        link: ''
       },
       { 
         number: 2,
@@ -51,15 +50,17 @@ class Home extends Component {
         title: 'Node + React',
         content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
         slug: 'node-react-apps',
-        backgroundImage: '/images/home-hero-bg-full-light.jpg'
+        backgroundImage: '/images/home-hero-bg-full-light.jpg',
+        link: ''
       },
       { 
         number: 3,
-        color: '#2C83CF',
+        color: '#487CEF',
         title: 'WordPress Development',
         content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
         slug: 'wordpress-development',
-        backgroundImage: false
+        backgroundImage: false,
+        link: ''
       },
       { 
         number: 4,
@@ -67,7 +68,8 @@ class Home extends Component {
         title: 'Digital Art',
         content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
         slug: 'wordpress-development',
-        backgroundImage: false
+        backgroundImage: false,
+        link: ''
       }
     ];
     
@@ -85,7 +87,7 @@ class Home extends Component {
         onAfterScroll={(page) => {this.onAfterScroll(page)}}
         isEnabled={true}
         swipeSensitivity={300}
-        transDuration={1.2}
+        transDuration={1}
       >  
         { 
           sectionData.map(function(section, index){
