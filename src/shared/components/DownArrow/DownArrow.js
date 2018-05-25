@@ -22,10 +22,10 @@ class DownArrow extends Component {
     let hoverColor = this.props.hoverColor || 'white';
 
     return <a className="jo-down-arrow" href="">
-      <svg style={style} version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000">
+      <svg style={style} version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1000 1000" enableBackground="new 0 0 1000 1000">
         <g>
-          <circle cx="500" cy="500" r="480" stroke={color} stroke-width="40" fill="none" />
-          <path stroke={color} stroke-width="40" fill="transparent" d="M300 400 L500 620 L700 400"></path>
+          <circle cx="500" cy="500" r="480" stroke={color} strokeWidth="40" fill="none" />
+          <path stroke={color} strokeWidth="40" fill="transparent" d="M300 400 L500 620 L700 400"></path>
         </g>
       </svg>
     </a>;

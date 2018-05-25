@@ -4,6 +4,43 @@ import HomeSection from '../HomeSection/HomeSection';
 import styles from './Home.css';
 import { Scroller, Section } from 'react-fully-scrolled';
 
+let sectionData = [
+  { 
+    number: 1,
+    color: 'none',
+    title: 'Node + React',
+    content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
+    slug: 'node-react-apps',
+    link: ''
+  },
+  { 
+    number: 2,
+    color: '#C33847',
+    title: 'Node + React',
+    content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
+    slug: 'node-react-apps',
+    link: ''
+  },
+  { 
+    number: 3,
+    color: '#487CEF',
+    title: 'WordPress Development',
+    content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
+    slug: 'wordpress-development',
+    backgroundImage: false,
+    link: ''
+  },
+  { 
+    number: 4,
+    color: '#6DC853',
+    title: 'Digital Art',
+    content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
+    slug: 'wordpress-development',
+    backgroundImage: false,
+    link: ''
+  }
+];
+
 class Home extends Component {
 
   constructor(props){
@@ -23,63 +60,26 @@ class Home extends Component {
   }
   
   onBeforeScroll = (from,to) => {
-    this.props.updateCurrentSection(to)
-    console.log(to);
+    // this.props.updateCurrentSection(to);
+    // setTimeout(function(to) { this.props.updateCurrentSection(to); }.bind(this), 100);
+    console.log(sectionData);
+    let backgroundColor = sectionData[to - 1].color || 'none';
+    let backgroundColorStyle = '.home-section-content{ background-color:'+backgroundColor+';}';
+    setTimeout(function(to) {  document.getElementById('home-section-content-style').innerHTML=backgroundColorStyle; }.bind(this), 100);
+
   }
 
+  
+
   onAfterScroll = (page) => {
-    console.log(page);
   }
   
   render(){
     
     console.log(this.props);
-    
-    let sectionData = [
-      { 
-        number: 1,
-        color: 'none',
-        title: 'Node + React',
-        content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
-        slug: 'node-react-apps',
-        link: ''
-      },
-      { 
-        number: 2,
-        color: '#C33847',
-        title: 'Node + React',
-        content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
-        slug: 'node-react-apps',
-        link: ''
-      },
-      { 
-        number: 3,
-        color: '#487CEF',
-        title: 'WordPress Development',
-        content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
-        slug: 'wordpress-development',
-        backgroundImage: false,
-        link: ''
-      },
-      { 
-        number: 4,
-        color: '#6DC853',
-        title: 'Digital Art',
-        content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
-        slug: 'wordpress-development',
-        backgroundImage: false,
-        link: ''
-      }
-    ];
-    
-    let className = 'current-' + this.props.app.currentSection;
-    let backgroundColor = sectionData[this.props.app.currentSection - 1].color || 'none';
-    let backgroundColorStyle = '.home-section-content{ background-color:'+backgroundColor+';}';
 
-    return <div id="home" className="home">
-      <style>{backgroundColorStyle}</style>
-      
-      
+    return <div id="home" className="home">      
+      <style id="home-section-content-style"></style>
       <Scroller
         curPage={1}
         onBeforeScroll={(from, to) => {this.onBeforeScroll(from,to)}}
