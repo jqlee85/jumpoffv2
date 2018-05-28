@@ -5,16 +5,8 @@ class HomeSection extends Component {
   
   constructor(props){
     super(props);
-    // console.log(props);
   }
 
-  componentDidMount(){
- 
- 
-  }
-
-  
-  
   render(){
     
     let sectionStyle = this.props.sectionData.backgroundImage ? {

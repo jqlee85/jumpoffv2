@@ -23,7 +23,6 @@ let sectionData = [
     title: 'WordPress Development',
     content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
     slug: 'wordpress-development',
-    backgroundImage: 'false',
     link: ''
   },
   { 
@@ -32,7 +31,6 @@ let sectionData = [
     title: 'Digital Art',
     content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
     slug: 'wordpress-development',
-    backgroundImage: false,
     link: ''
   },
   { 
@@ -49,7 +47,6 @@ let sectionData = [
     title: 'WordPress Development',
     content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
     slug: 'wordpress-development',
-    backgroundImage: false,
     link: ''
   },
   { 
@@ -58,7 +55,6 @@ let sectionData = [
     title: 'Digital Art',
     content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
     slug: 'wordpress-development',
-    backgroundImage: false,
     link: ''
   }
 ];
@@ -73,6 +69,12 @@ class Home extends Component {
     window.addEventListener('scroll', this.handleScroll);
     document.ontouchmove = function(ev) {
       ev.preventDefault();
+    }
+    let contents = document.getElementsByClassName('content-wrapper');
+    for (var i = 0; i < contents.length; i++) {
+      // contents[i].style.top = '';
+      contents[i].style.opacity = '0';
+      contents[i].style.left = '-150%';
     }
   }
 
@@ -107,10 +109,12 @@ class Home extends Component {
     }
   }
   
+
   render(){
 
     return <div id="home" className="home">      
       <style id="home-section-content-style"></style>
+      <a href="#" onClick={this.goToSectionTwo}>heyyyy</a>
       <Scroller
         curPage={1}
         onBeforeScroll={(from, to) => {this.onBeforeScroll(from,to)}}
