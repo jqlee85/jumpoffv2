@@ -120,7 +120,7 @@ class Home extends Component {
         onBeforeScroll={(from, to) => {this.onBeforeScroll(from,to)}}
         onAfterScroll={(page) => {this.onAfterScroll(page)}}
         isEnabled={true}
-        swipeSensitivity={300}
+        swipeSensitivity={100}
         transDuration={1.2}
       >  
         { 
