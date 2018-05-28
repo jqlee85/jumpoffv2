@@ -114,7 +114,6 @@ class Home extends Component {
 
     return <div id="home" className="home">      
       <style id="home-section-content-style"></style>
-      <a href="#" onClick={this.goToSectionTwo}>heyyyy</a>
       <Scroller
         curPage={1}
         onBeforeScroll={(from, to) => {this.onBeforeScroll(from,to)}}
