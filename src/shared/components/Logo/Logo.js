@@ -10,12 +10,10 @@ class Logo extends Component {
   }
 
   render(){
-    console.log(this.props);
+    
     let mainColor = this.props.color == 'white' ? 'white' : 'black';
     let secondaryColor = this.props.color == 'white' ? 'black' : 'white';
 
-    console.log('mainColor'+mainColor);
-    console.log('secondary'+secondaryColor);
     return <div className="jo-logo-wrapper">
       <div className="jo-logo">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" 

@@ -7,23 +7,45 @@ import { Scroller, Section } from 'react-fully-scrolled';
 let sectionData = [
   { 
     number: 1,
-    color: 'none',
-    title: 'Node + React',
-    content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
-    slug: 'node-react-apps',
-    link: ''
   },
   { 
     number: 2,
-    color: '#C33847',
+    color: '#c12a3a',
     title: 'Node + React',
     content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
     slug: 'node-react-apps',
+    backgroundImage: '/images/home-landing-bg.jpg',
     link: ''
   },
   { 
     number: 3,
-    color: '#487CEF',
+    color: '#376ee5',
+    title: 'WordPress Development',
+    content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
+    slug: 'wordpress-development',
+    backgroundImage: 'false',
+    link: ''
+  },
+  { 
+    number: 4,
+    color: '#6DC853',
+    title: 'Digital Art',
+    content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
+    slug: 'wordpress-development',
+    backgroundImage: false,
+    link: ''
+  },
+  { 
+    number: 5,
+    color: '#f2ad37',
+    title: 'Node + React',
+    content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
+    slug: 'node-react-apps',
+    link: ''
+  },
+  { 
+    number: 6,
+    color: '#f26aae',
     title: 'WordPress Development',
     content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
     slug: 'wordpress-development',
@@ -31,8 +53,8 @@ let sectionData = [
     link: ''
   },
   { 
-    number: 4,
-    color: '#6DC853',
+    number: 7,
+    color: '#70efe5',
     title: 'Digital Art',
     content: 'WP Dev Lorem ipsum sit dolor blah blah blah blah blah blah',
     slug: 'wordpress-development',
@@ -60,23 +82,32 @@ class Home extends Component {
   }
   
   onBeforeScroll = (from,to) => {
-    // this.props.updateCurrentSection(to);
-    // setTimeout(function(to) { this.props.updateCurrentSection(to); }.bind(this), 100);
-    console.log(sectionData);
+    
+    //Change Content Div Color
     let backgroundColor = sectionData[to - 1].color || 'none';
     let backgroundColorStyle = '.home-section-content{ background-color:'+backgroundColor+';}';
-    setTimeout(function(to) {  document.getElementById('home-section-content-style').innerHTML=backgroundColorStyle; }.bind(this), 100);
-
+    setTimeout(function() {  
+      document.getElementById('home-section-content-style').innerHTML=backgroundColorStyle;   
+    }.bind(this), 200);
+    
   }
 
-  
-
   onAfterScroll = (page) => {
+    let contents = document.getElementsByClassName('content-wrapper');
+    for (var i = 0; i < contents.length; i++) {
+      // contents[i].style.top = '';
+      contents[i].style.opacity = '0';
+      contents[i].style.left = '-150%';
+    }
+    if (page > 1) {
+      let content = document.getElementById('home-content-wrapper_'+page);  
+      // content.style.top = '45%';
+      content.style.opacity = '1';
+      content.style.left= '0px';
+    }
   }
   
   render(){
-    
-    console.log(this.props);
 
     return <div id="home" className="home">      
       <style id="home-section-content-style"></style>
@@ -86,14 +117,14 @@ class Home extends Component {
         onAfterScroll={(page) => {this.onAfterScroll(page)}}
         isEnabled={true}
         swipeSensitivity={300}
-        transDuration={1}
+        transDuration={1.2}
       >  
         { 
           sectionData.map(function(section, index){
             if (section.number === 1) {
-              return <Section><HomeLanding/></Section>;
+              return <Section key={section.number}><HomeLanding/></Section>;
             } else {
-              return <Section><HomeSection sectionNumber={section.number} sectionData={section}/></Section>;
+              return <Section key={section.number}><HomeSection sectionNumber={section.number} sectionData={section}/></Section>;
             }
           })
         }
