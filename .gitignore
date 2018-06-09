@@ -9,8 +9,10 @@
 # production
 /build
 /public/bundle.js
+/public/bundle.js.gz
 /public/bundle.js.map
 server.js
+server.js.gz
 server.js.map
 
 # misc
