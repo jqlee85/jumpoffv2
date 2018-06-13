@@ -5,7 +5,7 @@
   display: flex;
   justify-content: flex-start;
   background-color: #ffffff;
-  background-image: url('../../../../public/images/grid-bg-1.jpg');
+  /* background-image: url('../../../../public/images/grid-bg-1.jpg'); */
   background-size: 100% auto;
   background-repeat: repeat-y;
   background-position: right-bottom;
