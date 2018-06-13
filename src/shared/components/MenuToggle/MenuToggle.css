@@ -9,11 +9,11 @@ button#nav-icon, button#nav-icon:hover, button#nav-icon:active, button#nav-icon:
   border: none;
   color: none;
 }
-button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
-  -webkit-animation: bg-rainbow 10s infinite;
-  -ms-animation: bg-rainbow 10s infinite;
-  -o-animation: bg-rainbow 10s infinite;
-  animation: bg-rainbow 10s infinite;
+button#nav-icon:hover span {
+  -webkit-animation: bg-rainbow 7s infinite;
+  -ms-animation: bg-rainbow 7s infinite;
+  -o-animation: bg-rainbow 7s infinite;
+  animation: bg-rainbow 7s infinite;
 }
 #nav-icon {
   width: 24px;
@@ -124,80 +124,72 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   left: 2px;
 }
 @-webkit-keyframes bg-rainbow {
-  0% {background-color: #f35b5b;}
-  17% {background-color: #f09f4e;}
-  33% {background-color: #fafa79;}
-  40% {background-color: #6ef7ab;}
-  67% {background-color: #5cfcf4;}
-  83% {background-color: #7b8ef8;}
-  100% {background-color: #f35ba2;}
+  0% {background-color: #ffffff;}
+  15% {background-color: #f0ba45;}
+  40% {background-color: #f89c44;}
+  65% {background-color: #ef6085;}
+  90% {background-color: #cd5fa1;}
+  100% {background-color: #ffffff;}
 }
 @-ms-keyframes bg-rainbow {
-  0% {background-color: #f35b5b;}
-  17% {background-color: #f09f4e;}
-  33% {background-color: #fafa79;}
-  40% {background-color: #6ef7ab;}
-  67% {background-color: #5cfcf4;}
-  83% {background-color: #7b8ef8;}
-  100% {background-color: #f35ba2;}
+  0% {background-color: #ffffff;}
+  15% {background-color: #f0ba45;}
+  40% {background-color: #f89c44;}
+  65% {background-color: #ef6085;}
+  90% {background-color: #cd5fa1;}
+  100% {background-color: #ffffff;}
 }
 @-o-keyframes bg-rainbow {
-  0% {background-color: #f35b5b;}
-  17% {background-color: #f09f4e;}
-  33% {background-color: #fafa79;}
-  40% {background-color: #6ef7ab;}
-  67% {background-color: #5cfcf4;}
-  83% {background-color: #7b8ef8;}
-  100% {background-color: #f35ba2;}
+  0% {background-color: #ffffff;}
+  15% {background-color: #f0ba45;}
+  40% {background-color: #f89c44;}
+  65% {background-color: #ef6085;}
+  90% {background-color: #cd5fa1;}
+  100% {background-color: #ffffff;}
 }
 @keyframes bg-rainbow {
-  0% {background-color: #f35b95;}
-  17% {background-color: #f09f4e;}
-  33% {background-color: #fafa79;}
-  40% {background-color: #6ef7ab;}
-  67% {background-color: #5cfcf4;}
-  83% {background-color: #7b8ef8;}
-  100% {background-color: #f35ba2;}
+  0% {background-color: #ffffff;}
+  15% {background-color: #f0ba45;}
+  40% {background-color: #f89c44;}
+  65% {background-color: #ef6085;}
+  90% {background-color: #cd5fa1;}
+  100% {background-color: #ffffff;}
 }
 button#nav-icon:hover p, .app-menu-toggled button#nav-icon p {
-  -webkit-animation: p-rainbow 10s infinite;
-  -ms-animation: p-rainbow 10s infinite;
-  -o-animation: p-rainbow 10s infinite;
-  animation: p-rainbow 10s infinite;
+  -webkit-animation: p-rainbow 7s infinite;
+  -ms-animation: p-rainbow 7s infinite;
+  -o-animation: p-rainbow 7s infinite;
+  animation: p-rainbow 7s infinite;
 }
 @-webkit-keyframes p-rainbow {
-  0% {color: #f35b5b;}
-  17% {color: #f09f4e;}
-  33% {color: #fafa79;}
-  40% {color: #6ef7ab;}
-  67% {color: #5cfcf4;}
-  83% {color: #7b8ef8;}
-  100% {color: #f35ba2;}
+  0% {color: #ffffff;stroke:#ffffff;}
+  15% {color: #f0ba45;stroke:#f0ba45;}
+  40% {color: #f89c44;stroke:#f89c44;}
+  65% {color: #ef6085;stroke:#ef6085;}
+  90% {color: #cd5fa1;stroke:#cd5fa1;}
+  100% {color: #ffffff;stroke:#ffffff;}
 }
 @-ms-keyframes p-rainbow {
-  0% {color: #f35b5b;}
-  17% {color: #f09f4e;}
-  33% {color: #fafa79;}
-  40% {color: #6ef7ab;}
-  67% {color: #5cfcf4;}
-  83% {color: #7b8ef8;}
-  100% {color: #f35ba2;}
+  0% {color: #ffffff;stroke:#ffffff;}
+  15% {color: #f0ba45;stroke:#f0ba45;}
+  40% {color: #f89c44;stroke:#f89c44;}
+  65% {color: #ef6085;stroke:#ef6085;}
+  90% {color: #cd5fa1;stroke:#cd5fa1;}
+  100% {color: #ffffff;stroke:#ffffff;}
 }
 @-o-keyframes p-rainbow {
-  0% {color: #f35b5b;}
-  17% {color: #f09f4e;}
-  33% {color: #fafa79;}
-  40% {color: #6ef7ab;}
-  67% {color: #5cfcf4;}
-  83% {color: #7b8ef8;}
-  100% {color: #f35ba2;}
+  0% {color: #ffffff;stroke:#ffffff;}
+  15% {color: #f0ba45;stroke:#f0ba45;}
+  40% {color: #f89c44;stroke:#f89c44;}
+  65% {color: #ef6085;stroke:#ef6085;}
+  90% {color: #cd5fa1;stroke:#cd5fa1;}
+  100% {color: #ffffff;stroke:#ffffff;}
 }
 @keyframes p-rainbow {
-  0% {color: #f35b5b;}
-  17% {color: #f09f4e;}
-  33% {color: #fafa79;}
-  40% {color: #6ef7ab;}
-  67% {color: #5cfcf4;}
-  83% {color: #7b8ef8;}
-  100% {color: #f35ba2;}
+  0% {color: #ffffff;stroke:#ffffff;}
+  15% {color: #f0ba45;stroke:#f0ba45;}
+  40% {color: #f89c44;stroke:#f89c44;}
+  65% {color: #ef6085;stroke:#ef6085;}
+  90% {color: #cd5fa1;stroke:#cd5fa1;}
+  100% {color: #ffffff;stroke:#ffffff;}
 }

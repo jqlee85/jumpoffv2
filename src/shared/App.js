@@ -8,6 +8,7 @@ import {requestUserLogin} from './actions/userActions';
 import {userLogout} from './actions/userActions';
 import {fetchBlogPost} from './actions/blogActions';
 import {toggleNav} from './actions/appActions';
+import {toggleNavFront} from './actions/appActions';
 import {toggleNavFade} from './actions/appActions';
 import {toggleMenuDark} from './actions/appActions';
 import {updateCurrentSection} from './actions/appActions';
@@ -21,20 +22,22 @@ class App extends Component {
       super(props);
   }
 
-  toggleNavFade = () => {
-    this.props.toggleNavFade();
-  }
-
   toggleAppNav = () => {
+    // Fade/Unfade Nav Items
     this.props.toggleNavFade();
-    this.props.toggleNav();
-  }
-
-  toggleAppNavRoute = () => {
-    this.props.toggleNavFade();
+    // Change Navigation Z-Index
+    if (this.props.app.navFront) {
+      setTimeout(() => {
+        this.props.toggleNavFront();
+      },400);
+    } else {
+      this.props.toggleNavFront();
+    }
+    // Toggle the Menu Opacity
     setTimeout(() => {
+      this.props.toggle
       this.props.toggleNav();
-    }, 100);
+    }, 100); 
   }
 
   render(){
@@ -49,13 +52,14 @@ class App extends Component {
         userData={this.props.user} 
         userLogout={this.props.userLogout}
         toggleNav={this.toggleAppNav}
-        toggleAppNavRoute={this.toggleAppNavRoute}
+        navFront={this.props.app.navFront}
+        toggleAppNavRoute={this.toggleAppNav}
       />
       <Header 
         menuToggled={this.props.app.menuToggled} 
         userLogin={this.props.requestUserLogin} 
         userData={this.props.user}
-        toggleNav={this.toggleAppNavRoute}
+        toggleNav={this.toggleAppNav}
       />
       <div className="main">
         {routes.map((route, i) => <PropsRoute 
@@ -92,8 +96,8 @@ const mapDispatchToProps = (dispatch) => {
     toggleNavFade: (data) => {
       dispatch(toggleNavFade(data));
     },
-    toggleMenuDark: (data) => {
-      dispatch(toggleMenuDark(data));
+    toggleNavFront: (data) => {
+      dispatch(toggleNavFront(data));
     },
     updateCurrentSection: (data) => {
       dispatch(updateCurrentSection(data));

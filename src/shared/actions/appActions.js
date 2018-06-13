@@ -10,9 +10,9 @@ export function toggleNavFade(){
   }
 }
 
-export function toggleMenuDark(){
+export function toggleNavFront(){
   return { 
-    type: 'TOGGLE_MENU_DARK'
+    type: 'TOGGLE_NAV_FRONT'
   }
 }
 

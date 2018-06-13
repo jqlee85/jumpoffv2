@@ -23,6 +23,7 @@ class Nav extends Component {
   render() {
     let theClasses = 'main-nav';
     if (this.props.menuToggled) theClasses += ' toggled';
+    if (this.props.navFront) theClasses += ' front';
     return <nav id="main-nav" className={theClasses}>
       <ul className="menu">
         <li><Link to='/about' onClick={this.routeLinkClicked}>About</Link></li>

@@ -81,10 +81,10 @@ article.jo-post img {
   color: rgba(255,255,255,.9);
 }
 .jo-post a:hover, .jo-post a:active, .jo-post a:focus {
-  -webkit-animation: black-rainbow 6s infinite;
-  -ms-animation: black-rainbow 6s infinite;
-  -o-animation: black-rainbow 6s infinite;
-  animation: black-rainbow 6s infinite;
+  -webkit-animation: white-rainbow 6s infinite;
+  -ms-animation: white-rainbow 6s infinite;
+  -o-animation: white-rainbow 6s infinite;
+  animation: white-rainbow 6s infinite;
 }
 
 /* Media Queries */

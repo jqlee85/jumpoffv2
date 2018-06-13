@@ -31,10 +31,10 @@
   margin: 1em auto .8em;
 }
 .home-landing-content a.jo-down-arrow:hover circle {
-  -webkit-animation: black-rainbow 6s infinite;
-  -ms-animation: black-rainbow 6s infinite;
-  -o-animation: black-rainbow 6s infinite;
-  animation: black-rainbow 6s infinite;
+  -webkit-animation: white-rainbow 6s infinite;
+  -ms-animation: white-rainbow 6s infinite;
+  -o-animation: white-rainbow 6s infinite;
+  animation: white-rainbow 6s infinite;
 }
 /* Media Queries */
 

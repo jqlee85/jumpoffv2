@@ -137,42 +137,60 @@ button:active {
   text-align: right;
 }
 
+.icon-17 {
+  color: #cd5fa1;
+  fill: #cd5fa1;
+}
+.icon-17:hover {
+  /* background: #cd5fa1; */
+}
+.icon-13 {
+  color: #f0ba45;
+  fill: #f0ba45;
+}
+.icon-13:hover {
+  /* background: #f0ba45; */
+}
+.icon-15 {
+  color: #f89c44;
+  fill: #f89c44;
+}
+.icon-15:hover {
+  /* background: #f89c44; */
+}
+.icon-26 {
+  color: #ef6085;
+  fill: #ef6085;
+}
+
 /* Rainbow Hover */
-@-webkit-keyframes black-rainbow {
-  0% {color: #000000;stroke:#000000;}
-  10% {color: #f35b5b;stroke:#f35b5b;}
-  30% {color: #f09f4e;stroke:#f09f4e;}
-  50% {color: #fafa79;stroke:#fafa79;}
-  70% {color: #43e295;stroke:#43e295;}
-  90% {color: #7b8ef8;stroke:#7b8ef8;}
-  100% {color: #000000;stroke:#000000;}
+@-webkit-keyframes white-rainbow {
+  0% {color: #cd5fa1;stroke:#cd5fa1;}
+  23% {color: #f89c44;stroke:#f89c44;}
+  56% {color: #ef6085;stroke:#ef6085;}
+  89% {color: #f0ba45;stroke:#f0ba45;}
+  100% {color: #cd5fa1;stroke:#cd5fa1;}
 }
-@-ms-keyframes black-rainbow {
-  0% {color: #000000;stroke:#000000;}
-  10% {color: #f35b5b;stroke:#f35b5b;}
-  30% {color: #f09f4e;stroke:#f09f4e;}
-  50% {color: #fafa79;stroke:#fafa79;}
-  70% {color: #43e295;stroke:#43e295;}
-  90% {color: #7b8ef8;stroke:#7b8ef8;}
-  100% {color: #000000;stroke:#000000;}
+@-ms-keyframes white-rainbow {
+  0% {color: #cd5fa1;stroke:#cd5fa1;}
+  23% {color: #f89c44;stroke:#f89c44;}
+  56% {color: #ef6085;stroke:#ef6085;}
+  89% {color: #f0ba45;stroke:#f0ba45;}
+  100% {color: #cd5fa1;stroke:#cd5fa1;}
 }
-@-o-keyframes black-rainbow {
-  0% {color: #000000;stroke:#000000;}
-  10% {color: #f35b5b;stroke:#f35b5b;}
-  30% {color: #f09f4e;stroke:#f09f4e;}
-  50% {color: #fafa79;stroke:#fafa79;}
-  70% {color: #43e295;stroke:#43e295;}
-  90% {color: #7b8ef8;stroke:#7b8ef8;}
-  100% {color: #000000;stroke:#000000;}
+@-o-keyframes white-rainbow {
+  0% {color: #cd5fa1;stroke:#cd5fa1;}
+  23% {color: #f89c44;stroke:#f89c44;}
+  56% {color: #ef6085;stroke:#ef6085;}
+  89% {color: #f0ba45;stroke:#f0ba45;}
+  100% {color: #cd5fa1;stroke:#cd5fa1;}
 }
-@keyframes black-rainbow {
-  0% {color: #000000;stroke:#000000;}
-  10% {color: #f35b5b;stroke:#f35b5b;}
-  30% {color: #f09f4e;stroke:#f09f4e;}
-  50% {color: #fafa79;stroke:#fafa79;}
-  70% {color: #43e295;stroke:#43e295;}
-  90% {color: #7b8ef8;stroke:#7b8ef8;}
-  100% {color: #000000;stroke:#000000;}
+@keyframes white-rainbow {
+  0% {color: #cd5fa1;stroke:#cd5fa1;}
+  23% {color: #f89c44;stroke:#f89c44;}
+  56% {color: #ef6085;stroke:#ef6085;}
+  89% {color: #f0ba45;stroke:#f0ba45;}
+  100% {color: #cd5fa1;stroke:#cd5fa1;}
 }
 
 /* Media Queries */

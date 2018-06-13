@@ -2,7 +2,7 @@
 const appState = {
   menuToggled: false,
   navFadeToggled: false,
-  menuDark: false,
+  navFront: false,
   currentSection: 1
 }
 
@@ -19,10 +19,10 @@ const appReducer = (state = appState, action) => {
         ...state,
         navFadeToggled: !state.navFadeToggled
       };
-    case 'TOGGLE_MENU_DARK':
+    case 'TOGGLE_NAV_FRONT':
       return {
         ...state,
-        menuDark: !state.menuDark
+        navFront: !state.navFront
       };
     case 'UPDATE_CURRENT_SECTION':
       return {
