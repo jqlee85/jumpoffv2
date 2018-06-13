@@ -16,11 +16,11 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   animation: bg-rainbow 10s infinite;
 }
 #nav-icon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   position: relative;
   float: right;
-  margin: 12px 14px;
+  margin: 12px 10px;
   padding: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -46,10 +46,10 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   transition: color .5s ease-in-out;
 }
 .app-menu-dark #nav-icon span {
-  background: #fff;
+  background-color: #000;
 }
 .app-menu-dark #nav-icon p {
-  color: #fff;
+  color: #000;
 }
 #nav-icon span {
   display: block;
@@ -57,21 +57,17 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   height: 2px;
   width: 24px;
   border-radius: 2px;
-  background: #000;
+  background-color: #fff;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-  -webkit-transition: background .5s ease-in-out;
-  -moz-transition: background .5s ease-in-out;
-  -o-transition: background .5s ease-in-out;
-  transition: background .5s ease-in-out;
+  -webkit-transition: background-color .5s ease-in-out;
+  -moz-transition: background-color .5s ease-in-out;
+  -o-transition: background-color .5s ease-in-out;
+  transition: background-color .5s ease-in-out;
 }
 #nav-icon span:nth-child(1) {
   top: 0px;
@@ -86,6 +82,10 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center;
+  -webkit-transition: opacity .15s ease-in-out;
+  -moz-transition: opacity .15s ease-in-out;
+  -o-transition: opacity .15s ease-in-out;
+  transition: opacity .15s ease-in-out;
 }
 #nav-icon span:nth-child(3) {
   top: 18px;
@@ -93,6 +93,12 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center;
+}
+#nav-icon span:nth-child(1), #nav-icon span:nth-child(3) {
+  -webkit-transition: -webkit-transform .15s ease-in-out, top .15s ease-in-out, left .15s ease-in-out;
+  -moz-transition: -moz-transform .15s ease-in-out, top .15s ease-in-out, left .15s ease-in-out;
+  -o-transition: -o-transform .15s ease-in-out, top .15s ease-in-out, left .15s ease-in-out;
+  transition: transform .15s ease-in-out, top .15s ease-in-out, left .15s ease-in-out;
 }
 #nav-icon.toggled span {
   width: 27px;
@@ -103,11 +109,10 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: -3px;
-  left: 0px;
+  top: -1px;
+  left: 2px;
 }
 #nav-icon.toggled span:nth-child(2) {
-  width: 0%;
   opacity: 0;
 }
 #nav-icon.toggled span:nth-child(3) {
@@ -115,8 +120,8 @@ button#nav-icon:hover span, .app-menu-toggled button#nav-icon span {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 16px;
-  left: 0px;
+  top: 18px;
+  left: 2px;
 }
 @-webkit-keyframes bg-rainbow {
   0% {background-color: #f35b5b;}

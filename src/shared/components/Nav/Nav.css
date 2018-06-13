@@ -13,8 +13,8 @@
   width: 100%;
   padding: 80px 20px 60px;
   opacity: 0;
-  background: #fff;
-  color: #000;
+  background: #111;
+  color: #fff;
   -webkit-transition: opacity .3s ease-in-out; /* Safari */
   transition: opacity .3s ease-in-out;
   overflow: hidden;
@@ -38,53 +38,53 @@
   line-height: 130%;
 }
 .main-nav ul li a {
-  color: #000;
+  color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   -webkit-transition: color .5s; /* Safari */
   transition: color .5s;
 }
-.main-nav ul li a:hover, ul li a:active, .main-nav ul li a:focus, a.site-title:hover h1 {
+.main-nav ul li a:hover, ul li a:active, .main-nav ul li a:focus {
   -webkit-animation: rainbow 6s infinite;
   -ms-animation: rainbow 6s infinite;
   -o-animation: rainbow 6s infinite;
   animation: rainbow 6s infinite;
 }
 @-webkit-keyframes rainbow {
-  0% {color: #000;}
+  0% {color: #ffffff;}
   10% {color: #f35b5b;}
   30% {color: #f09f4e;}
   50% {color: #fafa79;}
   70% {color: #43e295;}
   90% {color: #7b8ef8;}
-  100% {color: #000;}
+  100% {color: #ffffff;}
 }
 @-ms-keyframes rainbow {
-  0% {color: #000000;}
+  0% {color: #ffffff;}
   10% {color: #f35b5b;}
   30% {color: #f09f4e;}
   50% {color: #fafa79;}
   70% {color: #43e295;}
   90% {color: #7b8ef8;}
-  100% {color: #000000;}
+  100% {color: #ffffff;}
 }
 @-o-keyframes rainbow {
-  0% {color: #000000;}
+  0% {color: #ffffff;}
   10% {color: #f35b5b;}
   30% {color: #f09f4e;}
   50% {color: #fafa79;}
   70% {color: #43e295;}
   90% {color: #7b8ef8;}
-  100% {color: #000000;}
+  100% {color: #ffffff;}
 }
 @keyframes rainbow {
-  0% {color: #000000;}
+  0% {color: #ffffff;}
   10% {color: #f35b5b;}
   30% {color: #f09f4e;}
   50% {color: #fafa79;}
   70% {color: #43e295;}
   90% {color: #7b8ef8;}
-  100% {color: #000000;}
+  100% {color: #ffffff;}
 }
 @media screen and ( min-width: 601px ) and ( max-width: 800px ) {
   .main-nav ul li {

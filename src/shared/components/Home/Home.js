@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import HomeLanding from '../HomeLanding/HomeLanding';
 import HomeSection from '../HomeSection/HomeSection';
 import styles from './Home.css';
-import { Scroller, Section } from 'react-fully-scrolled';
 
 let sectionData = [
   { 
@@ -14,7 +13,7 @@ let sectionData = [
     title: 'Node + React',
     content: 'Lorem ipsum sit dolor blah blah blah blah blah blah',
     slug: 'node-react-apps',
-    backgroundImage: '/images/home-landing-bg.jpg',
+    backgroundImage: '',
     link: ''
   },
   { 
@@ -66,47 +65,11 @@ class Home extends Component {
   }
 
   componentDidMount(){
-    window.addEventListener('scroll', this.handleScroll);
-    document.ontouchmove = function(ev) {
-      ev.preventDefault();
-    }
-    let contents = document.getElementsByClassName('content-wrapper');
-    for (var i = 0; i < contents.length; i++) {
-      // contents[i].style.top = '';
-      contents[i].style.opacity = '0';
-      contents[i].style.left = '-150%';
-    }
+
   }
 
   componentWillUnmount(){
-    window.removeEventListener('scroll', this.handleScroll);
-    document.ontouchmove = function(ev) {}
-  }
-  
-  onBeforeScroll = (from,to) => {
-    
-    //Change Content Div Color
-    let backgroundColor = sectionData[to - 1].color || 'none';
-    let backgroundColorStyle = '.home-section-content{ background-color:'+backgroundColor+';}';
-    setTimeout(function() {  
-      document.getElementById('home-section-content-style').innerHTML=backgroundColorStyle;   
-    }.bind(this), 200);
-    
-  }
 
-  onAfterScroll = (page) => {
-    let contents = document.getElementsByClassName('content-wrapper');
-    for (var i = 0; i < contents.length; i++) {
-      // contents[i].style.top = '';
-      contents[i].style.opacity = '0';
-      contents[i].style.left = '-150%';
-    }
-    if (page > 1) {
-      let content = document.getElementById('home-content-wrapper_'+page);  
-      // content.style.top = '45%';
-      content.style.opacity = '1';
-      content.style.left= '0px';
-    }
   }
   
 
@@ -114,24 +77,17 @@ class Home extends Component {
 
     return <div id="home" className="home">      
       <style id="home-section-content-style"></style>
-      <Scroller
-        curPage={1}
-        onBeforeScroll={(from, to) => {this.onBeforeScroll(from,to)}}
-        onAfterScroll={(page) => {this.onAfterScroll(page)}}
-        isEnabled={true}
-        swipeSensitivity={100}
-        transDuration={1.2}
-      >  
-        { 
+      
+         {
           sectionData.map(function(section, index){
             if (section.number === 1) {
-              return <Section key={section.number}><HomeLanding/></Section>;
+              return <section key={section.number}><HomeLanding/></section>;
             } else {
-              return <Section key={section.number}><HomeSection sectionNumber={section.number} sectionData={section}/></Section>;
+              return <section key={section.number}><HomeSection sectionNumber={section.number} sectionData={section}/></section>;
             }
           })
         }
-      </Scroller>
+      
     </div>
   }
 

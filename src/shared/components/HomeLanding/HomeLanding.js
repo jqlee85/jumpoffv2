@@ -8,10 +8,6 @@ class HomeLanding extends Component {
   constructor(props){
     super(props);
   }
-  
-  goToSectionTwo() {
-    document.fpTurnTo(2);
-  }
 
   render(){
     
@@ -25,7 +21,6 @@ class HomeLanding extends Component {
         <h2 className="jo-home-title">We build modern web experiences</h2>
         <p>
         </p>
-        <DownArrow size="60" href="#" onClick={this.goToSectionTwo}/>
       </div>
     </section>
   }

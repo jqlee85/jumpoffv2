@@ -28,7 +28,7 @@ class Header extends Component {
 
   render(){
     return <header id="header">
-      <Link className="site-title" to='/' onClick={this.titleLinkClicked}><Logo mainColor="black"/><h1>JumpOff</h1></Link>
+      <Link className="site-title" to='/' onClick={this.titleLinkClicked}><Logo mainColor="white"/><h1>JumpOff</h1></Link>
       <MenuToggle menuToggled={this.props.menuToggled} toggleNav={this.linkClicked}/>
     </header>
   }

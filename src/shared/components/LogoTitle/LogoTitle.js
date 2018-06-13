@@ -8,7 +8,7 @@ class LogoTitle extends Component {
 
   render(){
     return <div className="jo-logo-title">  
-      <Logo />
+      <Logo mainColor="white"/>
       <h3>JUMP<br/>OFF</h3>
     </div>
   }

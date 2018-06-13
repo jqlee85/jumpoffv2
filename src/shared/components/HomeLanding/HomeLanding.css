@@ -1,9 +1,10 @@
 .home-landing {
   display: flex;
   align-items: center;
-  background-image: url('../../../../public/images/home-landing-bg.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: url('../../../../public/images/grid-bg-1.jpg');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: right-bottom;
 }
 .home-landing-content {
   width: 80%;

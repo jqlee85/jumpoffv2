@@ -11,8 +11,8 @@ class Logo extends Component {
 
   render(){
     
-    let mainColor = this.props.color == 'white' ? 'white' : 'black';
-    let secondaryColor = this.props.color == 'white' ? 'black' : 'white';
+    let mainColor = this.props.mainColor == 'white' ? 'white' : 'black';
+    let secondaryColor = this.props.mainColor == 'white' ? 'black' : 'white';
 
     return <div className="jo-logo-wrapper">
       <div className="jo-logo">

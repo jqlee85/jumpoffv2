@@ -70,7 +70,7 @@ class App extends Component {
           updateCurrentSection={this.props.updateCurrentSection}
         />)}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   }
 
