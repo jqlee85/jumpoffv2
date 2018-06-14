@@ -16,10 +16,8 @@ class Header extends Component {
 
   titleLinkClicked() {
     if (this.props.menuToggled) {
-      this.props.toggleNav();
-    } else {
-      this.props.toggleNavNonToggledMenu();
-    }
+      this.props.toggleNav();  
+    } 
   }
 
   linkClicked() {

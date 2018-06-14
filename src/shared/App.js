@@ -60,6 +60,7 @@ class App extends Component {
         userLogin={this.props.requestUserLogin} 
         userData={this.props.user}
         toggleNav={this.toggleAppNav}
+        // toggleNavNonToggledMenu={}
       />
       <div className="main">
         {routes.map((route, i) => <PropsRoute 

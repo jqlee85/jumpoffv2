@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import styles from './Nav.css';
 import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
 
 
 class Nav extends Component {
@@ -9,11 +8,6 @@ class Nav extends Component {
   constructor(props){
     super(props);
     this.routeLinkClicked = this.routeLinkClicked.bind(this)
-  }
-
-  linkClicked() {
-    console.log('linkClicked in nav.js');
-    this.props.toggleAppNavDelayed();
   }
 
   routeLinkClicked() {

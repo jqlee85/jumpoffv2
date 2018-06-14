@@ -46,7 +46,7 @@
   -webkit-transition: color .5s; /* Safari */
   transition: color .5s;
 }
-.main-nav ul li a:hover, ul li a:active, .main-nav ul li a:focus {
+.main-nav ul li a:hover, .main-nav ul li a:active, .main-nav ul li a:focus {
   -webkit-animation: white-rainbow 5s infinite;
   -ms-animation: white-rainbow 5s infinite;
   -o-animation: white-rainbow 5s infinite;
