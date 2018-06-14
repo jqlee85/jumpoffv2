@@ -47,7 +47,7 @@ class HomeLanding extends Component {
               <path 
                 d="M 0 75 L 175 75 L 175 225 L 25 225 L 25 150"
                 fill="none"
-                stroke="black"
+                stroke="#191919"
                 strokeWidth="50"
               />
               
@@ -59,7 +59,7 @@ class HomeLanding extends Component {
         <div className="jo-home-title-wrapper">
           <h1 className="jo-home-title">Jump<br/>Off</h1>
           <p className="jo-home-description">
-          An interdisciplinary web development agency, focused on building quality, modern web experiences using React.js, Node and WordPress.
+          An interdisciplinary web development company focused on building quality, modern web experiences.
           </p>
         </div>
       </div>

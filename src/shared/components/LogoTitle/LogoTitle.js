@@ -7,9 +7,13 @@ import Logo from '../Logo/Logo';
 class LogoTitle extends Component {
 
   render(){
+    let color = this.props.color ? this.props.color : 'white';
+    let textColor = this.props.color ? this.props.color : '#ffffff';
+    let textStyle = {color: textColor};
+
     return <div className="jo-logo-title">  
-      <Logo mainColor="white"/>
-      <h3>JUMP<br/>OFF</h3>
+      <Logo mainColor={color}/>
+      <h3 style={textStyle}>JUMP<br/>OFF</h3>
     </div>
   }
 

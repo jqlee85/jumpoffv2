@@ -63,14 +63,14 @@ h1,h2,h3,h4,h5,h6,a {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
-h1,h2,h3,h4,h5,h6 {
-
+p,h1,h2,h3,h4,h5,h6 {
+  color: #191919;
 }
 textarea, input, button { outline: none; }
 button {
 	background: none;
   border: none;
-  border: 1px solid #333;
+  border: 1px solid #191919;
 }
 button:hover {
   border-color: #3ae0b1;
