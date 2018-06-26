@@ -20,13 +20,21 @@
 }
 .home-section-content h2 {
   text-align: left;
-  font-size: 2.2em;
+  font-size: 3.2em;
   margin-bottom: .7em;
+  background-image: -webkit-linear-gradient(left, #cd5fa1, #ef6085, #f89c44 ); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #cd5fa1, #ef6085, #f89c44 ); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #cd5fa1, #ef6085, #f89c44 ); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #cd5fa1, #ef6085, #f89c44 ); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #cd5fa1, #ef6085, #f89c44 ); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 .home-section-content p {
   font-size: 1.2em;
   line-height: 1.6em;
-  font-weight: 100;
+  font-weight: 300;
   text-align: left;
 }
 .home-section-content a {

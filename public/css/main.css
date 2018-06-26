@@ -202,6 +202,16 @@ button:active {
   89% {color: #f0ba45;stroke:#f0ba45;}
   100% {color: #cd5fa1;stroke:#cd5fa1;}
 }
+.tech-logo.rotating {
+  -webkit-animation:spin 12s linear infinite;
+  animation:spin 12s linear infinite;
+}
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.tech-logo svg {
+  width: 100%;
+  height: 100%;
+}
 
 /* Media Queries */
 @media screen and ( min-width: 1201px ) {
@@ -605,13 +615,18 @@ article.jo-post img {
 }
 .home-section-content h2 {
   text-align: left;
-  font-size: 2.2em;
-  margin-bottom: .7em;
+  font-size: 3.2em;
+  margin-bottom: .7em; /* For Chrome and Safari */ /* For old Fx (3.6 to 15) */ /* For pre-releases of IE 10*/ /* For old Opera (11.1 to 12.0) */
+    background-image:         -webkit-gradient(linear, left top, right top, from(#cd5fa1), color-stop(#ef6085), to(#f89c44) );
+    background-image:         linear-gradient(to right, #cd5fa1, #ef6085, #f89c44 ); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 .home-section-content p {
   font-size: 1.2em;
   line-height: 1.6em;
-  font-weight: 100;
+  font-weight: 300;
   text-align: left;
 }
 .home-section-content a {
@@ -649,17 +664,7 @@ article.jo-post img {
   .home-section-content {
       width: 100%;
   }    
-}.react-logo.rotating {
-  -webkit-animation:spin 12s linear infinite;
-  animation:spin 12s linear infinite;
-}
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }.wordpress-logo.rotating {
-  -webkit-animation:spin 12s linear infinite;
-  animation:spin 12s linear infinite;
-}
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }.home {
+}.home {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
