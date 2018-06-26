@@ -17,9 +17,9 @@ class HomeSectionTwo extends Component {
       </div>
       <div className="home-section-graphics">
         <TechLogo logo="react" rotating={true} color="#191919"/>
-        <TechLogo logo="graphql" color="#191919"/>
-        <TechLogo logo="wordpress" color="#191919"/>
-        <TechLogo logo="redux" color="#191919"/>
+        <TechLogo logo="graphql" rotating={true} color="#191919"/>
+        <TechLogo logo="wordpress" rotating={true} color="#191919"/>
+        <TechLogo logo="redux" rotating={true} color="#191919"/>
       </div>
     </section>
   }
