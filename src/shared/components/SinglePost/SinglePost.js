@@ -20,13 +20,13 @@ const SINGLE_POST_QUERY = gql`
 
 const SinglePost = ({ match }) => {
   
-    console.log(match.params);
     let slug = { slug: match.params.post_slug }
 
     return <div className="blog jo-section">
       <div className="jo-row">
         <div className="jo-content">
           <div className="single-post">
+            {/* Check to see if post exists in cache first, if so*/}
             <Query query={SINGLE_POST_QUERY} variables={slug}>
               {({ loading, error, data }) => {
                 if (loading) return (<LoadingRectangles/>);
