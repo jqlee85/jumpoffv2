@@ -1,6 +1,7 @@
 import React from 'react';
 import About from "./components/About/About";
 import Blog from "./components/Blog/Blog";
+import SinglePost from "./components/SinglePost/SinglePost";
 import Home from "./components/Home/Home";
 import Work from "./components/Work/Work";
 import Resume from "./components/Resume/Resume";
@@ -13,13 +14,14 @@ const routes = [
   },
   {
     path: "/about",
+    exact: true,
     props: {},
     component: About
   },
   {
     path: "/blog/:post_slug",
     props: {},
-    component: Blog
+    component: SinglePost
   },
   {
     path: "/blog",
@@ -29,6 +31,7 @@ const routes = [
   },
   {
     path: "/work",
+    exact: true,
     props: {},
     component: Work
   },

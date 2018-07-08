@@ -19,12 +19,13 @@ const LATEST_POSTS_QUERY = gql`
       }
     }
   }
-  `;
+`;
 
 
 class Blog extends Component {
 
   render(){
+    
     return (
     <div className="blog jo-section">
     <div className="jo-row">
@@ -32,10 +33,10 @@ class Blog extends Component {
     <Query query={LATEST_POSTS_QUERY}>
     {({ loading, error, data }) => {
       if (loading) return (<LoadingRectangles/>);
-      if (error) return (<p>Error :(</p>);
+      if (error) return (<p>Error Loading Post</p>);
       return (
         data.posts.edges.map(({ node }) => (
-          <Post post={node} key={`${node.id}`}/>
+          <Post post={node} key={`${node.id}`} path={this.props.path}/>
         ))
       );
     }}  
