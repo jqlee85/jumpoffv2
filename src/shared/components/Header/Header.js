@@ -3,8 +3,6 @@ import styles from './Header.css';
 import MenuToggle from '../MenuToggle/MenuToggle';
 import Logo from '../Logo/Logo';
 import { Link } from 'react-router-dom';
-import {connect} from 'react-redux';
-
 
 class Header extends Component {
 
@@ -17,7 +15,7 @@ class Header extends Component {
   titleLinkClicked() {
     if (this.props.menuToggled) {
       this.props.toggleNav();  
-    } 
+    }
   }
 
   linkClicked() {
@@ -33,13 +31,4 @@ class Header extends Component {
 
 }
 
-// Application State
-const mapStateToProps = (state) => {
-  return {
-    blog: state.blog,
-    app: state.app,
-    user: state.user
-  }
-}
-
-export default connect(mapStateToProps)(Header);
+export default Header;

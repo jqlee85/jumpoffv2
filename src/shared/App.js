@@ -53,7 +53,6 @@ class App extends Component {
         userLogout={this.props.userLogout}
         toggleNav={this.toggleAppNav}
         navFront={this.props.app.navFront}
-        toggleAppNavRoute={this.toggleAppNav}
       />
       <Header 
         menuToggled={this.props.app.menuToggled} 

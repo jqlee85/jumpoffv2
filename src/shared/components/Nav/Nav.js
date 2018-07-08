@@ -11,7 +11,7 @@ class Nav extends Component {
   }
 
   routeLinkClicked() {
-    this.props.toggleAppNavRoute();
+    this.props.toggleNav();
   }
 
   render() {
