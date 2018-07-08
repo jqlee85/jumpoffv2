@@ -679,9 +679,7 @@ article.jo-post img {
     width: 100%;
 }
 
-.resume {
-  padding: 100px 60px;
-}/* Nav */
+/* Nav */
 #main-nav {
   position: fixed;
   display: -webkit-box;

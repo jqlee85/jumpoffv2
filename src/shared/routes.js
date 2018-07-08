@@ -1,10 +1,7 @@
-import React from 'react';
-import About from "./components/About/About";
 import Blog from "./components/Blog/Blog";
 import SinglePost from "./components/SinglePost/SinglePost";
 import Home from "./components/Home/Home";
-import Work from "./components/Work/Work";
-import Resume from "./components/Resume/Resume";
+import SinglePage from "./components/SinglePage/SinglePage";
 
 const routes = [
   {
@@ -16,7 +13,7 @@ const routes = [
     path: "/about",
     exact: true,
     props: {},
-    component: About
+    component: SinglePage
   },
   {
     path: "/blog/:post_slug",
@@ -33,12 +30,13 @@ const routes = [
     path: "/work",
     exact: true,
     props: {},
-    component: Work
+    component: SinglePage
   },
   {
     path: "/resume",
+    exact: true,
     props: {},
-    component: Resume
+    component: SinglePage
   }
 ];
 
