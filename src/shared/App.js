@@ -1,18 +1,15 @@
 import styles from './App.css';
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router'
 import routes from "./routes";
 import {PropsRoute} from 'react-router-with-props';
 import {connect} from 'react-redux';
 import {requestUserLogin} from './actions/userActions';
 import {userLogout} from './actions/userActions';
-import {fetchBlogPost} from './actions/blogActions';
 import {toggleNav} from './actions/appActions';
 import {toggleNavFront} from './actions/appActions';
 import {toggleNavFade} from './actions/appActions';
-import {toggleMenuDark} from './actions/appActions';
-import {updateCurrentSection} from './actions/appActions';
 import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -40,6 +37,10 @@ class App extends Component {
       this.props.toggleNav();
     }, 100); 
   }
+
+  // toggleNav = () => {
+  //   this.props.app.navToggled = !this.props.app.navToggled;
+  // }
 
   render(){
     
@@ -84,7 +85,6 @@ class App extends Component {
 // Application State
 const mapStateToProps = (state) => {
   return {
-    blog: state.blog,
     app: state.app,
     user: state.user
   }
@@ -99,18 +99,6 @@ const mapDispatchToProps = (dispatch) => {
     },
     toggleNavFront: (data) => {
       dispatch(toggleNavFront(data));
-    },
-    updateCurrentSection: (data) => {
-      dispatch(updateCurrentSection(data));
-    },
-    fetchBlogPost: (slug) => {
-      dispatch(fetchBlogPost(slug));
-    },
-    requestUserLogin: (userName,password) => {
-      dispatch(requestUserLogin(userName,password));
-    },
-    userLogout: (userName,password) => {
-      dispatch(userLogout(userName,password));
     }
   }
 }

@@ -663,6 +663,14 @@ article.jo-post img {
 .tech-logo svg {
   width: 100%;
   height: 100%;
+}.graphql-logo svg{
+  width: 85%;
+  margin: auto;
+  text-align:center;
+}.wordpress-logo svg{
+  width: 80%;
+  margin: auto;
+  text-align:center;
 }.home {
     position: relative;
     display: -webkit-box;

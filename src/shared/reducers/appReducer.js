@@ -24,11 +24,6 @@ const appReducer = (state = appState, action) => {
         ...state,
         navFront: !state.navFront
       };
-    case 'UPDATE_CURRENT_SECTION':
-      return {
-        ...state,
-        currentSection: action.payload
-      };
     default:
       return state;
   }

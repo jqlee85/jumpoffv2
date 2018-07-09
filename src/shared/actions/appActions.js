@@ -15,10 +15,3 @@ export function toggleNavFront(){
     type: 'TOGGLE_NAV_FRONT'
   }
 }
-
-export function updateCurrentSection(currentSection){
-  return { 
-    type: 'UPDATE_CURRENT_SECTION',
-    payload: currentSection
-  }
-}
