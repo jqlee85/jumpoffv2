@@ -31,19 +31,19 @@ class Blog extends Component {
     <div className="jo-row">
     <div className="jo-content">
     <Query query={LATEST_POSTS_QUERY}>
-    {({ loading, error, data }) => {
-      if (loading) return (<LoadingRectangles/>);
-      if (error) return (<p>Error Loading Post</p>);
-      return (
-        data.posts.edges.map(({ node }) => (
-          <Post post={node} key={`${node.id}`} path={this.props.path}/>
-        ))
-      );
-    }}  
-  </Query>
-  </div>
-  </div>
-  </div>);
+      {({ loading, error, data }) => {
+        if (loading) return (<LoadingRectangles/>);
+        if (error) return (<p>Error Loading Post</p>);
+        return (
+          data.posts.edges.map(({ node }) => (
+            <Post post={node} key={`${node.id}`} path={this.props.path}/>
+          ))
+        );
+      }}  
+    </Query>
+    </div>
+    </div>
+    </div>);
   }
 }
 

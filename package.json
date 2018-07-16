@@ -15,7 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "apollo-boost": "^0.1.4",
-    "apollo-cache-inmemory": "^1.1.12",
     "apollo-cache-persist": "^0.1.1",
     "cors": "^2.8.4",
     "cross-fetch": "^2.1.0",
@@ -23,7 +22,6 @@
     "express-static-gzip": "^0.3.2",
     "google-maps-react": "^1.1.2",
     "graphql": "^0.13.2",
-    "graphql-tag": "^2.8.0",
     "isomorphic-fetch": "^2.2.1",
     "js-cookie": "^2.2.0",
     "pm2": "^2.10.3",
