@@ -15,13 +15,11 @@ import "source-map-support/register";
 
 import expressStaticGzip from "express-static-gzip";
 
-
 const app = express();
 
 app.use(cors());
 app.use(express.static("public"));
 app.use("/", expressStaticGzip("/public/"));
-
 
 //Handle Gzips
 app.get('*.js', function (req, res, next) {
