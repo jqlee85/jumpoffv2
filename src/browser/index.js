@@ -10,28 +10,6 @@ import { BrowserRouter } from "react-router-dom";
 import configureStore from "../shared/configureStore";
 import App from "../shared/App";
 
-// Set up cache.
-const cache = new InMemoryCache({
-  dataIdFromObject: object => {
-    switch (object.__typename) {
-      case 'Post': return object.slug; // use `slug` as the primary key
-      default: return object.id || object._id; // fall back to `id` and `_id` for all other types
-    }
-  },
-  cacheRedirects: {
-    Query: { 
-      postBy: (_, {args}, {getCacheKey} ) => getCacheKey({ 
-        __typename: 'Post', slug: args.slug 
-      }) 
-    }
-  }
-});
-
-persistCache({
-  cache,
-  storage: window.localStorage,
-});
-
 const store = configureStore(window.__initialData__);
 
 hydrate(

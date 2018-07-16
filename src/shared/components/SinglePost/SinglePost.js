@@ -25,7 +25,7 @@ class SinglePost extends Component {
   }
 
   componentDidMount(){
-
+    console.log(window.localStorage);
     if(!client.cache.data.data.ROOT_QUERY){
       // an error or anything you want to be done
       console.log('cache NOT defined');

@@ -1,6 +1,9 @@
-import ApolloClient from "apollo-boost";
 import 'cross-fetch/polyfill';
+import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import { HttpLink } from 'apollo-link-http';
+import { onError } from 'apollo-link-error';
+import { ApolloLink } from 'apollo-link';
 import { persistCache } from 'apollo-cache-persist';
 
 // Set up cache.
@@ -20,15 +23,35 @@ const cache = new InMemoryCache({
   }
 });
 
+// Persist Cache
+persistCache({
+  cache,
+  storage: window.localStorage,
+});
+
 // Set API Host
 const API_HOST =
   process.env.NODE_ENV !== 'production'
     ? 'https://jumpoff.io/graphql'
     : 'https://jumpoff.io/graphql';
 
-// Create Apollo Client
+// Create Apollo client
 const client = new ApolloClient({
-  uri: API_HOST,
+  link: ApolloLink.from([
+    onError(({ graphQLErrors, networkError }) => {
+      if (graphQLErrors)
+        graphQLErrors.map(({ message, locations, path }) =>
+          console.log(
+            `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
+          ),
+        );
+      if (networkError) console.log(`[Network error]: ${networkError}`);
+    }),
+    new HttpLink({
+      uri: API_HOST,
+      credentials: 'same-origin'
+    })
+  ]),
   cache
 });
 
