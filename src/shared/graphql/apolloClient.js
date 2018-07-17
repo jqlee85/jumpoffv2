@@ -11,16 +11,20 @@ const cache = new InMemoryCache({
   dataIdFromObject: object => {
     switch (object.__typename) {
       case 'Post': return object.slug; // use `slug` as the primary key
+      case 'Page': return object.uri;
       default: return object.id || object._id; // fall back to `id` and `_id` for all other types
     }
   },
   cacheRedirects: {
     Query: { 
       postBy: (_, {args}, {getCacheKey} ) => getCacheKey({ 
-        __typename: 'Post', slug: args.slug 
-      }) 
+        __typename: 'Post', slug: args.slug
+      }),
+      pageBy: (_, {args}, {getCacheKey} ) => getCacheKey({ 
+        __typename: 'Page', uri: args.uri
+      })
     }
-  }
+  },
 });
 
 // Persist Cache
@@ -54,5 +58,6 @@ const client = new ApolloClient({
   ]),
   cache
 });
+
 
 export default client
