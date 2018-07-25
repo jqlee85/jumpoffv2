@@ -13,6 +13,19 @@ class HomeLanding extends Component {
     
     let onClick = this.props.onClick;
     
+    //Normal Versions
+    let color1 = '#f0ba45';
+    let color2 = '#f89c44';
+    let color3 = '#ef6085';
+    let color4 = '#cd5fa1';
+
+    //Vibrant Versions
+    // let color1 = '#FD6922';
+    // let color2 = '#F9562C';
+    // let color3 = '#ED2267';
+    // let color4 = '#EC1A75';
+
+
     return <section className="jo-section home-section-one home-landing">
       <div className="jo-section-half first">
         <div className="jo-logo-featured-wrapper">
@@ -26,10 +39,10 @@ class HomeLanding extends Component {
             >
               <defs>
                 <linearGradient id="jo-gradient" x1="0%" y1="0%" x2="75%" y2="100%">
-                  <stop offset="0%"   stopColor="#f0ba45"/>
-                  <stop offset="25%"   stopColor="#f89c44"/>
-                  <stop offset="75%" stopColor="#ef6085"/>
-                  <stop offset="100%" stopColor="#cd5fa1"/>
+                  <stop offset="0%"   stopColor={color1}/>
+                  <stop offset="25%"   stopColor={color2}/>
+                  <stop offset="75%" stopColor={color3}/>
+                  <stop offset="100%" stopColor={color4}/>
                 </linearGradient>
               </defs>
               <path 

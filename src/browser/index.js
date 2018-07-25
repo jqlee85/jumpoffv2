@@ -4,7 +4,6 @@ import { hydrate } from "react-dom";
 import { Provider } from "react-redux";
 import { ApolloProvider } from 'react-apollo';
 import { InMemoryCache } from 'apollo-cache-inmemory';
-import { persistCache } from 'apollo-cache-persist';
 import client from '../shared/graphql/apolloClient'
 import { BrowserRouter } from "react-router-dom";
 import configureStore from "../shared/configureStore";
