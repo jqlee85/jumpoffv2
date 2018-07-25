@@ -37,7 +37,7 @@ class Logo extends Component {
             stroke="url(#jo-gradient)"
             strokeWidth="50"
           />
-          <path 
+          {/* <path 
             d="M 12.5 62.5 L 187.5 62.5 L 187.5 212.5 L 37.5 212.5 L 37.5 137.5"
             fill="none"
             stroke={secondaryColor}
@@ -48,7 +48,7 @@ class Logo extends Component {
             fill="none"
             stroke={mainColor}
             strokeWidth="50"
-          />
+          /> */}
         </svg>
       </div>
     </div>

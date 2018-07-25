@@ -8,14 +8,20 @@
   height: 72px;
   padding: 14px 10px;
   z-index: 75;
-  background-color: #191919;
+  background-color: rgba(255,255,255,1);
+}
+.app-scrolled #header {
+  box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+}
+.app-menu-toggled #header {
+  background:none;
 }
 #header a.site-title {
   display: inline;
   position: relative;
   float: left;
   opacity: 1; 
-  color: #fff;
+  color: #191919;
   height: auto;
   margin-top: 8px;
   margin-left: 10px;

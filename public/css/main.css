@@ -767,14 +767,21 @@ article.jo-post img {
   height: 72px;
   padding: 14px 10px;
   z-index: 75;
-  background-color: #191919;
+  background-color: rgba(255,255,255,1);
+}
+.app-scrolled #header {
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+          box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+}
+.app-menu-toggled #header {
+  background:none;
 }
 #header a.site-title {
   display: inline;
   position: relative;
   float: left;
   opacity: 1; 
-  color: #fff;
+  color: #191919;
   height: auto;
   margin-top: 8px;
   margin-left: 10px;
@@ -830,8 +837,8 @@ button#nav-icon:hover span {
   width: 24px;
   height: 24px;
   position: relative;
-  float: right;
   margin: 12px 10px;
+  float:right;
   padding: 0;
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
@@ -850,11 +857,14 @@ button#nav-icon:hover span {
   -webkit-transition: color .5s ease-in-out;
   transition: color .5s ease-in-out;
 }
-.app-menu-dark #nav-icon span {
-  background-color: #000;
+/* .app-menu-dark #nav-icon span {
+  background-color: #fff;
 }
 .app-menu-dark #nav-icon p {
   color: #000;
+} */
+.app-menu-toggled #nav-icon span {
+  background-color: #fff;
 }
 #nav-icon span {
   display: block;
@@ -862,7 +872,7 @@ button#nav-icon:hover span {
   height: 2px;
   width: 24px;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: #191919;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
