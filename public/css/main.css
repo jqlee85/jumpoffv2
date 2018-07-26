@@ -249,6 +249,65 @@ button:active {
 }
 @media screen and ( max-width: 600px ) {
   
+}
+
+/* Custom Fonts */
+/* Butler font by http://fabiandesmet.com/portfolio/butler-font/ */
+@font-face {
+  font-family: 'butlerblack';
+  src: url(/media/butler_black-webfont.woff2) format('woff2'),
+       url(/media/butler_black-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'butlerbold';
+  src: url(/media/butler_bold-webfont.woff2) format('woff2'),
+       url(/media/butler_bold-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'butlerextrabold';
+  src: url(/media/butler_extrabold-webfont.woff2) format('woff2'),
+       url(/media/butler_extrabold-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'butlerlight';
+  src: url(/media/butler_light-webfont.woff2) format('woff2'),
+       url(/media/butler_light-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'butlermedium';
+  src: url(/media/butler_medium-webfont.woff2) format('woff2'),
+       url(/media/butler_medium-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'butlerregular';
+  src: url(/media/butler_regular-webfont.woff2) format('woff2'),
+       url(/media/butler_regular-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'butlerultralight';
+  src: url(/media/butler_ultra_light-webfont.woff2) format('woff2'),
+       url(/media/butler_ultra_light-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }.jo-blog-loading {
   font-size: 5em;
   -webkit-animation: white-rainbow 6s infinite;
@@ -417,11 +476,29 @@ article.jo-post img {
   100% {background-color: #fafafa;}
 }.home-section-one .first {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100vh;
-  width: 50%;
+  width: 60%;
   z-index: 10;
+}
+.jo-impossible-shape {
+  width: 80%;
+  margin: auto;
+  height: auto;
+  max-width: 500px;
+}
+.jo-impossible-shape svg path{
+  fill: #191919;
 }
 .jo-logo-featured-wrapper {
   position: relative;
@@ -448,7 +525,7 @@ article.jo-post img {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  width: 50%;
+  width: 40%;
   -ms-flex-line-pack: end;
       align-content: flex-end;
   -webkit-box-pack: end;
@@ -495,7 +572,7 @@ article.jo-post img {
     font-size: 130px;
   }
 }
-@media screen and ( max-width: 800px ) {
+@media screen and ( max-width: 800px ) { 
   .jo-section-half, .jo-section .first {
     width: 100%;
     height: auto;
@@ -509,6 +586,19 @@ article.jo-post img {
     height: auto;
   }
   .home-section-one .jo-section-half.first {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .jo-impossible-shape {
+    margin-top: 80px;
+    margin-left: 40px;
   }
   .jo-home-title-wrapper {
     margin-top: 20px;
@@ -518,6 +608,12 @@ article.jo-post img {
   .jo-logo-featured-wrapper {
     width: 60%;
     padding-bottom: 60%;
+  }
+  .jo-impossible-shape {
+    width: 60%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .jo-home-title-wrapper {
     margin-top: -40px;
@@ -538,6 +634,9 @@ article.jo-post img {
   .jo-logo-featured-wrapper {
     width: 80%;
     padding-bottom: 80%;
+  }
+  .jo-impossible-shape {
+    width: 80%;
   }
   .jo-home-description {
     width: 80%;
@@ -768,6 +867,8 @@ article.jo-post img {
   padding: 14px 10px;
   z-index: 75;
   background-color: rgba(255,255,255,1);
+  /* -webkit-transition: background-color .3s ease; Safari */
+  /* transition: background-color .3s ease; */
 }
 .app-scrolled #header {
   -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.1);
