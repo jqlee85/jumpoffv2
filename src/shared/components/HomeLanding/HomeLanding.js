@@ -13,62 +13,63 @@ class HomeLanding extends Component {
     
     let onClick = this.props.onClick;
     
-    //Normal Versions
-    let color1 = '#f0ba45';
-    let color2 = '#f89c44';
-    let color3 = '#ef6085';
-    let color4 = '#cd5fa1';
-
-    //Vibrant Versions
-    // let color1 = '#FD6922';
-    // let color2 = '#F9562C';
-    // let color3 = '#ED2267';
-    // let color4 = '#EC1A75';
-
+    //Muted Colors
+    let mutedColors = {
+      color1: '#f0ba45',
+      color2: '#f89c44',
+      color3: '#ef6085',
+      color4: '#cd5fa1'
+    } 
+    
+    //Vibrant Colors
+    let colors = {
+      color1: '#FD6922',
+      color2: '#F9562C',
+      color3: '#ED2267',
+      color4: '#EC1A75'
+    }
 
     return <section className="jo-section home-section-one home-landing">
-      <div className="jo-section-half first">
-        {/* <div className="jo-logo-featured-wrapper">
-          <div className="jo-logo-featured">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" 
-              width="100%"
-              height="100%"
-              x="0"
-              y="0"
-              viewBox="0 0 250 250"
-            >
+        <div className="jo-home-shapes-wrapper aspectRatioSizer">
+          <svg viewBox="0 0 3 5"></svg>
+          <svg className="jo-home-shape jo-home-shape-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640">
+            <defs><path d="M585.53 577.64L621.16 457.53L585.32 328.25L549.62 448.5L549.62 448.57L549.76 448.78L585.53 577.64Z" id="bnRLdbXzB"></path><path d="M620.65 189.5L583.96 57.46L451.41 94.22L488.11 226.27L620.65 189.5Z" id="f38mOBgm4"></path><path d="M432.28 420.12L545.78 446.65L620.37 194.92L488.17 231.6L488.11 231.6L432.28 420.12Z" id="b1pZVKhb8b"></path><path d="M484.05 230.39L424.68 212.84L448.85 349.22L484.05 230.39Z" id="hjNk5mVQZ"></path><path d="M450.13 621.45L582.61 584.68L545.85 452.12L413.3 488.82L450.13 621.45Z" id="db9bLcd01Z"></path><path d="M428.94 423.89L291.27 449.71L410.23 484.98L538.52 449.34L428.94 423.89Z" id="b5lXdISW6K"></path><path d="M456.96 17.92L327.75 53.82L448.57 89.66L448.71 89.66L577.92 53.76L456.96 17.92Z" id="c2kPhik1hR"></path><path d="M213.97 214.19L348.65 190.29L231.4 155.52L213.97 214.19Z" id="c8MsSiODh"></path><path d="M231.32 151.04L483.05 225.63L446.36 93.43L446.36 93.36L194.7 18.84L231.32 151.04Z" id="c1b0afuAsu"></path><path d="M408.53 488.89L156.8 414.29L156.73 414.29L193.42 546.49L445.16 621.08L408.53 488.89Z" id="aFkDlSV6L"></path><path d="M215.25 427.16L191.15 291.35L156.09 409.66L156.16 409.66L215.25 427.16Z" id="e1Z6keGuNp"></path><path d="M183.04 622.08L312.25 586.17L191.43 550.34L191.29 550.34L62.08 586.23L183.04 622.08Z" id="bFuSkZOv1"></path><path d="M190.02 19.06L57.39 55.89L94.02 187.95L226.7 151.18L190.02 19.06Z" id="ci2ISEOEK"></path><path d="M151.82 408.96L151.89 408.96L226.63 156.52L94.43 193.14L19.63 445.65L151.82 408.96Z" id="f2rNPhcG0R"></path><path d="M151.89 413.72L19.2 450.49L56.04 583.18L188.73 546.35L151.89 413.72Z" id="b44EG4e87p"></path><path d="M90.24 191.21C87.86 182.64 75.96 139.78 54.54 62.64L18.84 183.04L54.68 312.32L90.45 191.72L90.17 190.71C90.17 190.95 90.19 191.12 90.24 191.21Z" id="g2nODPQt8O"></path></defs><g><g><g><use xlinkHref="#bnRLdbXzB" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#bnRLdbXzB" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#f38mOBgm4" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#f38mOBgm4" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#b1pZVKhb8b" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#b1pZVKhb8b" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#hjNk5mVQZ" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#hjNk5mVQZ" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#db9bLcd01Z" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#db9bLcd01Z" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#b5lXdISW6K" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#b5lXdISW6K" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#c2kPhik1hR" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#c2kPhik1hR" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#c8MsSiODh" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#c8MsSiODh" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#c1b0afuAsu" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#c1b0afuAsu" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#aFkDlSV6L" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#aFkDlSV6L" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#e1Z6keGuNp" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#e1Z6keGuNp" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#bFuSkZOv1" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#bFuSkZOv1" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#ci2ISEOEK" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#ci2ISEOEK" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#f2rNPhcG0R" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#f2rNPhcG0R" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#b44EG4e87p" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#b44EG4e87p" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g><g><use xlinkHref="#g2nODPQt8O" opacity="1" fill="#000000" fillOpacity="1"></use><g><use xlinkHref="#g2nODPQt8O" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="0"></use></g></g></g></g>
+          </svg>
+          <svg className="jo-home-shape jo-home-shape-2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="-18 0 100 100" enableBackground="new -18 0 100 100" xmlSpace="preserve">
+            <g><polygon points="25.913,32.797 42.649,61.992 54.883,61.992 25.676,12.753 -11.114,76.314 -5.175,87.45  "/><polygon points="31.367,43.632 25.911,34.257 -4.631,87.45 69.303,87.45 75.114,75.624 13.232,75.687  "/><polygon points="21.448,62.713 14.413,75.192 75.114,75.192 38.308,12.607 26.672,12.607 56.355,62.713  "/></g>
+          </svg>
+          <svg className="jo-home-shape jo-home-shape-3" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 128 128"  xmlSpace="preserve">
+            <g><polygon points="58.156,108.431 16.01,79.799 10.944,82.519 58.004,114.594  "/><polygon points="69.496,108.431 69.648,114.594 116.709,82.519 111.643,79.799  "/><polygon points="111.612,56.821 112.323,78.602 116.709,82.519 116,53.986  "/><polygon points="31.703,67.98 17.305,78.92 21.741,82.122 37.096,71.368 26.726,64.301 16.556,71.424 16.758,77.605  "/><path d="M96.963,60.445c1.457,1.057,2.72,2.106,4.164,3.183l15.1-11.494c0.132-0.146,0.285-0.241,0.498-0.247   c0.029-0.001,0.041,0.004,0.07,0.007c0.207,0.013,0.4,0.11,0.536,0.289c0.144,0.188,0.175,0.424,0.118,0.637l-0.738,29.699   l-47.226,33.978c-0.132,0.141-0.317,0.231-0.524,0.236c-0.309,0.008-0.576-0.173-0.695-0.438c-0.067-0.141-0.088-0.294-0.063-0.44   l0.738-29.754l20.711-14.505l-4.517-3.123c-0.038,0.042-0.079,0.081-0.127,0.115L64.561,82.909l-0.397,43.811L122.5,86.101V41.899   L96.963,60.445z"/><polygon points="16.034,57.013 11.651,54.025 10.944,82.519 15.329,78.602  "/><path d="M83.865,67.578l-4.439-3.151l-15.6,10.927L15.714,42.561c-0.102-0.052-0.193-0.124-0.264-0.223   c-0.067-0.094-0.106-0.197-0.125-0.303c-0.001-0.007-0.002-0.015-0.002-0.021c-0.005-0.035-0.01-0.07-0.01-0.105   c-0.001-0.034,0.003-0.066,0.006-0.099c0.001-0.01,0.001-0.02,0.003-0.03c0.016-0.104,0.053-0.209,0.118-0.303   c0.072-0.105,0.167-0.184,0.272-0.238L63.078,8.954L17.271,41.899l4.374,3.179L58.5,19.192v22.707l0.117,0.047L37.728,56.585   l5.044,3.624l19.883-14.783l-3.721-3.325l4.096,2.16l0.756-35.789l0.039-0.026l0.997,35.815l3.393-1.713l-3.21,2.867l45.864,33   l0.227-6.948c-3.559-2.146-7.043-4.397-10.498-6.69c-1.816-1.188-3.602-2.422-5.402-3.632l-5.354-3.703l-5.308-3.767   c-1.754-1.278-3.522-2.535-5.261-3.836c-3.417-2.523-6.805-5.091-10.113-7.768l0.34-22.879l36.771,25.948l4.206-3.23L64.413,8.829   l47.485,32.372c0.123,0.049,0.229,0.13,0.314,0.245c0.164,0.219,0.18,0.499,0.079,0.734c-0.004,0.009-0.011,0.019-0.015,0.028   c-0.014,0.027-0.027,0.052-0.044,0.078c-0.007,0.011-0.012,0.023-0.02,0.035c-0.075,0.109-0.175,0.188-0.286,0.244l-20.997,13.83   l4.461,3.165c0.044-0.063,0.097-0.122,0.162-0.17c0.009-0.007,0.02-0.014,0.028-0.02l26.242-17.473L63.826,1.28L5.622,41.899   L5.5,41.957v44.144l58.162,40.619l-0.61-43.815L7.764,43.225l56.058,38.392L83.865,67.578z M10.292,52.283   c0.122-0.229,0.356-0.39,0.634-0.396c0.217-0.006,0.414,0.085,0.553,0.23l47.232,33.983l0.739,29.767   c0.023,0.158-0.004,0.321-0.086,0.468c-0.122,0.23-0.356,0.391-0.635,0.397c-0.217,0.005-0.413-0.085-0.553-0.23L10.944,82.519   l-0.739-29.767C10.181,52.594,10.209,52.431,10.292,52.283z"/><path d="M110.854,78.556c0.004-0.008,0.006-0.016,0.01-0.023c0-0.001,0-0.002,0.002-0.003l0.002-0.088L64.432,46.792l-0.483,4.672   l-0.73-4.694L42.797,60.223l5.037,3.624l16.33-11.398c3.613,2.178,7.147,4.866,10.656,7.194c1.815,1.188,3.602,2.421,5.402,3.633   l5.354,3.7l5.31,3.766c1.753,1.278,3.522,2.534,5.261,3.835c3.311,2.444,6.592,4.932,9.802,7.52L110.854,78.556z"/></g>
+          </svg>
+          <svg className="jo-home-shape jo-home-shape-4" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 90 90" xmlSpace="preserve">
+            <rect x="1.39" y="45.49" width="23.52" height="23.52"/><polygon points="43.294,33.24 25.263,44.51 2.604,44.51 20.638,33.24 "/><polygon points="64.108,44.727 25.89,68.617 25.89,45.273 64.108,21.382 "/><polygon points="64.728,45.49 87.394,45.49 69.36,56.76 46.704,56.76 "/><rect x="65.089" y="20.99" width="23.521" height="23.52"/>
+          </svg>
+          <svg className="jo-home-shape jo-home-shape-5" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 128 128" xmlSpace="preserve">
+            <path d="M64,1.279c-2.328,0-4.625,0.132-6.888,0.379c1.898,0.107,3.794,0.278,5.683,0.523c2.385,0.32,4.754,0.761,7.098,1.321  c4.687,1.12,9.27,2.741,13.603,4.907c4.325,2.176,8.388,4.902,12.038,8.111c3.654,3.207,6.869,6.915,9.587,10.953  c5.463,8.081,8.774,17.521,10.065,27.163c0.328,2.413,0.51,4.845,0.578,7.279c0.018,0.606,0.023,1.227,0.027,1.82  c-0.002,0.629-0.014,1.229-0.035,1.846c-0.048,1.224-0.137,2.447-0.273,3.666c-0.543,4.873-1.82,9.675-3.827,14.162  c-2.017,4.48-4.753,8.643-8.106,12.242c-3.35,3.595-7.312,6.642-11.703,8.869c-8.768,4.491-19.189,5.627-28.667,3.06  c-4.737-1.265-9.231-3.401-13.188-6.26c-3.961-2.855-7.407-6.394-10.177-10.383c-5.105-7.392-7.891-16.262-8.102-25.141  c-0.033-0.596-0.052-1.195-0.052-1.798c0-17.862,14.479-32.342,32.34-32.342c16.107,0,29.459,11.777,31.928,27.189  c-0.102-0.816-0.215-1.631-0.356-2.439c-0.399-2.358-0.976-4.684-1.726-6.946c-1.5-4.528-3.702-8.811-6.527-12.618  c-5.59-7.655-13.783-13.374-22.92-15.622c-4.553-1.132-9.318-1.408-13.965-0.868c-4.653,0.543-9.194,1.949-13.338,4.114  c-4.146,2.162-7.914,5.048-11.086,8.488c-3.178,3.436-5.771,7.408-7.678,11.686c-1.925,4.271-3.164,8.85-3.699,13.511  c-0.135,1.166-0.225,2.337-0.274,3.51c-0.023,0.583-0.037,1.182-0.04,1.752c0.001,0.607,0.004,1.186,0.021,1.778  c0.053,2.364,0.235,4.722,0.521,7.068c0.577,4.691,1.644,9.325,3.219,13.783c1.58,4.453,3.653,8.736,6.219,12.708  c5.126,7.95,12.306,14.572,20.701,19.055c4.181,2.27,8.647,4.025,13.254,5.294c2.304,0.637,4.643,1.149,7.003,1.554  c2.359,0.417,4.739,0.721,7.131,0.924c-2.398-0.094-4.795-0.289-7.18-0.598c-2.384-0.321-4.754-0.761-7.098-1.321  c-4.687-1.119-9.27-2.741-13.603-4.907c-4.326-2.177-8.387-4.903-12.038-8.112c-3.654-3.206-6.869-6.914-9.587-10.952  c-5.463-8.082-8.774-17.522-10.065-27.163c-0.328-2.413-0.51-4.846-0.578-7.278c-0.018-0.607-0.024-1.228-0.027-1.821  c0.001-0.63,0.013-1.229,0.035-1.846c0.047-1.225,0.136-2.447,0.273-3.666c0.543-4.873,1.82-9.676,3.827-14.162  c2.016-4.48,4.752-8.642,8.105-12.241c3.351-3.597,7.312-6.643,11.703-8.871c8.768-4.491,19.19-5.625,28.668-3.059  c4.737,1.266,9.231,3.399,13.188,6.259c3.961,2.856,7.406,6.395,10.177,10.383c5.299,7.673,8.099,16.938,8.112,26.15  c0.027,0.539,0.041,1.081,0.041,1.628c0,17.86-14.479,32.34-32.34,32.34c-15.064,0-27.722-10.3-31.317-24.241  c0.377,1.896,0.864,3.769,1.472,5.601c1.5,4.526,3.702,8.811,6.527,12.619c5.589,7.653,13.783,13.373,22.92,15.622  c4.554,1.132,9.318,1.406,13.965,0.867c4.652-0.543,9.194-1.949,13.338-4.115c4.146-2.16,7.914-5.046,11.088-8.486  c3.178-3.436,5.771-7.409,7.678-11.687c1.924-4.271,3.163-8.85,3.699-13.512c0.135-1.164,0.225-2.336,0.273-3.509  c0.023-0.583,0.037-1.183,0.04-1.752c-0.001-0.606-0.005-1.187-0.021-1.778c-0.053-2.363-0.235-4.724-0.521-7.069  c-0.577-4.691-1.644-9.325-3.218-13.782c-1.582-4.454-3.654-8.735-6.221-12.708c-5.126-7.95-12.307-14.573-20.7-19.054  c-4.181-2.271-8.647-4.027-13.254-5.295c-2.304-0.637-4.644-1.149-7.004-1.555c-1.973-0.349-3.963-0.613-5.96-0.812  C25.544,5.273,1.28,31.802,1.28,64.001c0,34.639,28.081,62.72,62.72,62.72c34.639,0,62.721-28.081,62.721-62.72  C126.721,29.36,98.639,1.279,64,1.279z"/>
+          </svg>
+        </div>
+        <div className="jo-home-title-wrapper">
+          <div className="jo-home-title">
+            <svg viewBox="0 0 380 100" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <linearGradient id="jo-gradient" x1="0%" y1="0%" x2="75%" y2="100%">
-                  <stop offset="0%"   stopColor={color1}/>
-                  <stop offset="25%"   stopColor={color2}/>
-                  <stop offset="75%" stopColor={color3}/>
-                  <stop offset="100%" stopColor={color4}/>
+                <linearGradient id="jo-gradient-vibrant" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%"   stopColor={colors.color1}/>
+                  <stop offset="25%"   stopColor={colors.color2}/>
+                  <stop offset="75%" stopColor={colors.color3}/>
+                  <stop offset="100%" stopColor={colors.color4}/>
                 </linearGradient>
               </defs>
-              <path 
-                d="M 25 50 L 200 50 L 200 200 L 50 200 L 50 125"
-                fill="none"
-                stroke="url(#jo-gradient)"
-                strokeWidth="50"
-              />
-              <path 
-                d="M 12.5 62.5 L 187.5 62.5 L 187.5 212.5 L 37.5 212.5 L 37.5 137.5"
-                fill="none"
-                stroke="white"
-                strokeWidth="50"
-              />
-              <path 
-                d="M 0 75 L 175 75 L 175 225 L 25 225 L 25 150"
-                fill="none"
-                stroke="#191919"
-                strokeWidth="50"
-              />
-              
+              <text size="" fill="url(#jo-gradient-vibrant)" x="18" y="42" className="home-title-top">JumpOff</text>
+              <text size="" fill="rgba(255,255,255,.8)" x="0" y="82.5" className="home-title-bottom">Development</text>
+              <text size="" fill="url(#jo-gradient-vibrant)" x="0" y="83" className="home-title-bottom">Development</text>
             </svg>
           </div>
-        </div> */}
-        <div className="jo-impossible-shape">
-        <svg version="1.1" x="0px" y="0px" viewBox="0 0 87.265 100" enableBackground="new 0 0 87.265 100" >
+          <p className="jo-home-description">
+            An interdisciplinary web development company focused on building quality, modern web experiences.
+          </p>
+        </div>
+        {/* <div className="jo-impossible-shape"> */}
+        {/* <svg version="1.1" x="0px" y="0px" viewBox="0 0 87.265 100" enableBackground="new 0 0 87.265 100" >
           <path d="M20.226,83.024c-0.401,0-0.791-0.208-1.004-0.581c-0.319-0.556-0.126-1.26,0.427-1.579l65.382-37.54  c0.556-0.318,1.261-0.127,1.577,0.427c0.32,0.555,0.126,1.26-0.425,1.579L20.8,82.87C20.619,82.975,20.421,83.024,20.226,83.024z"/>
           <path d="M10.839,100c-0.398,0-0.787-0.205-1.001-0.576c-0.321-0.553-0.132-1.26,0.421-1.581l75.269-43.602  c0.551-0.32,1.261-0.131,1.581,0.421c0.32,0.553,0.131,1.26-0.42,1.581L11.418,99.845C11.236,99.95,11.036,100,10.839,100z"/>
           <path d="M86.105,56.398c-0.614,0-1.125-0.483-1.152-1.104l-0.474-10.281L10.211,2.159c-0.553-0.32-0.743-1.027-0.423-1.58  s1.025-0.743,1.58-0.423l74.814,43.17c0.343,0.198,0.56,0.555,0.578,0.949l0.501,10.917c0.032,0.637-0.463,1.179-1.102,1.206  C86.142,56.398,86.124,56.398,86.105,56.398z"/>
@@ -94,17 +95,23 @@ class HomeLanding extends Component {
           <path d="M20.204,33.533c-0.399,0-0.786-0.206-1-0.576c-0.322-0.552-0.133-1.259,0.419-1.58l3.601-2.093  c0.549-0.321,1.259-0.135,1.58,0.419c0.322,0.552,0.133,1.259-0.419,1.58l-3.602,2.093C20.602,33.482,20.402,33.533,20.204,33.533z"/>
           <path d="M23.806,31.44c-0.399,0-0.787-0.207-1.002-0.576c-0.321-0.553-0.132-1.26,0.42-1.581l9.316-5.403  c0.557-0.32,1.261-0.13,1.582,0.42c0.32,0.554,0.132,1.261-0.42,1.581l-9.316,5.403C24.202,31.391,24.002,31.44,23.806,31.44z"/>
           <path d="M52.016,53.365c-0.4,0-0.791-0.208-1.006-0.583c-0.315-0.553-0.126-1.26,0.43-1.576l14.388-8.258  c0.556-0.318,1.261-0.128,1.579,0.427s0.126,1.262-0.427,1.579l-14.389,8.258C52.408,53.315,52.212,53.365,52.016,53.365z"/>
-        </svg>
-        </div>
-      </div>
-      <div className="jo-section-half last">
-        <div className="jo-home-title-wrapper">
-          <h1 className="jo-home-title">Jump<br/>Off</h1>
-          <p className="jo-home-description">
-          An interdisciplinary web development company focused on building quality, modern web experiences.
-          </p>
-        </div>
-      </div>
+        </svg> */}
+        {/* <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="-18 0 100 125" enable-background="new -18 0 100 100" >
+          <g>
+            <polygon points="25.913,32.797 42.649,61.992 54.883,61.992 25.676,12.753 -11.114,76.314 -5.175,87.45  "/>
+            <polygon points="31.367,43.632 25.911,34.257 -4.631,87.45 69.303,87.45 75.114,75.624 13.232,75.687  "/>
+            <polygon points="21.448,62.713 14.413,75.192 75.114,75.192 38.308,12.607 26.672,12.607 56.355,62.713  "/>
+          </g>
+        </svg> */}
+        {/* <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 90 112.5" enableBackground="new 0 0 90 90">
+        <polygon points="49.8,57.3 46,68.2 46,68 15.7,68 32.5,81 55.6,81 65.4,50.7 54.6,42.9 "/>
+        <polygon points="53.7,39.6 53.7,39.6 67.7,49.8 58.2,79.1 75,66.9 82.1,44.9 56.4,26.3 45.9,33.9 "/>
+        <polygon points="81.4,41.9 75,22.2 56.3,8.7 30.8,27.2 34.8,39.6 56.4,23.8 "/>
+        <polygon points="34,42.8 28.6,26.2 53.2,8 32.5,8 13.8,21.8 23.5,52 36.7,52 34,42.8 "/>
+        <polygon points="39.4,54 22.1,54 12.6,24.9 6.2,44.3 13.4,66 44.9,66 49,54 "/>
+        </svg> */}
+        {/* </div> */}
+      <div className="jo-scroll-down"></div>
     </section>
   }
 
