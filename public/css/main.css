@@ -534,11 +534,10 @@ article.jo-post img {
   height:auto;
 }
 .jo-home-shape-1 {
-  left: 50%;
-  bottom: 0;
-  width: 28%;
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
+  right: 0%;
+  bottom: 0%;
+  width: 30%;
+  /* transform: rotate(23deg); */
 }
 .jo-home-shape-2 {
   right: -2%;
@@ -567,8 +566,24 @@ article.jo-post img {
   width: 22%;
 }
 .jo-home-shape path, .jo-home-shape polygon, .jo-home-shape rect {
-  fill: #343796;
+  /* fill: #191919; */
+  fill: url('#jo-gradient-muted');
 }
+.jo-home-shape-1 path{
+  fill: #191919;
+}
+/*.jo-home-shape-2 polygon{
+  fill: #f89c44;
+}
+.jo-home-shape-3 path{
+  fill: #ef6085;
+}
+.jo-home-shape-4 path{
+  fill: #cd5fa1;
+}
+.jo-home-shape-5 path{
+  fill: #cd5fa1;
+} */
 .jo-home-shape-1 path, .jo-home-shape-2 polygon {
   /* fill: #343796; */
 }
@@ -579,25 +594,18 @@ article.jo-post img {
           box-sizing: border-box;
   z-index: 20;
 }
-.jo-home-title {
-}
-.jo-home-title text {
-  font-family: 'butlerblack', Helvetica, sans-serif;
+h1.jo-home-title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
   font-weight: bold;
   text-align: left;
-  font-size: 55px;
-}
-.home-title-top {
-  
-}
-.home-title-bottom {
-
+  font-size: 120px;
 }
 .jo-home-description {
   text-align: left;
-  font-size: 20px;
+  font-size: 44px;
+  font-weight: 300;
 }
-
 .jo-scroll-down {
   height: 60px;
   width: 100%;
@@ -608,7 +616,7 @@ article.jo-post img {
 
 @media screen and ( min-width: 1201px ) {
   .jo-home-description {
-    /* max-width: 60vw; */
+    max-width: 70vw;
   }
 }
 @media screen and ( max-width: 1200px ) {
@@ -618,8 +626,6 @@ article.jo-post img {
     left: 60%;
     bottom: 0;
     width: 45%;
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
   }
   .jo-home-shape-2 {
     right: -2%;
@@ -682,6 +688,9 @@ article.jo-post img {
   }
 }
 @media screen and ( min-width: 601px ) and ( max-width: 800px ) {
+  h1.jo-home-title {
+    font-size: 90px; 
+  }
   .jo-home-description {
     width: 80%;
     font-size: 24px;
@@ -690,8 +699,6 @@ article.jo-post img {
     left: 60%;
     bottom: 0;
     width: 65%;
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
   }
   .jo-home-shape-2 {
     right: -2%;
@@ -712,18 +719,17 @@ article.jo-post img {
   }
 }
 @media screen and ( max-width: 600px ) {
-  .jo-home-description {
-    width: 80%;
+  h1.jo-home-title {
+    font-size: 60px; 
   }
   .jo-home-description {
+    width: 80%;
     font-size: 20px;
   }
   .jo-home-shape-1 {
     left: 60%;
     bottom: 0;
     width: 80%;
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
   }
   .jo-home-shape-2 {
     right: -2%;
@@ -735,32 +741,64 @@ article.jo-post img {
 }
 
 
-.jo-logo-wrapper {
+.jo-scroll-down{
   position: relative;
-  padding-bottom: 85%;
-  left: 8%;
-  width: 85%;
-  height:0;
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
-  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
 }
-.jo-logo {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.jo-scroll-down p {
+  margin-top: 4px;
+  font-size: 10px;
 }
-.jo-logo > svg {
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-}.jo-down-arrow circle, .jo-down-arrow path {
-  stroke: black;
-  -webkit-transition: stroke .5s ease-in-out;
-  transition: stroke .5s ease-in-out;
+.jo-scroll-down-center {
+  
 }
-.jo-down-arrow:hover circle {
-  stroke: white;
-}.home-section {
+#scrolljo-scroll-down {
+  -webkit-animation: animateHeight 1.4s linear .3s 4;
+          animation: animateHeight 1.4s linear .3s 4;
+}
+#jo-scroll-down-circle-shape {
+  -webkit-animation: animateShape 1.6s ease-in-out 4;
+          animation: animateShape 1.6s ease-in-out 4;
+}
+@-webkit-keyframes animateShape {
+  50% {
+    cy: 100;
+    opacity: .1;
+  }
+}
+@keyframes animateShape {
+  50% {
+    cy: 100;
+    opacity: .1;
+  }
+}
+@-webkit-keyframes animateHeight {
+  70% {height:105px;}
+  from {margin-top:0px;}
+  to {margin-top:20px;}
+}
+@keyframes animateHeight {
+  70% {height:105px;}
+  from {margin-top:0px;}
+  to {margin-top:20px;}
+}
+@-webkit-keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px;}
+}
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px;}
+}
+  .home-section {
   width: 100%;
   height: 100vh;
   height: 100%;
@@ -1148,7 +1186,25 @@ button#nav-icon:hover p, .app-menu-toggled button#nav-icon p {
   90% {color: #cd5fa1;stroke:#cd5fa1;}
   100% {color: #ffffff;stroke:#ffffff;}
 }
-footer {
+.jo-logo-wrapper {
+  position: relative;
+  padding-bottom: 85%;
+  left: 8%;
+  width: 85%;
+  height:0;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  float: left;
+}
+.jo-logo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.jo-logo > svg {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+}footer {
   position: relative;
   height: 250px;;
   min-height: 200px;
