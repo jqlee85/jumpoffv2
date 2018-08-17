@@ -616,7 +616,7 @@ h1.jo-home-title {
 
 @media screen and ( min-width: 1201px ) {
   .jo-home-description {
-    max-width: 70vw;
+    /* max-width: 70vw; */
   }
 }
 @media screen and ( max-width: 1200px ) {
@@ -692,7 +692,7 @@ h1.jo-home-title {
     font-size: 90px; 
   }
   .jo-home-description {
-    width: 80%;
+    /* width: 80%; */
     font-size: 24px;
   }
   .jo-home-shape-1 {
@@ -723,7 +723,7 @@ h1.jo-home-title {
     font-size: 60px; 
   }
   .jo-home-description {
-    width: 80%;
+    /* width: 80%; */
     font-size: 20px;
   }
   .jo-home-shape-1 {

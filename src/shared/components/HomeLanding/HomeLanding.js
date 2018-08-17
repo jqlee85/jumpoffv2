@@ -19,14 +19,6 @@ class HomeLanding extends Component {
       color3: '#ef6085',
       color4: '#cd5fa1'
     } 
-    
-    //Vibrant Colors
-    let colors = {
-      color1: '#FD6922',
-      color2: '#F9562C',
-      color3: '#ED2267',
-      color4: '#EC1A75'
-    }
 
     return <section className="jo-section home-section-one home-landing">
         <div className="jo-home-shapes-wrapper aspectRatioSizer">
@@ -48,9 +40,9 @@ class HomeLanding extends Component {
         </div>
         <div className="jo-home-title-wrapper">
           <h1 className="jo-home-title">JumpOff</h1>
-          <p className="jo-home-description">a web development company building unique, modern web experiences</p>
+          <p className="jo-home-description">a web development company building<br/>unique, modern web experiences</p>
         </div>
-      <ScrollDown color='#191919'/>
+      {/* <ScrollDown color='#191919'/> */}
     </section>
   }
 

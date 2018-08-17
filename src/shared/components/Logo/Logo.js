@@ -11,13 +11,13 @@ class Logo extends Component {
     
     let mainColor = this.props.mainColor == 'white' ? 'white' : 'black';
     let secondaryColor = this.props.mainColor == 'white' ? 'black' : 'white';
-    //Vibrant Versions
+    //Muted Colors
     let colors = {
-      color1: '#FD6922',
-      color2: '#F9562C',
-      color3: '#ED2267',
-      color4: '#EC1A75'
-    }
+      color1: '#f0ba45',
+      color2: '#f89c44',
+      color3: '#ef6085',
+      color4: '#cd5fa1'
+    } 
 
     return <div className="jo-logo-wrapper">
       <div className="jo-logo">
