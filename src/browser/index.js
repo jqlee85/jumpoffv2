@@ -1,23 +1,17 @@
 import "babel-polyfill";
 import React from "react";
 import { hydrate } from "react-dom";
-import { Provider } from "react-redux";
 import { ApolloProvider } from 'react-apollo';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import client from '../shared/graphql/apolloClient'
 import { BrowserRouter } from "react-router-dom";
-import configureStore from "../shared/configureStore";
 import App from "../shared/App";
-
-const store = configureStore(window.__initialData__);
 
 hydrate(
   <ApolloProvider client={client} >
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </ApolloProvider>,
   document.getElementById("root")
 );

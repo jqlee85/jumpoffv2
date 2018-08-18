@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import styles from './MenuToggle.css';
-import {connect} from 'react-redux';
 
 class MenuToggle extends Component {
 
