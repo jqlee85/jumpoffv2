@@ -32,7 +32,8 @@ class App extends Component {
     let appScrolledClass = this.state.appScrolledClass;
     let appScrolled = this.state.appScrolled;
     setTimeout(function(){
-      let yPos = e.srcElement.scrollTop;
+      let target = typeof(e.srcElement) !== 'undefined' ? e.srcElement : e.target;
+      let yPos = target.scrollTop;
       if ( yPos >= 60 && !appScrolled ) {
         this.props.toggleHeaderSolid();
       } else if ( yPos < 60 && appScrolled ) {
@@ -43,7 +44,8 @@ class App extends Component {
 
   handleScroll = (e) => {
     let appScrolled = this.state.appScrolled;
-    let yPos = e.srcElement.scrollTop;
+    let target = typeof(e.srcElement) !== 'undefined' ? e.srcElement : e.target;
+    let yPos = target.scrollTop;
     if ( yPos >= 60 && !appScrolled ) {
       this.toggleHeaderSolid();
     } else if ( yPos < 60 && appScrolled ) {
