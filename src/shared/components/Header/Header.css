@@ -8,22 +8,23 @@
   height: 72px;
   padding: 14px 10px;
   z-index: 75;
-  background-color: rgba(255,255,255,1);
-  /* -webkit-transition: background-color .3s ease; Safari */
-  /* transition: background-color .3s ease; */
+  background-color: rgba(25,25,25,0);
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
 }
 .app-scrolled #header {
-  box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+  background-color: rgba(25,25,25,1);
+  /* box-shadow: 1px 1px 5px rgba(0,0,0,.1); */
 }
 .app-menu-toggled #header {
-  background:none;
+  /* background:none; */
 }
 #header a.site-title {
   display: inline;
   position: relative;
   float: left;
   opacity: 1; 
-  color: #191919;
+  color: #fff;
   height: auto;
   margin-top: 8px;
   margin-left: 10px;

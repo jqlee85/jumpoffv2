@@ -102,65 +102,36 @@ h1.jo-home-title {
 
 @media screen and ( min-width: 1201px ) {
   .jo-home-description {
-    /* max-width: 70vw; */
+    
+  }
+  .jo-home-title-wrapper {
+    padding-left: 80px;
+    padding-bottom: 80px;
   }
 }
 @media screen and ( max-width: 1200px ) {
 }
 @media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
+  .jo-home-title-wrapper {
+    padding-left: 40px;
+    padding-bottom: 40px;
+  }
+  h1.jo-home-title {
+    font-size: 105px; 
+  }
+  .jo-home-description {
+    font-size: 34px;
+  }
   .jo-home-shape-1 {
     left: 60%;
     bottom: 0;
     width: 45%;
   }
-  .jo-home-shape-2 {
-    right: -2%;
-    top: 10%;
-    width: 35%;
-    transform: rotate(37deg);
-  }
-  .jo-home-shape-3 {
-    right: 45%;
-    bottom: 40%;
-    width: 30%;
-    transform: rotate(-20deg);
-  }
-  .jo-home-shape-4 {
-    display: none;
-    right: 15%;
-    top: -5%;
-    width: 30%;
-    transform: rotate(-60deg);
-  }
-  .jo-home-shape-5 {
-    display: none;
-    right: 38%;
-    bottom: 50%;
-    width: 40%;
-  }
+  
 }
 @media screen and ( max-width: 800px ) { 
   .jo-home-shapes-wrapper {
     height: 100%;
-  }
-  .jo-home-shape-3 {
-    right: 45%;
-    bottom: 50%;
-    width: 40%;
-    transform: rotate(-20deg);
-  }
-  .jo-home-shape-4 {
-    display: none;
-    right: 15%;
-    top: -5%;
-    width: 30%;
-    transform: rotate(-60deg);
-  }
-  .jo-home-shape-5 {
-    display: none;
-    right: 38%;
-    bottom: 50%;
-    width: 40%;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 800px) and (max-height: 780px) {
@@ -173,7 +144,6 @@ h1.jo-home-title {
     font-size: 90px; 
   }
   .jo-home-description {
-    /* width: 80%; */
     font-size: 24px;
   }
   .jo-home-shape-1 {
@@ -181,22 +151,13 @@ h1.jo-home-title {
     bottom: 0;
     width: 65%;
   }
-  .jo-home-shape-2 {
-    right: -2%;
-    top: -15%;
-    width: 45%;
-    transform: rotate(37deg);
-  }
+  
 }
 @media screen and (max-width: 601px) and (max-height: 500px) {
-  .jo-home-shape-2, .jo-home-shape-3, .jo-home-shape-4, .jo-home-shape-5 {
-    display: none;
-  }
+  
 }
 @media screen and (max-width: 601px) and (max-height: 740px) {
-  .jo-home-shape-2 {
-    display: none;
-  }
+  
 }
 @media screen and ( max-width: 600px ) {
   h1.jo-home-title {
@@ -211,12 +172,7 @@ h1.jo-home-title {
     bottom: 0;
     width: 80%;
   }
-  .jo-home-shape-2 {
-    right: -2%;
-    top: -10%;
-    width: 55%;
-    transform: rotate(37deg);
-  } 
+  
 }
 
 

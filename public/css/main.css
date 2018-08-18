@@ -616,70 +616,36 @@ h1.jo-home-title {
 
 @media screen and ( min-width: 1201px ) {
   .jo-home-description {
-    /* max-width: 70vw; */
+    
+  }
+  .jo-home-title-wrapper {
+    padding-left: 80px;
+    padding-bottom: 80px;
   }
 }
 @media screen and ( max-width: 1200px ) {
 }
 @media screen and ( min-width: 801px ) and ( max-width: 1200px ) {
+  .jo-home-title-wrapper {
+    padding-left: 40px;
+    padding-bottom: 40px;
+  }
+  h1.jo-home-title {
+    font-size: 105px; 
+  }
+  .jo-home-description {
+    font-size: 34px;
+  }
   .jo-home-shape-1 {
     left: 60%;
     bottom: 0;
     width: 45%;
   }
-  .jo-home-shape-2 {
-    right: -2%;
-    top: 10%;
-    width: 35%;
-    -webkit-transform: rotate(37deg);
-            transform: rotate(37deg);
-  }
-  .jo-home-shape-3 {
-    right: 45%;
-    bottom: 40%;
-    width: 30%;
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  .jo-home-shape-4 {
-    display: none;
-    right: 15%;
-    top: -5%;
-    width: 30%;
-    -webkit-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-  }
-  .jo-home-shape-5 {
-    display: none;
-    right: 38%;
-    bottom: 50%;
-    width: 40%;
-  }
+  
 }
 @media screen and ( max-width: 800px ) { 
   .jo-home-shapes-wrapper {
     height: 100%;
-  }
-  .jo-home-shape-3 {
-    right: 45%;
-    bottom: 50%;
-    width: 40%;
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  .jo-home-shape-4 {
-    display: none;
-    right: 15%;
-    top: -5%;
-    width: 30%;
-    -webkit-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-  }
-  .jo-home-shape-5 {
-    display: none;
-    right: 38%;
-    bottom: 50%;
-    width: 40%;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 800px) and (max-height: 780px) {
@@ -692,7 +658,6 @@ h1.jo-home-title {
     font-size: 90px; 
   }
   .jo-home-description {
-    /* width: 80%; */
     font-size: 24px;
   }
   .jo-home-shape-1 {
@@ -700,23 +665,13 @@ h1.jo-home-title {
     bottom: 0;
     width: 65%;
   }
-  .jo-home-shape-2 {
-    right: -2%;
-    top: -15%;
-    width: 45%;
-    -webkit-transform: rotate(37deg);
-            transform: rotate(37deg);
-  }
+  
 }
 @media screen and (max-width: 601px) and (max-height: 500px) {
-  .jo-home-shape-2, .jo-home-shape-3, .jo-home-shape-4, .jo-home-shape-5 {
-    display: none;
-  }
+  
 }
 @media screen and (max-width: 601px) and (max-height: 740px) {
-  .jo-home-shape-2 {
-    display: none;
-  }
+  
 }
 @media screen and ( max-width: 600px ) {
   h1.jo-home-title {
@@ -731,13 +686,7 @@ h1.jo-home-title {
     bottom: 0;
     width: 80%;
   }
-  .jo-home-shape-2 {
-    right: -2%;
-    top: -10%;
-    width: 55%;
-    -webkit-transform: rotate(37deg);
-            transform: rotate(37deg);
-  } 
+  
 }
 
 
@@ -992,23 +941,23 @@ h1.jo-home-title {
   height: 72px;
   padding: 14px 10px;
   z-index: 75;
-  background-color: rgba(255,255,255,1);
-  /* -webkit-transition: background-color .3s ease; Safari */
-  /* transition: background-color .3s ease; */
+  background-color: rgba(25,25,25,0);
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
 }
 .app-scrolled #header {
-  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.1);
-          box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+  background-color: rgba(25,25,25,1);
+  /* box-shadow: 1px 1px 5px rgba(0,0,0,.1); */
 }
 .app-menu-toggled #header {
-  background:none;
+  /* background:none; */
 }
 #header a.site-title {
   display: inline;
   position: relative;
   float: left;
   opacity: 1; 
-  color: #191919;
+  color: #fff;
   height: auto;
   margin-top: 8px;
   margin-left: 10px;
