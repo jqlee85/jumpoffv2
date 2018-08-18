@@ -593,11 +593,15 @@ h1.jo-home-title {
 
 
 /* Media Queries */
-
-@media screen and ( min-width: 1201px ) {
-  .jo-home-description {
-    
+@media screen and ( min-width: 1600px ) {
+  h1.jo-home-title {
+    font-size: 160px;
   }
+  .jo-home-description {
+    font-size: 60px;
+  }
+}
+@media screen and ( min-width: 1201px ) {
   .jo-home-title-wrapper {
     padding-left: 80px;
     padding-bottom: 80px;
