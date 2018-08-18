@@ -241,56 +241,6 @@ button:active {
 }
 
 /* Custom Fonts */
-/* Butler font by http://fabiandesmet.com/portfolio/butler-font/ */
-@font-face {
-  font-family: 'butlerblack';
-  src: url('../../public/fonts/Butler_and_ButlerStencil/butler_black-webfont.woff2') format('woff2'),
-       url('../../public/fonts/Butler_and_ButlerStencil/butler_black-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'butlerbold';
-  src: url('../../public/fonts/Butler_and_ButlerStencil/butler_bold-webfont.woff2') format('woff2'),
-       url('../../public/fonts/Butler_and_ButlerStencil/butler_bold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'butlerextrabold';
-  src: url('../../public/fonts/Butler_and_ButlerStencil/butler_extrabold-webfont.woff2') format('woff2'),
-       url('../../public/fonts/Butler_and_ButlerStencil/butler_extrabold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'butlerlight';
-  src: url('../../public/fonts/Butler_and_ButlerStencil/butler_light-webfont.woff2') format('woff2'),
-       url('../../public/fonts/Butler_and_ButlerStencil/butler_light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'butlermedium';
-  src: url('../../public/fonts/Butler_and_ButlerStencil/butler_medium-webfont.woff2') format('woff2'),
-       url('../../public/fonts/Butler_and_ButlerStencil/butler_medium-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'butlerregular';
-  src: url('../../public/fonts/Butler_and_ButlerStencil/butler_regular-webfont.woff2') format('woff2'),
-       url('../../public/fonts/Butler_and_ButlerStencil/butler_regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'butlerultralight';
-  src: url('../../public/fonts/Butler_and_ButlerStencil/butler_ultra_light-webfont.woff2') format('woff2'),
-       url('../../public/fonts/Butler_and_ButlerStencil/butler_ultra_light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 /* Cerebri */
 @font-face {
   font-family: 'Cerebri';

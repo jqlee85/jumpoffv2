@@ -6,8 +6,6 @@ import { renderToString } from "react-dom/server";
 import { ApolloProvider } from 'react-apollo';
 import client from '../shared/graphql/apolloClient'
 import { StaticRouter, matchPath } from "react-router-dom";
-import serialize from "serialize-javascript";
-import routes from "../shared/routes";
 import App from "../shared/App";
 import "source-map-support/register";
 

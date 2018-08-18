@@ -47,14 +47,6 @@ const browserConfig = {
     new ExtractTextPlugin({
       filename: "public/css/[name].css"
     },),
-    // new webpack.DefinePlugin({ // <-- key to reducing React's size
-    //   'process.env': {
-    //     'NODE_ENV': JSON.stringify('production')
-    //   }
-    // }),
-    // new webpack.optimize.DedupePlugin(), //dedupe similar code 
-    // new webpack.optimize.UglifyJsPlugin(), //minify everything
-    // new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
   ]
 };
 
@@ -95,17 +87,10 @@ const serverConfig = {
     ]
   },
   plugins: [
-    // new webpack.DefinePlugin({ // <-- key to reducing React's size
-    //   'process.env': {
-    //     'NODE_ENV': JSON.stringify('production')
-    //   }
-    // }),
-    // new webpack.optimize.DedupePlugin(), //dedupe similar code 
-    // new webpack.optimize.UglifyJsPlugin(), //minify everything
-    // new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
+    
   ]
 };
 
 module.exports = [browserConfig, serverConfig];
-
+// 
 // module.exports = [browserConfig];
