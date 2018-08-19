@@ -52,7 +52,7 @@ body {
   overflow: auto;
   min-height: 100%;
   min-height: 100vh;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: 'Cerebri', Helvetica, Arial, sans-serif;
   font-weight: normal;
   background: #fff; /* Old browsers */
 }
@@ -60,7 +60,7 @@ body p {
   font-weight: 300;
 }
 h1,h2,h3,h4,h5,h6,a {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: 'Cerebri', Helvetica, Arial, sans-serif;
   font-weight: 600;
 }
 p,h1,h2,h3,h4,h5,h6 {
@@ -71,12 +71,18 @@ button {
 	background: none;
   border: none;
   border: 1px solid #191919;
+  padding: 14px 18px;
+  font-family: 'Cerebri', Helvetica, Arial, sans-serif;
+  font-size: .8em;
+  text-transform: uppercase;
+}
+button.blue {
+  background: #353A93;
+  color: #fff;
 }
 button:hover {
-  border-color: #3ae0b1;
-  color: #3ae0b1;
-  -webkit-transition: color .3s ease, border-color .3s ease; /* Safari */
-  transition: color .3s ease, border-color .3s ease;
+  -webkit-transition: color .3s ease, background-color .3s ease; /* Safari */
+  transition: color .3s ease, background-color .3s ease;
 }
 button:active {
 	position:relative;
@@ -232,4 +238,31 @@ button:active {
 }
 @media screen and ( max-width: 600px ) {
   
+}
+
+/* Custom Fonts */
+/* Cerebri */
+@font-face {
+  font-family: 'Cerebri';
+  src: url('../../public/fonts/Cerebri/CerebriSans-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cerebri';
+  src: url('../../public/fonts/Cerebri/CerebriSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cerebri';
+  src: url('../../public/fonts/Cerebri/CerebriSans-Light.woff2') format('woff2');
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cerebri';
+  src: url('../../public/fonts/Cerebri/CerebriSans-SemiBold.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
 }

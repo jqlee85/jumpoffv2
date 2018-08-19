@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import styles from './Footer.css';
-import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 import LogoTitle from '../LogoTitle/LogoTitle';
 import ContactInfo from '../ContactInfo/ContactInfo';
@@ -12,8 +11,8 @@ class Footer extends Component {
   render(){
     return <footer id="footer">
       <div className="jo-map-wrapper">
-        <LazyLoad height={200}>
-          <MapContainer mapStyle={'light'}/>
+        <LazyLoad offset={900}>
+          <MapContainer mapStyle={'light'}/>    
         </LazyLoad>
       </div>
       <ContactInfo />

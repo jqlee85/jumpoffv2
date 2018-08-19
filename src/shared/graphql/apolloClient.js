@@ -4,30 +4,35 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
 import { onError } from 'apollo-link-error';
 import { ApolloLink } from 'apollo-link';
-import { persistCache } from 'apollo-cache-persist';
+// import { persistCache } from 'apollo-cache-persist';
 
 // Set up cache.
 const cache = new InMemoryCache({
-  dataIdFromObject: object => {
-    switch (object.__typename) {
-      case 'Post': return object.slug; // use `slug` as the primary key
-      default: return object.id || object._id; // fall back to `id` and `_id` for all other types
-    }
-  },
-  cacheRedirects: {
-    Query: { 
-      postBy: (_, {args}, {getCacheKey} ) => getCacheKey({ 
-        __typename: 'Post', slug: args.slug 
-      }) 
-    }
-  }
+  // // attempting to load from cache before making trip to server
+  // dataIdFromObject: object => {
+  //   switch (object.__typename) {
+  //     case 'Post': return object.slug; // use `slug` as the primary key
+  //     case 'Page': return object.uri;
+  //     default: return object.id || object._id; // fall back to `id` and `_id` for all other types
+  //   }
+  // },
+  // cacheRedirects: {
+  //   Query: { 
+  //     postBy: (_, {args}, {getCacheKey} ) => getCacheKey({ 
+  //       __typename: 'Post', slug: args.slug
+  //     }),
+  //     pageBy: (_, {args}, {getCacheKey} ) => getCacheKey({ 
+  //       __typename: 'Page', uri: args.uri
+  //     })
+  //   }
+  // },
 });
 
 // Persist Cache
-persistCache({
-  cache,
-  storage: window.localStorage,
-});
+// persistCache({
+//   cache,
+//   storage: window.localStorage,
+// });
 
 // Set API Host
 const API_HOST =
@@ -52,7 +57,9 @@ const client = new ApolloClient({
       credentials: 'same-origin'
     })
   ]),
+  ssrMode: true,
   cache
 });
+
 
 export default client

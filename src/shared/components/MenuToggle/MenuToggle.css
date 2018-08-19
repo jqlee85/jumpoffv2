@@ -19,8 +19,8 @@ button#nav-icon:hover span {
   width: 24px;
   height: 24px;
   position: relative;
-  float: right;
   margin: 12px 10px;
+  float:right;
   padding: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -45,11 +45,14 @@ button#nav-icon:hover span {
   -o-transition: color .5s ease-in-out;
   transition: color .5s ease-in-out;
 }
-.app-menu-dark #nav-icon span {
-  background-color: #000;
+/* .app-menu-dark #nav-icon span {
+  background-color: #fff;
 }
 .app-menu-dark #nav-icon p {
   color: #000;
+} */
+.app-menu-toggled #nav-icon span, .app-scrolled #nav-icon span {
+  background-color: #fff;
 }
 #nav-icon span {
   display: block;
@@ -57,7 +60,7 @@ button#nav-icon:hover span {
   height: 2px;
   width: 24px;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: #191919;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);

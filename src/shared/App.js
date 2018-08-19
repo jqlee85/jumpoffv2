@@ -10,12 +10,57 @@ import Footer from './components/Footer/Footer';
 class App extends Component {
 
   constructor(props) {
-      super(props);
-      this.state = { 
-        navToggled: false,
-        navFadeToggled: false,
-        navFrontToggled: false
-      };  
+    super(props);
+    this.state = { 
+      navToggled: false,
+      navFadeToggled: false,
+      navFrontToggled: false,
+      appScrolled: false,
+      appScrolledClass: 'app-scrolled'
+    };  
+  }
+
+  componentDidMount(){
+    window.addEventListener('scroll', this.handleScroll, true);
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.handleScroll, true);
+  }
+
+  initializeMenuBar(){
+    let appScrolledClass = this.state.appScrolledClass;
+    let appScrolled = this.state.appScrolled;
+    setTimeout(function(){
+      let target = typeof(e.srcElement) !== 'undefined' ? e.srcElement : e.target;
+      let yPos = target.scrollTop;
+      if ( yPos >= 60 && !appScrolled ) {
+        this.props.toggleHeaderSolid();
+      } else if ( yPos < 60 && appScrolled ) {
+        this.props.toggleHeaderSolid();
+      } 
+    },500);
+  }
+
+  handleScroll = (e) => {
+    let appScrolled = this.state.appScrolled;
+    let target = typeof(e.srcElement) !== 'undefined' ? e.srcElement : e.target;
+    let yPos = target.scrollTop;
+    if ( yPos >= 60 && !appScrolled ) {
+      this.toggleHeaderSolid();
+    } else if ( yPos < 60 && appScrolled ) {
+      this.toggleHeaderSolid();
+    }
+  }
+
+  toggleHeaderSolid = () => {
+    this.setState(prevState => ({
+      appScrolled: !prevState.appScrolled
+    }));
+  }
+
+  toggleNavFade = () => {
+    this.props.toggleNavFade();
   }
 
   toggleAppNav = () => {
@@ -46,13 +91,12 @@ class App extends Component {
     }, 100); 
   }
 
-  toggleNav
-
   render(){
     
     let appClasses = 'App';
     if (this.state.navToggled) appClasses += ' app-menu-toggled';
     if (this.state.navFadeToggled) appClasses += ' nav-fade';
+    if (this.state.appScrolled) appClasses += ' ' + this.state.appScrolledClass;
     return <div id="App" className={appClasses}>
       <Nav 
         menuToggled={this.state.navToggled} 

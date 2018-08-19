@@ -13,7 +13,7 @@ class HomeSectionTwo extends Component {
       <div className="home-section-content">
           <h2>React + Redux</h2>
           <p>Users today expect fast, app-like experiences when using the web. Full page refreshes can be slow and choppy, so we build universal web applications that leverage client-side apps and server-side rendering to create the fast, modern experience that users expect without sacrificing SEO.</p>
-          <a>Learn More</a>
+          <a><button className="blue">Learn More</button></a>
       </div>
       <div className="home-section-graphics">
         <TechLogo logo="react" rotating={true} color="#191919"/>
