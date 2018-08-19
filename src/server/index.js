@@ -9,20 +9,20 @@ import { StaticRouter, matchPath } from "react-router-dom";
 import App from "../shared/App";
 import "source-map-support/register";
 
-import expressStaticGzip from "express-static-gzip";
+// import expressStaticGzip from "express-static-gzip";
 
 const app = express();
 
 app.use(cors());
 app.use(express.static("public"));
-app.use("/", expressStaticGzip("/public/"));
+// app.use("/", expressStaticGzip("/public/"));
 
 //Handle Gzips
-app.get('*.js', function (req, res, next) {
-  req.url = req.url + '.gz';
-  res.set('Content-Encoding', 'gzip');
-  next();
-});
+// app.get('*.js', function (req, res, next) {
+//   req.url = req.url + '.gz';
+//   res.set('Content-Encoding', 'gzip');
+//   next();
+// });
 
 app.get("*", (req, res, next) => {
 

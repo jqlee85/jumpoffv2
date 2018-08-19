@@ -28,7 +28,6 @@
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
     "js-cookie": "^2.2.0",
-    "pm2": "^2.10.3",
     "react": "^16.4.1",
     "react-apollo": "^2.1.9",
     "react-dom": "^16.4.1",
